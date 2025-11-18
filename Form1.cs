@@ -156,8 +156,8 @@ namespace Cloud
 
         }
 
-        private void btn_databaseCounter_Click(object sender, EventArgs e)
-        {
-        }
+
+
+
     }
 }
