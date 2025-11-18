@@ -62,8 +62,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_ContainerInput = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.databaseCounter = new System.Windows.Forms.TabPage();
+            this.Exercise7 = new System.Windows.Forms.TabPage();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_SearchDB = new System.Windows.Forms.Button();
+            this.textBox_SearchDB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox_SearchedDBs = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,6 +78,8 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.Exercise7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -92,7 +100,7 @@
             // 
             this.tabControl1.Controls.Add(this.General);
             this.tabControl1.Controls.Add(this.DBandContainer);
-            this.tabControl1.Controls.Add(this.databaseCounter);
+            this.tabControl1.Controls.Add(this.Exercise7);
             this.tabControl1.Location = new System.Drawing.Point(12, 17);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -467,12 +475,15 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Container";
             // 
-            // databaseCounter
+            // Exercise7
             // 
-            this.databaseCounter.Location = new System.Drawing.Point(4, 25);
-            this.databaseCounter.Name = "databaseCounter";
-            this.databaseCounter.Size = new System.Drawing.Size(1009, 663);
-            this.databaseCounter.TabIndex = 2;
+            this.Exercise7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Exercise7.Controls.Add(this.groupBox6);
+            this.Exercise7.Location = new System.Drawing.Point(4, 25);
+            this.Exercise7.Name = "Exercise7";
+            this.Exercise7.Size = new System.Drawing.Size(1009, 663);
+            this.Exercise7.TabIndex = 2;
+            this.Exercise7.Text = "Ex7";
             // 
             // btn_databaseCounter
             // 
@@ -480,6 +491,72 @@
             this.btn_databaseCounter.Name = "btn_databaseCounter";
             this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
             this.btn_databaseCounter.TabIndex = 0;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.Tan;
+            this.groupBox6.Controls.Add(this.comboBox_SearchedDBs);
+            this.groupBox6.Controls.Add(this.btn_SearchDB);
+            this.groupBox6.Controls.Add(this.textBox_SearchDB);
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(25, 24);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(924, 156);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Exercise 7";
+            // 
+            // btn_SearchDB
+            // 
+            this.btn_SearchDB.Location = new System.Drawing.Point(146, 91);
+            this.btn_SearchDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_SearchDB.Name = "btn_SearchDB";
+            this.btn_SearchDB.Size = new System.Drawing.Size(283, 38);
+            this.btn_SearchDB.TabIndex = 5;
+            this.btn_SearchDB.Text = "Search";
+            this.btn_SearchDB.UseVisualStyleBackColor = true;
+            this.btn_SearchDB.Click += new System.EventHandler(this.btn_SearchDB_Click);
+            // 
+            // textBox_SearchDB
+            // 
+            this.textBox_SearchDB.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SearchDB.Location = new System.Drawing.Point(89, 34);
+            this.textBox_SearchDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_SearchDB.Name = "textBox_SearchDB";
+            this.textBox_SearchDB.Size = new System.Drawing.Size(145, 24);
+            this.textBox_SearchDB.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 25);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(357, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 25);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Databases";
+            // 
+            // comboBox_SearchedDBs
+            // 
+            this.comboBox_SearchedDBs.FormattingEnabled = true;
+            this.comboBox_SearchedDBs.Location = new System.Drawing.Point(469, 27);
+            this.comboBox_SearchedDBs.Name = "comboBox_SearchedDBs";
+            this.comboBox_SearchedDBs.Size = new System.Drawing.Size(121, 31);
+            this.comboBox_SearchedDBs.TabIndex = 6;
             // 
             // Form1
             // 
@@ -503,6 +580,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.Exercise7.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -533,7 +613,7 @@
         private System.Windows.Forms.TextBox textBox_ContainerInput;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_CreateDataInCloud;
-        private System.Windows.Forms.TabPage databaseCounter;
+        private System.Windows.Forms.TabPage Exercise7;
         private System.Windows.Forms.Button btn_databaseCounter;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_GetTablesNames;
@@ -545,6 +625,12 @@
         private System.Windows.Forms.ComboBox comboBox_TablesNames;
         private System.Windows.Forms.Button btn_CountTables;
         private System.Windows.Forms.Button btn_CountDBs;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox comboBox_SearchedDBs;
+        private System.Windows.Forms.Button btn_SearchDB;
+        private System.Windows.Forms.TextBox textBox_SearchDB;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
     }
 }
 

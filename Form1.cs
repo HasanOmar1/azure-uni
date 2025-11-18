@@ -275,5 +275,31 @@ namespace Cloud
             return tablesCounter;
         }
 
+        private async void btn_SearchDB_Click(object sender, EventArgs e)
+        {
+
+            comboBox_SearchedDBs.DataSource = await getDBsThatStartsWithTheInputAsync();
+
+        }
+
+        private async Task<List<string>> getDBsThatStartsWithTheInputAsync()
+        {
+            List<string> databasesNames = new List<string>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    if (currentDBProp.Id.StartsWith(textBox_SearchDB.Text))
+                    {
+                        databasesNames.Add(currentDBProp.Id);
+                    }
+                }
+            }
+
+            return databasesNames;
+        }
     }
 }
