@@ -72,7 +72,6 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.databaseCounter.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -287,12 +286,13 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.Tan;
             this.groupBox5.Controls.Add(this.btn_CountTables);
             this.groupBox5.Controls.Add(this.btn_CountDBs);
             this.groupBox5.Controls.Add(this.textBox_TablesCounter);
             this.groupBox5.Controls.Add(this.textBox_DBsCounter);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(27, 369);
+            this.groupBox5.Location = new System.Drawing.Point(27, 358);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -303,47 +303,48 @@
             // 
             // btn_CountTables
             // 
-            this.btn_CountTables.Location = new System.Drawing.Point(27, 98);
+            this.btn_CountTables.Location = new System.Drawing.Point(27, 99);
             this.btn_CountTables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CountTables.Name = "btn_CountTables";
-            this.btn_CountTables.Size = new System.Drawing.Size(283, 31);
+            this.btn_CountTables.Size = new System.Drawing.Size(283, 30);
             this.btn_CountTables.TabIndex = 7;
             this.btn_CountTables.Text = "Count Tables in Cloud";
             this.btn_CountTables.UseVisualStyleBackColor = true;
             // 
             // btn_CountDBs
             // 
-            this.btn_CountDBs.Location = new System.Drawing.Point(27, 47);
+            this.btn_CountDBs.Location = new System.Drawing.Point(27, 49);
             this.btn_CountDBs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CountDBs.Name = "btn_CountDBs";
-            this.btn_CountDBs.Size = new System.Drawing.Size(283, 31);
+            this.btn_CountDBs.Size = new System.Drawing.Size(283, 29);
             this.btn_CountDBs.TabIndex = 6;
             this.btn_CountDBs.Text = "Count Databases in Cloud";
             this.btn_CountDBs.UseVisualStyleBackColor = true;
+            this.btn_CountDBs.Click += new System.EventHandler(this.btn_CountDBs_Click);
             // 
             // textBox_TablesCounter
             // 
-            this.textBox_TablesCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TablesCounter.Location = new System.Drawing.Point(334, 105);
+            this.textBox_TablesCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TablesCounter.Location = new System.Drawing.Point(334, 99);
             this.textBox_TablesCounter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_TablesCounter.Name = "textBox_TablesCounter";
             this.textBox_TablesCounter.ReadOnly = true;
-            this.textBox_TablesCounter.Size = new System.Drawing.Size(76, 24);
+            this.textBox_TablesCounter.Size = new System.Drawing.Size(76, 29);
             this.textBox_TablesCounter.TabIndex = 1;
             // 
             // textBox_DBsCounter
             // 
-            this.textBox_DBsCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DBsCounter.Location = new System.Drawing.Point(334, 54);
+            this.textBox_DBsCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_DBsCounter.Location = new System.Drawing.Point(334, 49);
             this.textBox_DBsCounter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_DBsCounter.Name = "textBox_DBsCounter";
             this.textBox_DBsCounter.ReadOnly = true;
-            this.textBox_DBsCounter.Size = new System.Drawing.Size(76, 24);
+            this.textBox_DBsCounter.Size = new System.Drawing.Size(76, 29);
             this.textBox_DBsCounter.TabIndex = 3;
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Silver;
+            this.groupBox4.BackColor = System.Drawing.Color.Tan;
             this.groupBox4.Controls.Add(this.comboBox_TablesNames);
             this.groupBox4.Controls.Add(this.comboBox_DBsNames);
             this.groupBox4.Controls.Add(this.btn_GetTablesNames);
@@ -360,6 +361,7 @@
             // 
             // comboBox_TablesNames
             // 
+            this.comboBox_TablesNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_TablesNames.FormattingEnabled = true;
             this.comboBox_TablesNames.Location = new System.Drawing.Point(320, 109);
             this.comboBox_TablesNames.Name = "comboBox_TablesNames";
@@ -368,10 +370,11 @@
             // 
             // comboBox_DBsNames
             // 
+            this.comboBox_DBsNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DBsNames.FormattingEnabled = true;
             this.comboBox_DBsNames.Location = new System.Drawing.Point(320, 45);
             this.comboBox_DBsNames.Name = "comboBox_DBsNames";
-            this.comboBox_DBsNames.Size = new System.Drawing.Size(144, 31);
+            this.comboBox_DBsNames.Size = new System.Drawing.Size(452, 31);
             this.comboBox_DBsNames.TabIndex = 11;
             // 
             // btn_GetTablesNames
@@ -393,9 +396,11 @@
             this.btn_GetDBsNames.TabIndex = 5;
             this.btn_GetDBsNames.Text = "Get DBs Names from Cloud";
             this.btn_GetDBsNames.UseVisualStyleBackColor = true;
+            this.btn_GetDBsNames.Click += new System.EventHandler(this.btn_GetDBsNames_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Tan;
             this.groupBox3.Controls.Add(this.btn_CreateDataInCloud);
             this.groupBox3.Controls.Add(this.textBox_DatabaseInput);
             this.groupBox3.Controls.Add(this.label8);
@@ -434,17 +439,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(119, 47);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(103, 45);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 20);
+            this.label8.Size = new System.Drawing.Size(96, 25);
             this.label8.TabIndex = 2;
             this.label8.Text = "Database";
             // 
             // textBox_ContainerInput
             // 
             this.textBox_ContainerInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ContainerInput.Location = new System.Drawing.Point(615, 46);
+            this.textBox_ContainerInput.Location = new System.Drawing.Point(611, 46);
             this.textBox_ContainerInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_ContainerInput.Name = "textBox_ContainerInput";
             this.textBox_ContainerInput.Size = new System.Drawing.Size(236, 24);
@@ -453,13 +458,26 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(528, 46);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(508, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.Size = new System.Drawing.Size(97, 25);
             this.label9.TabIndex = 4;
             this.label9.Text = "Container";
-
+            // 
+            // databaseCounter
+            // 
+            this.databaseCounter.Location = new System.Drawing.Point(4, 25);
+            this.databaseCounter.Name = "databaseCounter";
+            this.databaseCounter.Size = new System.Drawing.Size(1009, 663);
+            this.databaseCounter.TabIndex = 2;
+            // 
+            // btn_databaseCounter
+            // 
+            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
+            this.btn_databaseCounter.Name = "btn_databaseCounter";
+            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
+            this.btn_databaseCounter.TabIndex = 0;
             // 
             // Form1
             // 
@@ -483,7 +501,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.databaseCounter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

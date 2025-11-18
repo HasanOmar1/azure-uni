@@ -156,8 +156,49 @@ namespace Cloud
 
         }
 
+        private async void btn_GetDBsNames_Click(object sender, EventArgs e)
+        {
+            comboBox_DBsNames.DataSource = await getDBsNamesFromCloudAccountAsync();
+        }
 
+        private async Task<List<string>> getDBsNamesFromCloudAccountAsync()
+        {
+            List<string> databasesNames = new List<string>();
 
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
 
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    databasesNames.Add(currentDBProp.Id);
+                }
+            }
+
+            return databasesNames;
+        }
+
+        private async void btn_CountDBs_Click(object sender, EventArgs e)
+        {
+            int numOfDBs = await countDBsInCloudAccountAsync();
+            textBox_DBsCounter.Text = numOfDBs.ToString();
+        }
+
+        private async Task<int> countDBsInCloudAccountAsync()
+        {
+            int numOfDbs = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    numOfDbs++;
+                }
+            }
+
+            return numOfDbs;
+        }
     }
 }
