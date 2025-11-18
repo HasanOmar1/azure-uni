@@ -200,5 +200,79 @@ namespace Cloud
 
             return numOfDbs;
         }
+
+
+        private async void btn_GetTablesNames_Click(object sender, EventArgs e)
+        {
+            comboBox_TablesNames.DataSource = await getTablesNamesFromCloudAccountAsync();
+        }
+
+
+
+        // Returns a list of string that each one of its members is with the following format:
+        // DBName - Table Name
+        private async Task<List<string>> getTablesNamesFromCloudAccountAsync()
+        {
+
+            List<string> results = new List<string>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            results.Add(currentDBProp.Id + " - " + currentTableProp.Id);
+                        }
+                    }
+                }
+            }
+
+            return results;
+        }
+
+        private async void btn_CountTables_Click(object sender, EventArgs e)
+        {
+            int tablesCounter = await countTablesInCloudAccountAsync();
+            textBox_TablesCounter.Text = tablesCounter.ToString();
+        }
+
+        private async Task<int> countTablesInCloudAccountAsync()
+        {
+            int tablesCounter = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            tablesCounter++;
+                        }
+                    }
+                }
+            }
+
+            return tablesCounter;
+        }
+
     }
 }

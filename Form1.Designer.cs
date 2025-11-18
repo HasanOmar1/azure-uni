@@ -310,6 +310,7 @@
             this.btn_CountTables.TabIndex = 7;
             this.btn_CountTables.Text = "Count Tables in Cloud";
             this.btn_CountTables.UseVisualStyleBackColor = true;
+            this.btn_CountTables.Click += new System.EventHandler(this.btn_CountTables_Click);
             // 
             // btn_CountDBs
             // 
@@ -386,6 +387,7 @@
             this.btn_GetTablesNames.TabIndex = 6;
             this.btn_GetTablesNames.Text = "Get Tables Names from Cloud";
             this.btn_GetTablesNames.UseVisualStyleBackColor = true;
+            this.btn_GetTablesNames.Click += new System.EventHandler(this.btn_GetTablesNames_Click);
             // 
             // btn_GetDBsNames
             // 
