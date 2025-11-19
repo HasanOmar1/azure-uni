@@ -292,7 +292,7 @@ namespace Cloud
             {
                 foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
                 {
-                    if (currentDBProp.Id.StartsWith(textBox_SearchDB.Text))
+                    if (currentDBProp.Id.ToLower().StartsWith(textBox_SearchDB.Text.ToLower()))
                     {
                         databasesNames.Add(currentDBProp.Id);
                     }
