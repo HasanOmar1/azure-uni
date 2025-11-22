@@ -301,5 +301,75 @@ namespace Cloud
 
             return databasesNames;
         }
+
+        private async void btn_DoesDBExist_Click(object sender, EventArgs e)
+        {
+            if(await DoesDBExistInCloudAsync())
+            {
+                textBox_DoesDBExist.Text = "Database Exists in the Cloud!";
+            }
+            else
+            {
+                textBox_DoesDBExist.Text = "Database Does Not Exist in the Cloud!";
+            }
+        }
+
+        private async Task<bool> DoesDBExistInCloudAsync()
+        {
+            
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    if (currentDBProp.Id.ToLower().Equals(textBox_CheckDB.Text.ToLower()))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        private async void btn_DBsWithTablesCount_Click(object sender, EventArgs e)
+        {
+            comboBox_DBsWithTablesCount.DataSource = await getDBsNamesWithTheirAmountOfTablesAsync();
+        }
+
+        private async Task<List<string>> getDBsNamesWithTheirAmountOfTablesAsync()
+        {
+            List<string> databasesNames = new List<string>();
+           
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    int tablesCounter = 0;
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            tablesCounter++;
+                        }
+                    }
+
+                    databasesNames.Add(currentDBProp.Id + " - " + tablesCounter + " Tables");
+                }
+            }
+
+            return databasesNames;
+        }
     }
 }
