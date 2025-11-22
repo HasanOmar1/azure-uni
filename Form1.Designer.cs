@@ -89,6 +89,9 @@
             this.btn_TablesLength = new System.Windows.Forms.Button();
             this.textBox_TablesLength = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.comboBox_DBsWithConditions = new System.Windows.Forms.ComboBox();
+            this.btn_DBsWithConditions = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,6 +107,7 @@
             this.groupBox9.SuspendLayout();
             this.Exercises_2.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -753,6 +757,7 @@
             // Exercises_2
             // 
             this.Exercises_2.BackColor = System.Drawing.Color.DimGray;
+            this.Exercises_2.Controls.Add(this.groupBox11);
             this.Exercises_2.Controls.Add(this.groupBox10);
             this.Exercises_2.Location = new System.Drawing.Point(4, 22);
             this.Exercises_2.Name = "Exercises_2";
@@ -815,6 +820,39 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "Length";
             // 
+            // groupBox11
+            // 
+            this.groupBox11.BackColor = System.Drawing.Color.Tan;
+            this.groupBox11.Controls.Add(this.comboBox_DBsWithConditions);
+            this.groupBox11.Controls.Add(this.btn_DBsWithConditions);
+            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.groupBox11.Location = new System.Drawing.Point(42, 160);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(601, 123);
+            this.groupBox11.TabIndex = 12;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "DBs With Odd Length And Contain No Tables or Greater Than 2 Tables";
+            // 
+            // comboBox_DBsWithConditions
+            // 
+            this.comboBox_DBsWithConditions.FormattingEnabled = true;
+            this.comboBox_DBsWithConditions.Location = new System.Drawing.Point(239, 36);
+            this.comboBox_DBsWithConditions.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_DBsWithConditions.Name = "comboBox_DBsWithConditions";
+            this.comboBox_DBsWithConditions.Size = new System.Drawing.Size(289, 25);
+            this.comboBox_DBsWithConditions.TabIndex = 11;
+            // 
+            // btn_DBsWithConditions
+            // 
+            this.btn_DBsWithConditions.Location = new System.Drawing.Point(28, 32);
+            this.btn_DBsWithConditions.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DBsWithConditions.Name = "btn_DBsWithConditions";
+            this.btn_DBsWithConditions.Size = new System.Drawing.Size(164, 31);
+            this.btn_DBsWithConditions.TabIndex = 10;
+            this.btn_DBsWithConditions.Text = "Get Databases";
+            this.btn_DBsWithConditions.UseVisualStyleBackColor = true;
+            this.btn_DBsWithConditions.Click += new System.EventHandler(this.btn_DBsWithConditions_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -848,6 +886,7 @@
             this.Exercises_2.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -915,6 +954,9 @@
         private System.Windows.Forms.Button btn_TablesLength;
         private System.Windows.Forms.TextBox textBox_TablesLength;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox comboBox_DBsWithConditions;
+        private System.Windows.Forms.Button btn_DBsWithConditions;
     }
 }
 

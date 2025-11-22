@@ -457,5 +457,60 @@ namespace Cloud
 
             return databasesNames;
         }
+
+        private async void btn_DBsWithConditions_Click(object sender, EventArgs e)
+        {
+            List<string> databasesNames = await getDBsWithConditionAsync();
+            List<string> emptyComboBox = new List<string>();
+            emptyComboBox.Add("No such DBs exist");
+
+            comboBox_DBsWithConditions.DataSource = databasesNames.Count > 0 ? databasesNames : emptyComboBox;
+        }
+      
+
+        private async Task<List<string>> getDBsWithConditionAsync()
+        {
+            List<string> databasesNames = new List<string>();
+
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+
+                    if (currentDBProp.Id.Length % 2 != 0)
+                    {
+
+                        int tablesCounter = 0;
+
+                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                        FeedIterator<ContainerProperties> tableIterator =
+                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                        while (tableIterator.HasMoreResults)
+                        {
+                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                            {
+                                tablesCounter++;
+                            }
+                        }
+
+                        if (tablesCounter == 0 || tablesCounter > 2)
+                            databasesNames.Add(currentDBProp.Id + " - " + tablesCounter + " Tables");
+
+
+                    }
+                }
+            }
+
+            return databasesNames;
+        }
+
     }
 }
