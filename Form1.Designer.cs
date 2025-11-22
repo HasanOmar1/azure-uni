@@ -83,6 +83,12 @@
             this.btn_DBsContainTable = new System.Windows.Forms.Button();
             this.textBox_TableNameInput = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.Exercises_2 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.comboBox_TablesLength = new System.Windows.Forms.ComboBox();
+            this.btn_TablesLength = new System.Windows.Forms.Button();
+            this.textBox_TablesLength = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -96,6 +102,8 @@
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.Exercises_2.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -117,6 +125,7 @@
             this.tabControl1.Controls.Add(this.General);
             this.tabControl1.Controls.Add(this.DBandContainer);
             this.tabControl1.Controls.Add(this.Exercises);
+            this.tabControl1.Controls.Add(this.Exercises_2);
             this.tabControl1.Location = new System.Drawing.Point(9, 14);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
@@ -741,11 +750,76 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Table Name";
             // 
+            // Exercises_2
+            // 
+            this.Exercises_2.BackColor = System.Drawing.Color.DimGray;
+            this.Exercises_2.Controls.Add(this.groupBox10);
+            this.Exercises_2.Location = new System.Drawing.Point(4, 22);
+            this.Exercises_2.Name = "Exercises_2";
+            this.Exercises_2.Size = new System.Drawing.Size(755, 536);
+            this.Exercises_2.TabIndex = 3;
+            this.Exercises_2.Text = "Exercises_2";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.BackColor = System.Drawing.Color.Tan;
+            this.groupBox10.Controls.Add(this.comboBox_TablesLength);
+            this.groupBox10.Controls.Add(this.btn_TablesLength);
+            this.groupBox10.Controls.Add(this.textBox_TablesLength);
+            this.groupBox10.Controls.Add(this.label13);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.groupBox10.Location = new System.Drawing.Point(42, 31);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(601, 123);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Tables With Length Longer Than Input";
+            // 
+            // comboBox_TablesLength
+            // 
+            this.comboBox_TablesLength.FormattingEnabled = true;
+            this.comboBox_TablesLength.Location = new System.Drawing.Point(214, 32);
+            this.comboBox_TablesLength.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_TablesLength.Name = "comboBox_TablesLength";
+            this.comboBox_TablesLength.Size = new System.Drawing.Size(289, 25);
+            this.comboBox_TablesLength.TabIndex = 11;
+            // 
+            // btn_TablesLength
+            // 
+            this.btn_TablesLength.Location = new System.Drawing.Point(139, 69);
+            this.btn_TablesLength.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TablesLength.Name = "btn_TablesLength";
+            this.btn_TablesLength.Size = new System.Drawing.Size(212, 31);
+            this.btn_TablesLength.TabIndex = 10;
+            this.btn_TablesLength.Text = "Search For Tables";
+            this.btn_TablesLength.UseVisualStyleBackColor = true;
+            this.btn_TablesLength.Click += new System.EventHandler(this.btn_TablesLength_Click);
+            // 
+            // textBox_TablesLength
+            // 
+            this.textBox_TablesLength.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TablesLength.Location = new System.Drawing.Point(87, 36);
+            this.textBox_TablesLength.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TablesLength.Name = "textBox_TablesLength";
+            this.textBox_TablesLength.Size = new System.Drawing.Size(86, 21);
+            this.textBox_TablesLength.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(24, 36);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 20);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Length";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 600);
+            this.ClientSize = new System.Drawing.Size(849, 610);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
@@ -771,6 +845,9 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.Exercises_2.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -832,6 +909,12 @@
         private System.Windows.Forms.Button btn_DBsContainTable;
         private System.Windows.Forms.TextBox textBox_TableNameInput;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabPage Exercises_2;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.ComboBox comboBox_TablesLength;
+        private System.Windows.Forms.Button btn_TablesLength;
+        private System.Windows.Forms.TextBox textBox_TablesLength;
+        private System.Windows.Forms.Label label13;
     }
 }
 

@@ -415,5 +415,47 @@ namespace Cloud
             return databasesNames;
         }
 
+        private async void btn_TablesLength_Click(object sender, EventArgs e)
+        {
+            List<string> databasesNames = await getTablesWithLengthAsync();
+            List<string> emptyComboBox = new List<string>();
+            emptyComboBox.Add("No Tables Found");
+
+            comboBox_TablesLength.DataSource = databasesNames.Count > 0 ? databasesNames : emptyComboBox;
+        }
+
+        private async Task<List<string>> getTablesWithLengthAsync()
+        {
+            List<string> databasesNames = new List<string>();
+
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            if (currentTableProp.Id.Length > Convert.ToInt32(textBox_TablesLength.Text))
+                            {
+                                databasesNames.Add(currentDBProp.Id + " - " + currentTableProp.Id);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            return databasesNames;
+        }
     }
 }
