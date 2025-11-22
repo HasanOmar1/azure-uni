@@ -546,10 +546,12 @@ namespace Cloud
                             tablesCounter++;
                                                        
                         }
-                        if(tablesCounter == Convert.ToInt32(textBox_TablesLengthX.Text))
-                        {
-                            databasesNames += currentDBProp.Id + " ";
-                        }
+                      
+                    }
+
+                    if (tablesCounter == Convert.ToInt32(textBox_TablesLengthX.Text))
+                    {
+                        databasesNames += currentDBProp.Id + " ";
                     }
 
                 }
