@@ -78,6 +78,11 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.comboBox_DBsWithTablesCount = new System.Windows.Forms.ComboBox();
             this.btn_DBsWithTablesCount = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.comboBox_DBsContainTable = new System.Windows.Forms.ComboBox();
+            this.btn_DBsContainTable = new System.Windows.Forms.Button();
+            this.textBox_TableNameInput = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,6 +95,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -498,6 +504,7 @@
             // Exercises
             // 
             this.Exercises.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Exercises.Controls.Add(this.groupBox9);
             this.Exercises.Controls.Add(this.groupBox8);
             this.Exercises.Controls.Add(this.groupBox7);
             this.Exercises.Controls.Add(this.groupBox6);
@@ -521,7 +528,7 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox6.Size = new System.Drawing.Size(693, 127);
+            this.groupBox6.Size = new System.Drawing.Size(693, 105);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Search Databases Using Substring";
@@ -537,7 +544,7 @@
             // 
             // btn_SearchDB
             // 
-            this.btn_SearchDB.Location = new System.Drawing.Point(110, 74);
+            this.btn_SearchDB.Location = new System.Drawing.Point(129, 61);
             this.btn_SearchDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SearchDB.Name = "btn_SearchDB";
             this.btn_SearchDB.Size = new System.Drawing.Size(212, 31);
@@ -592,18 +599,18 @@
             this.groupBox7.Controls.Add(this.textBox_CheckDB);
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(19, 151);
+            this.groupBox7.Location = new System.Drawing.Point(19, 129);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(693, 127);
+            this.groupBox7.Size = new System.Drawing.Size(693, 109);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Checks if Database Exists";
             // 
             // btn_DoesDBExist
             // 
-            this.btn_DoesDBExist.Location = new System.Drawing.Point(206, 80);
+            this.btn_DoesDBExist.Location = new System.Drawing.Point(129, 64);
             this.btn_DoesDBExist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DoesDBExist.Name = "btn_DoesDBExist";
             this.btn_DoesDBExist.Size = new System.Drawing.Size(212, 31);
@@ -648,11 +655,11 @@
             this.groupBox8.Controls.Add(this.comboBox_DBsWithTablesCount);
             this.groupBox8.Controls.Add(this.btn_DBsWithTablesCount);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(19, 282);
+            this.groupBox8.Location = new System.Drawing.Point(19, 242);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(693, 127);
+            this.groupBox8.Size = new System.Drawing.Size(693, 95);
             this.groupBox8.TabIndex = 10;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Databases with Count Of Tables";
@@ -676,6 +683,63 @@
             this.btn_DBsWithTablesCount.Text = "Get Databases With Their Tables Count";
             this.btn_DBsWithTablesCount.UseVisualStyleBackColor = true;
             this.btn_DBsWithTablesCount.Click += new System.EventHandler(this.btn_DBsWithTablesCount_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.Tan;
+            this.groupBox9.Controls.Add(this.textBox_TableNameInput);
+            this.groupBox9.Controls.Add(this.comboBox_DBsContainTable);
+            this.groupBox9.Controls.Add(this.label12);
+            this.groupBox9.Controls.Add(this.btn_DBsContainTable);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(19, 341);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(693, 143);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Databases That Contain Table";
+            // 
+            // comboBox_DBsContainTable
+            // 
+            this.comboBox_DBsContainTable.FormattingEnabled = true;
+            this.comboBox_DBsContainTable.Location = new System.Drawing.Point(321, 43);
+            this.comboBox_DBsContainTable.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_DBsContainTable.Name = "comboBox_DBsContainTable";
+            this.comboBox_DBsContainTable.Size = new System.Drawing.Size(320, 28);
+            this.comboBox_DBsContainTable.TabIndex = 6;
+            // 
+            // btn_DBsContainTable
+            // 
+            this.btn_DBsContainTable.Location = new System.Drawing.Point(129, 89);
+            this.btn_DBsContainTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DBsContainTable.Name = "btn_DBsContainTable";
+            this.btn_DBsContainTable.Size = new System.Drawing.Size(291, 31);
+            this.btn_DBsContainTable.TabIndex = 5;
+            this.btn_DBsContainTable.Text = "Get Databases That Contain The Table";
+            this.btn_DBsContainTable.UseVisualStyleBackColor = true;
+            this.btn_DBsContainTable.Click += new System.EventHandler(this.btn_DBsContainTable_Click);
+            // 
+            // textBox_TableNameInput
+            // 
+            this.textBox_TableNameInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TableNameInput.Location = new System.Drawing.Point(129, 48);
+            this.textBox_TableNameInput.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TableNameInput.Name = "textBox_TableNameInput";
+            this.textBox_TableNameInput.Size = new System.Drawing.Size(163, 21);
+            this.textBox_TableNameInput.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(31, 48);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(94, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Table Name";
             // 
             // Form1
             // 
@@ -705,6 +769,8 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -761,6 +827,11 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.ComboBox comboBox_DBsWithTablesCount;
         private System.Windows.Forms.Button btn_DBsWithTablesCount;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ComboBox comboBox_DBsContainTable;
+        private System.Windows.Forms.Button btn_DBsContainTable;
+        private System.Windows.Forms.TextBox textBox_TableNameInput;
+        private System.Windows.Forms.Label label12;
     }
 }
 

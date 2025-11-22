@@ -304,14 +304,13 @@ namespace Cloud
 
         private async void btn_DoesDBExist_Click(object sender, EventArgs e)
         {
-            if(await DoesDBExistInCloudAsync())
-            {
+            if(await DoesDBExistInCloudAsync())    
                 textBox_DoesDBExist.Text = "Database Exists in the Cloud!";
-            }
             else
-            {
                 textBox_DoesDBExist.Text = "Database Does Not Exist in the Cloud!";
-            }
+            
+
+
         }
 
         private async Task<bool> DoesDBExistInCloudAsync()
@@ -371,5 +370,50 @@ namespace Cloud
 
             return databasesNames;
         }
+
+        private async void btn_DBsContainTable_Click(object sender, EventArgs e)
+        {
+            List<string> databasesNames = await getDBsNamesThatContainsTableAsync();
+            List<string> emptyComboBox = new List<string>();
+            emptyComboBox.Add("No such DBs exist");
+
+            comboBox_DBsContainTable.DataSource = databasesNames.Count > 0 ?  databasesNames : emptyComboBox;
+        }
+
+
+        private async Task<List<string>> getDBsNamesThatContainsTableAsync()
+        {
+            List<string> databasesNames = new List<string>();
+         
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            if(currentTableProp.Id.ToLower().Equals(textBox_TableNameInput.Text.ToLower()))
+                            {
+                                databasesNames.Add(currentDBProp.Id);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            return databasesNames;
+        }
+
     }
 }
