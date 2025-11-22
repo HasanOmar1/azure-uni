@@ -92,6 +92,11 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.comboBox_DBsWithConditions = new System.Windows.Forms.ComboBox();
             this.btn_DBsWithConditions = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btn_TablesLengthX = new System.Windows.Forms.Button();
+            this.textBox_TablesLengthX = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_DBsWithLengthX = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -108,6 +113,7 @@
             this.Exercises_2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -757,6 +763,7 @@
             // Exercises_2
             // 
             this.Exercises_2.BackColor = System.Drawing.Color.DimGray;
+            this.Exercises_2.Controls.Add(this.groupBox12);
             this.Exercises_2.Controls.Add(this.groupBox11);
             this.Exercises_2.Controls.Add(this.groupBox10);
             this.Exercises_2.Location = new System.Drawing.Point(4, 22);
@@ -853,6 +860,62 @@
             this.btn_DBsWithConditions.UseVisualStyleBackColor = true;
             this.btn_DBsWithConditions.Click += new System.EventHandler(this.btn_DBsWithConditions_Click);
             // 
+            // groupBox12
+            // 
+            this.groupBox12.BackColor = System.Drawing.Color.Tan;
+            this.groupBox12.Controls.Add(this.textBox_DBsWithLengthX);
+            this.groupBox12.Controls.Add(this.btn_TablesLengthX);
+            this.groupBox12.Controls.Add(this.textBox_TablesLengthX);
+            this.groupBox12.Controls.Add(this.label14);
+            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.groupBox12.Location = new System.Drawing.Point(42, 289);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(601, 123);
+            this.groupBox12.TabIndex = 12;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "DBs With X Tables";
+            // 
+            // btn_TablesLengthX
+            // 
+            this.btn_TablesLengthX.Location = new System.Drawing.Point(139, 69);
+            this.btn_TablesLengthX.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TablesLengthX.Name = "btn_TablesLengthX";
+            this.btn_TablesLengthX.Size = new System.Drawing.Size(212, 31);
+            this.btn_TablesLengthX.TabIndex = 10;
+            this.btn_TablesLengthX.Text = "Search For DBs with Length";
+            this.btn_TablesLengthX.UseVisualStyleBackColor = true;
+            this.btn_TablesLengthX.Click += new System.EventHandler(this.btn_TablesLengthX_Click);
+            // 
+            // textBox_TablesLengthX
+            // 
+            this.textBox_TablesLengthX.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TablesLengthX.Location = new System.Drawing.Point(87, 36);
+            this.textBox_TablesLengthX.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TablesLengthX.Name = "textBox_TablesLengthX";
+            this.textBox_TablesLengthX.Size = new System.Drawing.Size(86, 21);
+            this.textBox_TablesLengthX.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 36);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 20);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Length";
+            // 
+            // textBox_DBsWithLengthX
+            // 
+            this.textBox_DBsWithLengthX.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_DBsWithLengthX.Location = new System.Drawing.Point(208, 36);
+            this.textBox_DBsWithLengthX.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DBsWithLengthX.Name = "textBox_DBsWithLengthX";
+            this.textBox_DBsWithLengthX.ReadOnly = true;
+            this.textBox_DBsWithLengthX.Size = new System.Drawing.Size(320, 21);
+            this.textBox_DBsWithLengthX.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -887,6 +950,8 @@
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -957,6 +1022,11 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.ComboBox comboBox_DBsWithConditions;
         private System.Windows.Forms.Button btn_DBsWithConditions;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox textBox_DBsWithLengthX;
+        private System.Windows.Forms.Button btn_TablesLengthX;
+        private System.Windows.Forms.TextBox textBox_TablesLengthX;
+        private System.Windows.Forms.Label label14;
     }
 }
 
