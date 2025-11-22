@@ -426,6 +426,7 @@ namespace Cloud
 
         private async Task<List<string>> getTablesWithLengthAsync()
         {
+            if(String.IsNullOrEmpty(textBox_TablesLength.Text)) return new List<string>();
             List<string> databasesNames = new List<string>();
 
 
@@ -523,6 +524,13 @@ namespace Cloud
 
         private async Task<string> getDBsWithLengthAsync()
         {
+
+            if (String.IsNullOrEmpty(textBox_TablesLengthX.Text))
+            {
+                return "No DBs Found With 0 Tables";
+            }
+            
+
             string databasesNames = "";
 
             FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
