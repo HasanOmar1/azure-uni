@@ -304,18 +304,18 @@ namespace Cloud
 
         private async void btn_DoesDBExist_Click(object sender, EventArgs e)
         {
-            if(await DoesDBExistInCloudAsync())    
+            if (await DoesDBExistInCloudAsync())
                 textBox_DoesDBExist.Text = "Database Exists in the Cloud!";
             else
                 textBox_DoesDBExist.Text = "Database Does Not Exist in the Cloud!";
-            
+
 
 
         }
 
         private async Task<bool> DoesDBExistInCloudAsync()
         {
-            
+
 
             FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
 
@@ -341,7 +341,7 @@ namespace Cloud
         private async Task<List<string>> getDBsNamesWithTheirAmountOfTablesAsync()
         {
             List<string> databasesNames = new List<string>();
-           
+
 
             FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
 
@@ -377,14 +377,14 @@ namespace Cloud
             List<string> emptyComboBox = new List<string>();
             emptyComboBox.Add("No such DBs exist");
 
-            comboBox_DBsContainTable.DataSource = databasesNames.Count > 0 ?  databasesNames : emptyComboBox;
+            comboBox_DBsContainTable.DataSource = databasesNames.Count > 0 ? databasesNames : emptyComboBox;
         }
 
 
         private async Task<List<string>> getDBsNamesThatContainsTableAsync()
         {
             List<string> databasesNames = new List<string>();
-         
+
 
             FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
 
@@ -402,7 +402,7 @@ namespace Cloud
                     {
                         foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
                         {
-                            if(currentTableProp.Id.ToLower().Equals(textBox_TableNameInput.Text.ToLower()))
+                            if (currentTableProp.Id.ToLower().Equals(textBox_TableNameInput.Text.ToLower()))
                             {
                                 databasesNames.Add(currentDBProp.Id);
                             }
@@ -426,7 +426,7 @@ namespace Cloud
 
         private async Task<List<string>> getTablesWithLengthAsync()
         {
-            if(String.IsNullOrEmpty(textBox_TablesLength.Text)) return new List<string>();
+            if (String.IsNullOrEmpty(textBox_TablesLength.Text)) return new List<string>();
             List<string> databasesNames = new List<string>();
 
 
@@ -467,7 +467,7 @@ namespace Cloud
 
             comboBox_DBsWithConditions.DataSource = databasesNames.Count > 0 ? databasesNames : emptyComboBox;
         }
-      
+
 
         private async Task<List<string>> getDBsWithConditionAsync()
         {
@@ -518,7 +518,7 @@ namespace Cloud
             string databasesNames = await getDBsWithLengthAsync();
 
             textBox_DBsWithLengthX.Text = databasesNames.Length > 0 ? databasesNames : "No DBs Found With " + textBox_TablesLengthX.Text + " Tables";
-          
+
         }
 
 
@@ -529,7 +529,7 @@ namespace Cloud
             {
                 return "No DBs Found With 0 Tables";
             }
-            
+
 
             string databasesNames = "";
 
@@ -552,14 +552,58 @@ namespace Cloud
                         foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
                         {
                             tablesCounter++;
-                                                       
+
                         }
-                      
+
                     }
 
                     if (tablesCounter == Convert.ToInt32(textBox_TablesLengthX.Text))
                     {
                         databasesNames += currentDBProp.Id + " ";
+                    }
+
+                }
+            }
+
+            return databasesNames;
+        }
+
+        private async void btn_Ex16SearchForDBs_Click(object sender, EventArgs e)
+        {
+            textBox_Ex16DBs.Text = await getDBsNamesWithTablesContainLengthAsync();
+
+        }
+
+        private async Task<string> getDBsNamesWithTablesContainLengthAsync()
+        {
+            if (String.IsNullOrEmpty(textBox_Ex16Length.Text)) return "";
+
+            string databasesNames = "";
+
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            if (currentTableProp.Id.Length > Convert.ToInt32(textBox_Ex16Length.Text))
+                            {
+                                databasesNames += currentDBProp.Id + " ";
+                                break;
+
+                            }
+                        }
                     }
 
                 }
