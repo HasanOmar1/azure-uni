@@ -96,13 +96,33 @@
             this.btn_TablesLength = new System.Windows.Forms.Button();
             this.textBox_TablesLength = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabPage_Exercises_3 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBox_Ex16DBs = new System.Windows.Forms.TextBox();
             this.btn_Ex16SearchForDBs = new System.Windows.Forms.Button();
             this.textBox_Ex16Length = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox_Ex16DBs = new System.Windows.Forms.TextBox();
+            this.btn_databaseCounter = new System.Windows.Forms.Button();
+            this.tabPage_Exercises_4 = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.btn_SaveDriverDataInCloud = new System.Windows.Forms.Button();
+            this.textBox_DBNameEx25 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox_ContainerNameEx25 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tabPage_Ex26 = new System.Windows.Forms.TabPage();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.btn_GetDBNamesForEx26 = new System.Windows.Forms.Button();
+            this.comboBox_DBsNamesForEx26 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox_ContainersForEx26 = new System.Windows.Forms.ComboBox();
+            this.richTextBox_JsonData = new System.Windows.Forms.RichTextBox();
+            this.btn_LoadJsonIntoScreen = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Insert = new System.Windows.Forms.RadioButton();
+            this.radioButton_Replace = new System.Windows.Forms.RadioButton();
+            this.radioButton_Delete = new System.Windows.Forms.RadioButton();
+            this.btn_PerformSelectedActivity = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,6 +142,11 @@
             this.groupBox10.SuspendLayout();
             this.tabPage_Exercises_3.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.tabPage_Exercises_4.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.tabPage_Ex26.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -145,6 +170,8 @@
             this.tabControl1.Controls.Add(this.tabPage_Exercises);
             this.tabControl1.Controls.Add(this.tabPage_Exercises_2);
             this.tabControl1.Controls.Add(this.tabPage_Exercises_3);
+            this.tabControl1.Controls.Add(this.tabPage_Exercises_4);
+            this.tabControl1.Controls.Add(this.tabPage_Ex26);
             this.tabControl1.Location = new System.Drawing.Point(12, 17);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -154,7 +181,7 @@
             // 
             // tabPage_General
             // 
-            this.tabPage_General.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tabPage_General.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tabPage_General.Controls.Add(this.groupBox2);
             this.tabPage_General.Controls.Add(this.groupBox1);
             this.tabPage_General.Controls.Add(this.btn_CreateCosmosClient);
@@ -757,7 +784,7 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox11);
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
             this.tabPage_Exercises_2.Size = new System.Drawing.Size(1009, 663);
             this.tabPage_Exercises_2.TabIndex = 3;
@@ -772,9 +799,9 @@
             this.groupBox12.Controls.Add(this.label14);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox12.Location = new System.Drawing.Point(56, 356);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox12.Size = new System.Drawing.Size(801, 151);
             this.groupBox12.TabIndex = 12;
             this.groupBox12.TabStop = false;
@@ -827,9 +854,9 @@
             this.groupBox11.Controls.Add(this.btn_DBsWithConditions);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox11.Location = new System.Drawing.Point(56, 197);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox11.Size = new System.Drawing.Size(801, 151);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
@@ -864,9 +891,9 @@
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox10.Location = new System.Drawing.Point(56, 38);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(801, 151);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
@@ -911,13 +938,6 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "Length";
             // 
-            // btn_databaseCounter
-            // 
-            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
-            this.btn_databaseCounter.Name = "btn_databaseCounter";
-            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
-            this.btn_databaseCounter.TabIndex = 0;
-            // 
             // tabPage_Exercises_3
             // 
             this.tabPage_Exercises_3.BackColor = System.Drawing.Color.DimGray;
@@ -944,6 +964,13 @@
             this.groupBox13.TabIndex = 13;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "DBs Names With Tables Contain Length Longer Than Input";
+            // 
+            // textBox_Ex16DBs
+            // 
+            this.textBox_Ex16DBs.Location = new System.Drawing.Point(303, 41);
+            this.textBox_Ex16DBs.Name = "textBox_Ex16DBs";
+            this.textBox_Ex16DBs.Size = new System.Drawing.Size(359, 27);
+            this.textBox_Ex16DBs.TabIndex = 11;
             // 
             // btn_Ex16SearchForDBs
             // 
@@ -975,12 +1002,227 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Length";
             // 
-            // textBox_Ex16DBs
+            // btn_databaseCounter
             // 
-            this.textBox_Ex16DBs.Location = new System.Drawing.Point(303, 41);
-            this.textBox_Ex16DBs.Name = "textBox_Ex16DBs";
-            this.textBox_Ex16DBs.Size = new System.Drawing.Size(359, 27);
-            this.textBox_Ex16DBs.TabIndex = 11;
+            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
+            this.btn_databaseCounter.Name = "btn_databaseCounter";
+            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
+            this.btn_databaseCounter.TabIndex = 0;
+            // 
+            // tabPage_Exercises_4
+            // 
+            this.tabPage_Exercises_4.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Exercises_4.Controls.Add(this.groupBox14);
+            this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_Exercises_4.Name = "tabPage_Exercises_4";
+            this.tabPage_Exercises_4.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Exercises_4.TabIndex = 5;
+            this.tabPage_Exercises_4.Text = "Exercises_4(25)";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.BackColor = System.Drawing.Color.Tan;
+            this.groupBox14.Controls.Add(this.btn_SaveDriverDataInCloud);
+            this.groupBox14.Controls.Add(this.textBox_DBNameEx25);
+            this.groupBox14.Controls.Add(this.label16);
+            this.groupBox14.Controls.Add(this.textBox_ContainerNameEx25);
+            this.groupBox14.Controls.Add(this.label17);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(21, 43);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox14.Size = new System.Drawing.Size(924, 135);
+            this.groupBox14.TabIndex = 9;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Demo For Ex25, Add Driver Data To Cloud";
+            // 
+            // btn_SaveDriverDataInCloud
+            // 
+            this.btn_SaveDriverDataInCloud.Location = new System.Drawing.Point(423, 48);
+            this.btn_SaveDriverDataInCloud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_SaveDriverDataInCloud.Name = "btn_SaveDriverDataInCloud";
+            this.btn_SaveDriverDataInCloud.Size = new System.Drawing.Size(283, 38);
+            this.btn_SaveDriverDataInCloud.TabIndex = 5;
+            this.btn_SaveDriverDataInCloud.Text = "Create Data in Cloud";
+            this.btn_SaveDriverDataInCloud.UseVisualStyleBackColor = true;
+            // 
+            // textBox_DBNameEx25
+            // 
+            this.textBox_DBNameEx25.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_DBNameEx25.Location = new System.Drawing.Point(123, 35);
+            this.textBox_DBNameEx25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DBNameEx25.Name = "textBox_DBNameEx25";
+            this.textBox_DBNameEx25.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DBNameEx25.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(21, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Database";
+            // 
+            // textBox_ContainerNameEx25
+            // 
+            this.textBox_ContainerNameEx25.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ContainerNameEx25.Location = new System.Drawing.Point(123, 74);
+            this.textBox_ContainerNameEx25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ContainerNameEx25.Name = "textBox_ContainerNameEx25";
+            this.textBox_ContainerNameEx25.Size = new System.Drawing.Size(236, 24);
+            this.textBox_ContainerNameEx25.TabIndex = 3;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(20, 74);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 25);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Container";
+            // 
+            // tabPage_Ex26
+            // 
+            this.tabPage_Ex26.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Ex26.Controls.Add(this.groupBox16);
+            this.tabPage_Ex26.Controls.Add(this.groupBox15);
+            this.tabPage_Ex26.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_Ex26.Name = "tabPage_Ex26";
+            this.tabPage_Ex26.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Ex26.TabIndex = 6;
+            this.tabPage_Ex26.Text = "Ex_26";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.BackColor = System.Drawing.Color.Tan;
+            this.groupBox15.Controls.Add(this.btn_LoadJsonIntoScreen);
+            this.groupBox15.Controls.Add(this.comboBox_ContainersForEx26);
+            this.groupBox15.Controls.Add(this.richTextBox_JsonData);
+            this.groupBox15.Controls.Add(this.label18);
+            this.groupBox15.Controls.Add(this.comboBox_DBsNamesForEx26);
+            this.groupBox15.Controls.Add(this.btn_GetDBNamesForEx26);
+            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(47, 34);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(932, 371);
+            this.groupBox15.TabIndex = 0;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Ex26";
+            // 
+            // btn_GetDBNamesForEx26
+            // 
+            this.btn_GetDBNamesForEx26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetDBNamesForEx26.Location = new System.Drawing.Point(18, 36);
+            this.btn_GetDBNamesForEx26.Name = "btn_GetDBNamesForEx26";
+            this.btn_GetDBNamesForEx26.Size = new System.Drawing.Size(228, 32);
+            this.btn_GetDBNamesForEx26.TabIndex = 0;
+            this.btn_GetDBNamesForEx26.Text = "Get DBs For Ex26";
+            this.btn_GetDBNamesForEx26.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_DBsNamesForEx26
+            // 
+            this.comboBox_DBsNamesForEx26.FormattingEnabled = true;
+            this.comboBox_DBsNamesForEx26.Location = new System.Drawing.Point(285, 36);
+            this.comboBox_DBsNamesForEx26.Name = "comboBox_DBsNamesForEx26";
+            this.comboBox_DBsNamesForEx26.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_DBsNamesForEx26.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(22, 101);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(224, 26);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Tables of selected DB";
+            // 
+            // comboBox_ContainersForEx26
+            // 
+            this.comboBox_ContainersForEx26.FormattingEnabled = true;
+            this.comboBox_ContainersForEx26.Location = new System.Drawing.Point(285, 93);
+            this.comboBox_ContainersForEx26.Name = "comboBox_ContainersForEx26";
+            this.comboBox_ContainersForEx26.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_ContainersForEx26.TabIndex = 3;
+            // 
+            // richTextBox_JsonData
+            // 
+            this.richTextBox_JsonData.Location = new System.Drawing.Point(27, 154);
+            this.richTextBox_JsonData.Name = "richTextBox_JsonData";
+            this.richTextBox_JsonData.Size = new System.Drawing.Size(833, 132);
+            this.richTextBox_JsonData.TabIndex = 0;
+            this.richTextBox_JsonData.Text = "";
+            // 
+            // btn_LoadJsonIntoScreen
+            // 
+            this.btn_LoadJsonIntoScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LoadJsonIntoScreen.Location = new System.Drawing.Point(27, 308);
+            this.btn_LoadJsonIntoScreen.Name = "btn_LoadJsonIntoScreen";
+            this.btn_LoadJsonIntoScreen.Size = new System.Drawing.Size(228, 32);
+            this.btn_LoadJsonIntoScreen.TabIndex = 4;
+            this.btn_LoadJsonIntoScreen.Text = "Load JSON File";
+            this.btn_LoadJsonIntoScreen.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.BackColor = System.Drawing.Color.Tan;
+            this.groupBox16.Controls.Add(this.btn_PerformSelectedActivity);
+            this.groupBox16.Controls.Add(this.radioButton_Delete);
+            this.groupBox16.Controls.Add(this.radioButton_Replace);
+            this.groupBox16.Controls.Add(this.radioButton_Insert);
+            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox16.Location = new System.Drawing.Point(47, 411);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(932, 103);
+            this.groupBox16.TabIndex = 1;
+            this.groupBox16.TabStop = false;
+            // 
+            // radioButton_Insert
+            // 
+            this.radioButton_Insert.AutoSize = true;
+            this.radioButton_Insert.Location = new System.Drawing.Point(26, 40);
+            this.radioButton_Insert.Name = "radioButton_Insert";
+            this.radioButton_Insert.Size = new System.Drawing.Size(87, 30);
+            this.radioButton_Insert.TabIndex = 0;
+            this.radioButton_Insert.TabStop = true;
+            this.radioButton_Insert.Text = "Insert";
+            this.radioButton_Insert.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Replace
+            // 
+            this.radioButton_Replace.AutoSize = true;
+            this.radioButton_Replace.Location = new System.Drawing.Point(313, 40);
+            this.radioButton_Replace.Name = "radioButton_Replace";
+            this.radioButton_Replace.Size = new System.Drawing.Size(113, 30);
+            this.radioButton_Replace.TabIndex = 1;
+            this.radioButton_Replace.TabStop = true;
+            this.radioButton_Replace.Text = "Replace";
+            this.radioButton_Replace.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Delete
+            // 
+            this.radioButton_Delete.AutoSize = true;
+            this.radioButton_Delete.Location = new System.Drawing.Point(172, 40);
+            this.radioButton_Delete.Name = "radioButton_Delete";
+            this.radioButton_Delete.Size = new System.Drawing.Size(96, 30);
+            this.radioButton_Delete.TabIndex = 2;
+            this.radioButton_Delete.TabStop = true;
+            this.radioButton_Delete.Text = "Delete";
+            this.radioButton_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_PerformSelectedActivity
+            // 
+            this.btn_PerformSelectedActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PerformSelectedActivity.Location = new System.Drawing.Point(470, 31);
+            this.btn_PerformSelectedActivity.Name = "btn_PerformSelectedActivity";
+            this.btn_PerformSelectedActivity.Size = new System.Drawing.Size(433, 39);
+            this.btn_PerformSelectedActivity.TabIndex = 5;
+            this.btn_PerformSelectedActivity.Text = "Perform Selected Activity In Cloud";
+            this.btn_PerformSelectedActivity.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1021,6 +1263,14 @@
             this.tabPage_Exercises_3.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.tabPage_Exercises_4.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.tabPage_Ex26.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1102,6 +1352,26 @@
         private System.Windows.Forms.Button btn_Ex16SearchForDBs;
         private System.Windows.Forms.TextBox textBox_Ex16Length;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPage_Exercises_4;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button btn_SaveDriverDataInCloud;
+        private System.Windows.Forms.TextBox textBox_DBNameEx25;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox_ContainerNameEx25;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TabPage tabPage_Ex26;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBox_DBsNamesForEx26;
+        private System.Windows.Forms.Button btn_GetDBNamesForEx26;
+        private System.Windows.Forms.ComboBox comboBox_ContainersForEx26;
+        private System.Windows.Forms.RichTextBox richTextBox_JsonData;
+        private System.Windows.Forms.Button btn_LoadJsonIntoScreen;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.RadioButton radioButton_Delete;
+        private System.Windows.Forms.RadioButton radioButton_Replace;
+        private System.Windows.Forms.RadioButton radioButton_Insert;
+        private System.Windows.Forms.Button btn_PerformSelectedActivity;
     }
 }
 
