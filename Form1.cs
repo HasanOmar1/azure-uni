@@ -628,7 +628,7 @@ namespace Cloud
             driver.Passengers = new Passenger[2];
 
             Passenger firstPassenger = new Passenger { Name = "Ward", SpecialRequests = "Be on time", Age = 21 };
-            Passenger secondPassenger = new Passenger { Name = "Essa" };
+            Passenger secondPassenger = new Passenger { Name = "Essa", SpecialRequests = "Wait for me", Age = 22 };
 
             driver.Passengers[0] = firstPassenger;
             driver.Passengers[1] = secondPassenger;
@@ -641,9 +641,24 @@ namespace Cloud
             await SaveDriverDataIntoCloudAsync(db, container, driver);
         }
 
-        private async Task SaveDriverDataIntoCloudAsync(string db, string container, Driver driver)
+        private async Task SaveDriverDataIntoCloudAsync(string db, string container, Driver driverData)
         {
-            throw new NotImplementedException();
+            DatabaseResponse databaseResponse = await myCosmosClient.CreateDatabaseIfNotExistsAsync(db);
+
+            if (databaseResponse.StatusCode == System.Net.HttpStatusCode.OK ||
+                databaseResponse.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                Database dbRefObj = databaseResponse.Database;
+                ContainerResponse containerResponse = await dbRefObj.CreateContainerIfNotExistsAsync(container, "/id");
+
+                if (containerResponse.StatusCode == System.Net.HttpStatusCode.OK ||
+                    containerResponse.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    Microsoft.Azure.Cosmos.Container containerRefObj = containerResponse.Container;
+                    await containerRefObj.CreateItemAsync<Driver>(driverData);
+
+                }
+            }
         }
     }
 }
