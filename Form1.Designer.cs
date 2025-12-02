@@ -1047,6 +1047,7 @@
             this.btn_SaveDriverDataInCloud.TabIndex = 5;
             this.btn_SaveDriverDataInCloud.Text = "Create Data in Cloud";
             this.btn_SaveDriverDataInCloud.UseVisualStyleBackColor = true;
+            this.btn_SaveDriverDataInCloud.Click += new System.EventHandler(this.btn_SaveDriverDataInCloud_Click);
             // 
             // textBox_DBNameEx25
             // 

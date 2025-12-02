@@ -2,5 +2,7 @@
 {
     public class CabStation
     {
+        public string address { get; set; }
+
     }
 }

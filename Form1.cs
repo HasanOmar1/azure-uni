@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
+using Cloud.Models;
 
 
 namespace Cloud
@@ -610,6 +611,39 @@ namespace Cloud
             }
 
             return databasesNames;
+        }
+
+        private async void btn_SaveDriverDataInCloud_Click(object sender, EventArgs e)
+        {
+            // Read the destination within cloud
+            string db = textBox_DBNameEx25.Text;
+            string container = textBox_ContainerNameEx25.Text;
+
+            // Get Driver details: ( Hardcoded )
+            Driver driver = new Driver();
+            driver.Id = Guid.NewGuid().ToString();
+            driver.Name = "Hasan";
+            driver.Age = 23.5;
+            driver.YearsInService = 6;
+            driver.Passengers = new Passenger[2];
+
+            Passenger firstPassenger = new Passenger { Name = "Ward", SpecialRequests = "Be on time", Age = 21 };
+            Passenger secondPassenger = new Passenger { Name = "Essa" };
+
+            driver.Passengers[0] = firstPassenger;
+            driver.Passengers[1] = secondPassenger;
+
+            driver.CabStations = new CabStation[1];
+            CabStation myStation = new CabStation { address = "Haifa" };
+            driver.CabStations[0] = myStation;
+
+            // Save the above data with the defined cloud destination
+            await SaveDriverDataIntoCloudAsync(db, container, driver);
+        }
+
+        private async Task SaveDriverDataIntoCloudAsync(string db, string container, Driver driver)
+        {
+            throw new NotImplementedException();
         }
     }
 }
