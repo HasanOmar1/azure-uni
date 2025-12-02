@@ -123,6 +123,7 @@
             this.radioButton_Replace = new System.Windows.Forms.RadioButton();
             this.radioButton_Delete = new System.Windows.Forms.RadioButton();
             this.btn_PerformSelectedActivity = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1099,6 +1100,7 @@
             // groupBox15
             // 
             this.groupBox15.BackColor = System.Drawing.Color.Tan;
+            this.groupBox15.Controls.Add(this.label19);
             this.groupBox15.Controls.Add(this.btn_LoadJsonIntoScreen);
             this.groupBox15.Controls.Add(this.comboBox_ContainersForEx26);
             this.groupBox15.Controls.Add(this.richTextBox_JsonData);
@@ -1151,7 +1153,7 @@
             // 
             // richTextBox_JsonData
             // 
-            this.richTextBox_JsonData.Location = new System.Drawing.Point(27, 154);
+            this.richTextBox_JsonData.Location = new System.Drawing.Point(26, 173);
             this.richTextBox_JsonData.Name = "richTextBox_JsonData";
             this.richTextBox_JsonData.Size = new System.Drawing.Size(833, 132);
             this.richTextBox_JsonData.TabIndex = 0;
@@ -1160,7 +1162,7 @@
             // btn_LoadJsonIntoScreen
             // 
             this.btn_LoadJsonIntoScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadJsonIntoScreen.Location = new System.Drawing.Point(27, 308);
+            this.btn_LoadJsonIntoScreen.Location = new System.Drawing.Point(27, 324);
             this.btn_LoadJsonIntoScreen.Name = "btn_LoadJsonIntoScreen";
             this.btn_LoadJsonIntoScreen.Size = new System.Drawing.Size(228, 32);
             this.btn_LoadJsonIntoScreen.TabIndex = 4;
@@ -1217,12 +1219,22 @@
             // btn_PerformSelectedActivity
             // 
             this.btn_PerformSelectedActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PerformSelectedActivity.Location = new System.Drawing.Point(470, 31);
+            this.btn_PerformSelectedActivity.Location = new System.Drawing.Point(474, 31);
             this.btn_PerformSelectedActivity.Name = "btn_PerformSelectedActivity";
             this.btn_PerformSelectedActivity.Size = new System.Drawing.Size(433, 39);
             this.btn_PerformSelectedActivity.TabIndex = 5;
             this.btn_PerformSelectedActivity.Text = "Perform Selected Activity In Cloud";
             this.btn_PerformSelectedActivity.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(22, 144);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(273, 24);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Type JSON or Select From File";
             // 
             // Form1
             // 
@@ -1372,6 +1384,7 @@
         private System.Windows.Forms.RadioButton radioButton_Replace;
         private System.Windows.Forms.RadioButton radioButton_Insert;
         private System.Windows.Forms.Button btn_PerformSelectedActivity;
+        private System.Windows.Forms.Label label19;
     }
 }
 
