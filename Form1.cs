@@ -892,7 +892,7 @@ namespace Cloud
             // Person Data (Hardcoded)
             Person p1 = new Person();
             p1.id = Guid.NewGuid().ToString();
-            p1.Name = "Hasan";
+            p1.Name = textBox_Ex25_PersonName.Text;
             p1.Age = 23.6;
             p1.EyesColor = "Brown";
 

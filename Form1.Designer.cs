@@ -145,6 +145,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox_Ex25_ContainerName = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.textBox_Ex25_PersonName = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1469,6 +1471,8 @@
             // groupBox20
             // 
             this.groupBox20.BackColor = System.Drawing.Color.Tan;
+            this.groupBox20.Controls.Add(this.textBox_Ex25_PersonName);
+            this.groupBox20.Controls.Add(this.label26);
             this.groupBox20.Controls.Add(this.btn_Ex25_PersonData);
             this.groupBox20.Controls.Add(this.textBox_Ex25_DBName);
             this.groupBox20.Controls.Add(this.label24);
@@ -1479,7 +1483,7 @@
             this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox20.Size = new System.Drawing.Size(693, 110);
+            this.groupBox20.Size = new System.Drawing.Size(693, 150);
             this.groupBox20.TabIndex = 10;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Ex25, Person Data To Cloud";
@@ -1534,6 +1538,26 @@
             this.label25.Size = new System.Drawing.Size(78, 20);
             this.label25.TabIndex = 4;
             this.label25.Text = "Container";
+            // 
+            // textBox_Ex25_PersonName
+            // 
+            this.textBox_Ex25_PersonName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex25_PersonName.Location = new System.Drawing.Point(118, 95);
+            this.textBox_Ex25_PersonName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Ex25_PersonName.Name = "textBox_Ex25_PersonName";
+            this.textBox_Ex25_PersonName.Size = new System.Drawing.Size(178, 21);
+            this.textBox_Ex25_PersonName.TabIndex = 6;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(9, 96);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(105, 20);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "Person Name";
             // 
             // Form1
             // 
@@ -1713,6 +1737,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox_Ex25_ContainerName;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox_Ex25_PersonName;
+        private System.Windows.Forms.Label label26;
     }
 }
 
