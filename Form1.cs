@@ -613,6 +613,152 @@ namespace Cloud
             return databasesNames;
         }
 
+        // Ex17-1
+        private async void btn_Ex17_1_Click(object sender, EventArgs e)
+        {
+
+            textBox_Ex17_1_Results.Text = await getDBsThatStartsWithTheInputAndTableAsync();
+
+        }
+
+
+        private async Task<string> getDBsThatStartsWithTheInputAndTableAsync()
+        {
+
+            if(textBox_Ex17_1.Text.Length == 0) return "";
+            
+            string databasesNames = "";
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    if (currentDBProp.Id.ToLower().StartsWith(textBox_Ex17_1.Text.ToLower()))
+                    {
+                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                        FeedIterator<ContainerProperties> tableIterator =
+                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                        while (tableIterator.HasMoreResults)
+                        {
+                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                            {
+                                if (currentTableProp.Id.ToLower().StartsWith(textBox_Ex17_1.Text.ToLower()))
+                                {
+                                    databasesNames += currentDBProp.Id + " ";
+                                    break;
+
+                                }
+                            }
+                            break;
+                        }
+
+
+                    }
+                }
+            }
+
+            return databasesNames;
+        }
+
+
+        // Ex17-2
+        private async void btn_Ex17_2_Click(object sender, EventArgs e)
+        {
+            textBox_Ex17_2_Results.Text = await getLongestDBThatStartsWithTheInputAndTableAsync();
+        }
+
+        private async Task<string> getLongestDBThatStartsWithTheInputAndTableAsync()
+        {
+
+            if (textBox_Ex17_2.Text.Length == 0) return "";
+
+            string databasesNames = "";
+            int maxLength = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+
+                    if (currentDBProp.Id.ToLower().StartsWith(textBox_Ex17_2.Text.ToLower()))
+                    {
+                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                        FeedIterator<ContainerProperties> tableIterator =
+                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                        while (tableIterator.HasMoreResults)
+                        {
+                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                            {
+                                if (currentTableProp.Id.ToLower().StartsWith(textBox_Ex17_2.Text.ToLower()))
+                                {
+                                    if (currentDBProp.Id.Length >= maxLength)
+                                        maxLength = currentDBProp.Id.Length;
+                                    
+                                break;
+
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+
+            dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+
+                    if (currentDBProp.Id.ToLower().StartsWith(textBox_Ex17_2.Text.ToLower()))
+                    {
+                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                        FeedIterator<ContainerProperties> tableIterator =
+                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+
+                        while (tableIterator.HasMoreResults)
+                        {
+                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                            {
+                                if (currentTableProp.Id.ToLower().StartsWith(textBox_Ex17_2.Text.ToLower()))
+                                {
+                                    if (currentDBProp.Id.Length == maxLength)
+                                        databasesNames += currentDBProp.Id + " ";
+
+                                    break;
+
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return databasesNames;
+        }
+
+
+        // Ex20
+        private void btn_Ex20_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private async void btn_SaveDriverDataInCloud_Click(object sender, EventArgs e)
         {
             // Read the destination within cloud
@@ -660,5 +806,7 @@ namespace Cloud
                 }
             }
         }
+
+     
     }
 }
