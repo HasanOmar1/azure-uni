@@ -139,6 +139,12 @@
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.btn_Ex20 = new System.Windows.Forms.Button();
             this.textBox_Ex20 = new System.Windows.Forms.TextBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.btn_Ex25_PersonData = new System.Windows.Forms.Button();
+            this.textBox_Ex25_DBName = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox_Ex25_ContainerName = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -166,6 +172,7 @@
             this.groupBox17.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -1035,6 +1042,7 @@
             // tabPage_Exercises_4
             // 
             this.tabPage_Exercises_4.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Exercises_4.Controls.Add(this.groupBox20);
             this.tabPage_Exercises_4.Controls.Add(this.groupBox14);
             this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -1458,6 +1466,75 @@
             this.textBox_Ex20.Size = new System.Drawing.Size(469, 28);
             this.textBox_Ex20.TabIndex = 8;
             // 
+            // groupBox20
+            // 
+            this.groupBox20.BackColor = System.Drawing.Color.Tan;
+            this.groupBox20.Controls.Add(this.btn_Ex25_PersonData);
+            this.groupBox20.Controls.Add(this.textBox_Ex25_DBName);
+            this.groupBox20.Controls.Add(this.label24);
+            this.groupBox20.Controls.Add(this.textBox_Ex25_ContainerName);
+            this.groupBox20.Controls.Add(this.label25);
+            this.groupBox20.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.Location = new System.Drawing.Point(16, 149);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox20.Size = new System.Drawing.Size(693, 110);
+            this.groupBox20.TabIndex = 10;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Ex25, Person Data To Cloud";
+            // 
+            // btn_Ex25_PersonData
+            // 
+            this.btn_Ex25_PersonData.Location = new System.Drawing.Point(317, 39);
+            this.btn_Ex25_PersonData.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex25_PersonData.Name = "btn_Ex25_PersonData";
+            this.btn_Ex25_PersonData.Size = new System.Drawing.Size(212, 31);
+            this.btn_Ex25_PersonData.TabIndex = 5;
+            this.btn_Ex25_PersonData.Text = "Create Data in Cloud";
+            this.btn_Ex25_PersonData.UseVisualStyleBackColor = true;
+            this.btn_Ex25_PersonData.Click += new System.EventHandler(this.btn_Ex25_PersonData_Click);
+            // 
+            // textBox_Ex25_DBName
+            // 
+            this.textBox_Ex25_DBName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex25_DBName.Location = new System.Drawing.Point(92, 28);
+            this.textBox_Ex25_DBName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Ex25_DBName.Name = "textBox_Ex25_DBName";
+            this.textBox_Ex25_DBName.Size = new System.Drawing.Size(178, 21);
+            this.textBox_Ex25_DBName.TabIndex = 1;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(16, 28);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(79, 20);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Database";
+            // 
+            // textBox_Ex25_ContainerName
+            // 
+            this.textBox_Ex25_ContainerName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex25_ContainerName.Location = new System.Drawing.Point(92, 60);
+            this.textBox_Ex25_ContainerName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Ex25_ContainerName.Name = "textBox_Ex25_ContainerName";
+            this.textBox_Ex25_ContainerName.Size = new System.Drawing.Size(178, 21);
+            this.textBox_Ex25_ContainerName.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(15, 60);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(78, 20);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Container";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1511,6 +1588,8 @@
             this.groupBox18.PerformLayout();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1628,6 +1707,12 @@
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Button btn_Ex20;
         private System.Windows.Forms.TextBox textBox_Ex20;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Button btn_Ex25_PersonData;
+        private System.Windows.Forms.TextBox textBox_Ex25_DBName;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox_Ex25_ContainerName;
+        private System.Windows.Forms.Label label25;
     }
 }
 

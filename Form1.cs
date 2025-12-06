@@ -832,7 +832,7 @@ namespace Cloud
             return dbNames;
         }
 
-
+        // Ex 25 Driver Data Demo
         private async void btn_SaveDriverDataInCloud_Click(object sender, EventArgs e)
         {
             // Read the destination within cloud
@@ -841,7 +841,7 @@ namespace Cloud
 
             // Get Driver details: ( Hardcoded )
             Driver driver = new Driver();
-            driver.Id = Guid.NewGuid().ToString();
+            driver.id = Guid.NewGuid().ToString();
             driver.Name = "Hasan";
             driver.Age = 23.5;
             driver.YearsInService = 6;
@@ -860,6 +860,7 @@ namespace Cloud
             // Save the above data with the defined cloud destination
             await SaveDriverDataIntoCloudAsync(db, container, driver);
         }
+
 
         private async Task SaveDriverDataIntoCloudAsync(string db, string container, Driver driverData)
         {
@@ -881,6 +882,41 @@ namespace Cloud
             }
         }
 
-     
+        // Ex 25 Person Data
+        private async void btn_Ex25_PersonData_Click(object sender, EventArgs e)
+        {
+            string db = textBox_Ex25_DBName.Text;
+            string container = textBox_Ex25_ContainerName.Text;
+
+
+            // Person Data (Hardcoded)
+            Person p1 = new Person();
+            p1.id = Guid.NewGuid().ToString();
+            p1.Name = "Hasan";
+            p1.Age = 23.6;
+            p1.EyesColor = "Brown";
+
+            await SavePersonDataIntoCloudAsync(db, container, p1);
+        }
+
+        private async Task SavePersonDataIntoCloudAsync(string db, string container, Person personData)
+        {
+            DatabaseResponse databaseResponse = await myCosmosClient.CreateDatabaseIfNotExistsAsync(db);
+
+            if (databaseResponse.StatusCode == System.Net.HttpStatusCode.OK ||
+                databaseResponse.StatusCode == System.Net.HttpStatusCode.Created)
+            {
+                Database dbRefObj = databaseResponse.Database;
+                ContainerResponse containerResponse = await dbRefObj.CreateContainerIfNotExistsAsync(container, "/id");
+
+                if (containerResponse.StatusCode == System.Net.HttpStatusCode.OK ||
+                    containerResponse.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    Microsoft.Azure.Cosmos.Container containerRefObj = containerResponse.Container;
+                    await containerRefObj.CreateItemAsync<Person>(personData);
+
+                }
+            }
+        }
     }
 }

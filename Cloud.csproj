@@ -128,6 +128,7 @@
     <Compile Include="Models\CabStation.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
