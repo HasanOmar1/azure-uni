@@ -137,8 +137,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBox_Ex20 = new System.Windows.Forms.TextBox();
             this.btn_Ex20 = new System.Windows.Forms.Button();
+            this.textBox_Ex20 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1438,18 +1438,9 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Ex20";
             // 
-            // textBox_Ex20
-            // 
-            this.textBox_Ex20.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex20.Location = new System.Drawing.Point(246, 31);
-            this.textBox_Ex20.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_Ex20.Name = "textBox_Ex20";
-            this.textBox_Ex20.Size = new System.Drawing.Size(223, 28);
-            this.textBox_Ex20.TabIndex = 7;
-            // 
             // btn_Ex20
             // 
-            this.btn_Ex20.Location = new System.Drawing.Point(18, 28);
+            this.btn_Ex20.Location = new System.Drawing.Point(139, 61);
             this.btn_Ex20.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex20.Name = "btn_Ex20";
             this.btn_Ex20.Size = new System.Drawing.Size(212, 31);
@@ -1457,6 +1448,15 @@
             this.btn_Ex20.Text = "Get DBs";
             this.btn_Ex20.UseVisualStyleBackColor = true;
             this.btn_Ex20.Click += new System.EventHandler(this.btn_Ex20_Click);
+            // 
+            // textBox_Ex20
+            // 
+            this.textBox_Ex20.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex20.Location = new System.Drawing.Point(69, 22);
+            this.textBox_Ex20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Ex20.Name = "textBox_Ex20";
+            this.textBox_Ex20.Size = new System.Drawing.Size(469, 28);
+            this.textBox_Ex20.TabIndex = 8;
             // 
             // Form1
             // 
@@ -1626,8 +1626,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.TextBox textBox_Ex20;
         private System.Windows.Forms.Button btn_Ex20;
+        private System.Windows.Forms.TextBox textBox_Ex20;
     }
 }
 

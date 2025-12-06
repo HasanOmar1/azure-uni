@@ -754,10 +754,84 @@ namespace Cloud
 
 
         // Ex20
-        private void btn_Ex20_Click(object sender, EventArgs e)
+        private async void btn_Ex20_Click(object sender, EventArgs e)
+        {
+            textBox_Ex20.Text = await GetDbsWithMostTablesAsync();
+        }
+
+        private async Task<string> GetDbsWithMostTablesAsync()
         {
 
+            string databasesNames = "";
+
+            bool isThereDB = false;
+            int tablesMaxCount = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                        isThereDB = true;
+                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+                        int tableCounter = 0;
+
+                        FeedIterator<ContainerProperties> tableIterator =
+                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                            {
+                                 tableCounter++;                            
+                            }    
+                    }
+
+                    if (tableCounter >= tablesMaxCount)
+                        tablesMaxCount = tableCounter;
+                }
+            }
+
+            dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        int tableCounter = 0;
+                    
+
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            tableCounter++;
+
+                        }
+
+                        if (tableCounter == tablesMaxCount)
+                            databasesNames += currentDBProp.Id + " ";
+                    }
+                }
+            }
+
+            if (!isThereDB)
+                return "No database exists in the current cloud account";
+
+            if (tablesMaxCount == 0)
+                return "There are no tables in any of the databases.";
+
+            string dbNames = "The following databases contain " + tablesMaxCount + " tables: " + databasesNames;
+
+            return dbNames;
         }
+
 
         private async void btn_SaveDriverDataInCloud_Click(object sender, EventArgs e)
         {
