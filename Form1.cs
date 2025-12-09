@@ -11,6 +11,7 @@ using System.Configuration;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 using Cloud.Models;
+using System.IO;
 
 
 namespace Cloud
@@ -625,8 +626,8 @@ namespace Cloud
         private async Task<string> getDBsThatStartsWithTheInputAndTableAsync()
         {
 
-            if(textBox_Ex17_1.Text.Length == 0) return "";
-            
+            if (textBox_Ex17_1.Text.Length == 0) return "";
+
             string databasesNames = "";
 
             FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
@@ -704,8 +705,8 @@ namespace Cloud
                                 {
                                     if (currentDBProp.Id.Length >= maxLength)
                                         maxLength = currentDBProp.Id.Length;
-                                    
-                                break;
+
+                                    break;
 
                                 }
                             }
@@ -773,19 +774,19 @@ namespace Cloud
             {
                 foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
                 {
-                        isThereDB = true;
-                        Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
-                        int tableCounter = 0;
+                    isThereDB = true;
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+                    int tableCounter = 0;
 
-                        FeedIterator<ContainerProperties> tableIterator =
-                        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
 
                     while (tableIterator.HasMoreResults)
                     {
-                            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
-                            {
-                                 tableCounter++;                            
-                            }    
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            tableCounter++;
+                        }
                     }
 
                     if (tableCounter >= tablesMaxCount)
@@ -807,7 +808,7 @@ namespace Cloud
                     while (tableIterator.HasMoreResults)
                     {
                         int tableCounter = 0;
-                    
+
 
                         foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
                         {
@@ -916,6 +917,57 @@ namespace Cloud
                     await containerRefObj.CreateItemAsync<Person>(personData);
 
                 }
+            }
+        }
+
+        // Ex 26
+        private async void btn_GetDBNamesForEx26_Click(object sender, EventArgs e)
+        {
+            comboBox_DBsNamesForEx26.DataSource = await getDBsNamesFromCloudAccountAsync();
+        }
+
+        private async void comboBox_SelectedIndexChangedEx26(object sender, EventArgs e)
+        {
+            // Get the tables names only for the selected database.
+            string dbName = comboBox_DBsNamesForEx26.Text;
+            comboBox_ContainersForEx26.DataSource = await getTablesNamesOfSelectedDBAsync(dbName);
+        }
+
+        private async Task<List<string>> getTablesNamesOfSelectedDBAsync(string selectedDB)
+        {
+
+            List<string> results = new List<string>();
+            Database databaseRefObj = myCosmosClient.GetDatabase(selectedDB);
+
+            FeedIterator<ContainerProperties> tableIterator =
+            databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+            while (tableIterator.HasMoreResults)
+            {
+                foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                {
+                    results.Add(currentTableProp.Id);
+                }
+            }
+
+            return results;
+        }
+
+        private void btn_LoadJsonIntoScreen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Select a JSON that contains student's data...";
+            openFile.Filter = "JSON files(*.json)|*.json";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                string studentsDataAsString = File.ReadAllText(openFile.FileName);
+                richTextBox_JsonData.Text = studentsDataAsString;
+            }
+            else
+            {
+                MessageBox.Show("No file was selected", "No Selection",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
