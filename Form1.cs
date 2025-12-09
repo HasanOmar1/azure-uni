@@ -996,10 +996,29 @@ namespace Cloud
         {
 
             Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+            bool isStudentExist;
 
             foreach (Student student in students)
             {
-                await containerRefObj.CreateItemAsync<Student>(student);
+                try
+                {
+                    Student s = await containerRefObj.ReadItemAsync<Student>(student.id, new PartitionKey(student.id));
+                    isStudentExist = true;
+                }
+                catch
+                {
+                    isStudentExist = false;
+                }
+
+                if (selectedActivity == "Insert" && !isStudentExist)
+                    await containerRefObj.CreateItemAsync<Student>(student);
+                else if (selectedActivity == "Delete" && isStudentExist)
+                    await containerRefObj.DeleteItemAsync<Student>(student.id, new PartitionKey(student.id));
+                else if (selectedActivity == "Replace" && !isStudentExist)
+                    await containerRefObj.ReplaceItemAsync<Student>(student, student.id, new PartitionKey(student.id));
+
+
+
             }
         }
     }
