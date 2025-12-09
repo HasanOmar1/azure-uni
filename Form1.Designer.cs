@@ -812,7 +812,7 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox11);
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
             this.tabPage_Exercises_2.Size = new System.Drawing.Size(1009, 663);
             this.tabPage_Exercises_2.TabIndex = 3;
@@ -827,9 +827,9 @@
             this.groupBox12.Controls.Add(this.label14);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox12.Location = new System.Drawing.Point(56, 356);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox12.Size = new System.Drawing.Size(801, 151);
             this.groupBox12.TabIndex = 12;
             this.groupBox12.TabStop = false;
@@ -882,9 +882,9 @@
             this.groupBox11.Controls.Add(this.btn_DBsWithConditions);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox11.Location = new System.Drawing.Point(56, 197);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox11.Size = new System.Drawing.Size(801, 151);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
@@ -919,9 +919,9 @@
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox10.Location = new System.Drawing.Point(56, 38);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(801, 151);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
@@ -1158,9 +1158,9 @@
             this.groupBox13.Controls.Add(this.label15);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox13.Location = new System.Drawing.Point(33, 44);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox13.Size = new System.Drawing.Size(801, 138);
             this.groupBox13.TabIndex = 13;
             this.groupBox13.TabStop = false;
@@ -1409,6 +1409,7 @@
             this.btn_PerformSelectedActivity.TabIndex = 5;
             this.btn_PerformSelectedActivity.Text = "Perform Selected Activity In Cloud";
             this.btn_PerformSelectedActivity.UseVisualStyleBackColor = true;
+            this.btn_PerformSelectedActivity.Click += new System.EventHandler(this.btn_PerformSelectedActivity_Click);
             // 
             // radioButton_Delete
             // 

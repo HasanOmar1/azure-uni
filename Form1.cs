@@ -970,5 +970,37 @@ namespace Cloud
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private async void btn_PerformSelectedActivity_Click(object sender, EventArgs e)
+        {
+            // Read the user choice
+            string selectedActivity = radioButton_Delete.Checked ? "Delete" :
+                                      radioButton_Replace.Checked ? "Replace" :
+                                       "Insert";
+
+            // Read the selected destination (DB, Table)
+            string db = comboBox_DBsNamesForEx26.Text;
+            string table = comboBox_ContainersForEx26.Text;
+
+            // Read the data
+            string studentsAsString = richTextBox_JsonData.Text;
+            List<Student> students = Student.ConvertStringIntoList(studentsAsString);
+
+            // Perform activity in cloud
+            await performActivityInCloudAsync(selectedActivity, db, table, students);
+
+
+        }
+
+        private async Task performActivityInCloudAsync(string selectedActivity, string db, string table, List<Student> students)
+        {
+
+            Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+
+            foreach (Student student in students)
+            {
+                await containerRefObj.CreateItemAsync<Student>(student);
+            }
+        }
     }
 }

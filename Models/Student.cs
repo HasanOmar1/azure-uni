@@ -14,5 +14,11 @@ namespace Cloud.Models
         public double AvgGrade { get; set; }
         public Address[] Addresses { get; set; }
         public Course[] Courses { get; set; }
+
+        public static List<Student> ConvertStringIntoList(string studentsAsList)
+        {
+            if (string.IsNullOrEmpty(studentsAsList)) return new List<Student>();
+            return System.Text.Json.JsonSerializer.Deserialize<List<Student>>(studentsAsList);
+        }
     }
 }
