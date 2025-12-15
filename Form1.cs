@@ -1021,5 +1021,90 @@ namespace Cloud
 
             }
         }
+
+     
+
+      // Ex28
+
+        private async void btn_GetDBNamesForEx28_Click(object sender, EventArgs e)
+        {
+            comboBox_DBsNamesForEx28.DataSource = await getDBsNamesFromCloudAccountAsync();
+
+        }
+
+        private async void comboBox_SelectedIndexChangedEx28(object sender, EventArgs e)
+        {
+            // Get the tables names only for the selected database.
+            string dbName = comboBox_DBsNamesForEx28.Text;
+            comboBox_ContainersForEx28.DataSource = await getTablesNamesOfSelectedDBAsync(dbName);
+        }
+
+        private async void btn_PerformSelectedActivity_Ex28_Click(object sender, EventArgs e)
+        {
+
+            // Read the user choice
+            string selectedActivity = radioButton_Delete_Ex28.Checked ? "Delete" :
+                                      radioButton_Replace_Ex28.Checked ? "Replace" :
+                                       "Insert";
+
+            // Read the selected destination (DB, Table)
+            string db = comboBox_DBsNamesForEx28.Text;
+            string table = comboBox_ContainersForEx28.Text;
+
+            // Read the data
+            string businessAsString = richTextBox_JsonData_Ex28.Text;
+            List<Business> business = Business.ConvertStringIntoList(businessAsString);
+
+            // Perform activity in cloud
+            await performActivityForBusinessInCloudAsync(selectedActivity, db, table, business);
+
+        }
+
+        private async Task performActivityForBusinessInCloudAsync(string selectedActivity, string db, string table, List<Business> businesses)
+        {
+            Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+            bool isBusinessExist;
+
+            foreach (Business business in businesses)
+            {
+                try
+                {
+                    Business s = await containerRefObj.ReadItemAsync<Business>(business.id, new PartitionKey(business.id));
+                    isBusinessExist = true;
+                }
+                catch
+                {
+                    isBusinessExist = false;
+                }
+
+                if (selectedActivity == "Insert" && !isBusinessExist)
+                    await containerRefObj.CreateItemAsync<Business>(business);
+                else if (selectedActivity == "Delete" && isBusinessExist)
+                    await containerRefObj.DeleteItemAsync<Business>(business.id, new PartitionKey(business.id));
+                else if (selectedActivity == "Replace" && isBusinessExist)
+                    await containerRefObj.ReplaceItemAsync<Business>(business, business.id, new PartitionKey(business.id));
+
+
+
+            }
+        }
+
+        private void Btn_LoadJsonIntoScreen_Ex28(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Select a JSON that contains student's data...";
+            openFile.Filter = "JSON files(*.json)|*.json";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                string studentsDataAsString = File.ReadAllText(openFile.FileName);
+                richTextBox_JsonData_Ex28.Text = studentsDataAsString;
+            }
+            else
+            {
+                MessageBox.Show("No file was selected", "No Selection",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

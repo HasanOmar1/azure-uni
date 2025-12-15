@@ -126,11 +126,14 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Branches.cs" />
+    <Compile Include="Models\Business.cs" />
     <Compile Include="Models\CabStation.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
