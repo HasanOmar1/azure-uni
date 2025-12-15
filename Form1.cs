@@ -1089,7 +1089,7 @@ namespace Cloud
             }
         }
 
-        private void Btn_LoadJsonIntoScreen_Ex28(object sender, EventArgs e)
+        private void btn_LoadJsonIntoScreen_Ex28_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Title = "Select a JSON that contains student's data...";
@@ -1106,5 +1106,7 @@ namespace Cloud
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+      
     }
 }
