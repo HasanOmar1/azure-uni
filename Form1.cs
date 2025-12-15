@@ -1014,7 +1014,7 @@ namespace Cloud
                     await containerRefObj.CreateItemAsync<Student>(student);
                 else if (selectedActivity == "Delete" && isStudentExist)
                     await containerRefObj.DeleteItemAsync<Student>(student.id, new PartitionKey(student.id));
-                else if (selectedActivity == "Replace" && !isStudentExist)
+                else if (selectedActivity == "Replace" && isStudentExist)
                     await containerRefObj.ReplaceItemAsync<Student>(student, student.id, new PartitionKey(student.id));
 
 
