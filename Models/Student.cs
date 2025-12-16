@@ -45,7 +45,25 @@ namespace Cloud.Models
             }
 
             studentDataAsStr += (addrCounter == 0) ? "\nNo Addresses are documented at the moment" :
-                              $"\n{addrCounter} addresses are documented:{addrInfo}\n";
+                              $"\n{addrCounter} addresses are documented:{addrInfo}";
+
+            int courseCounter = 0;
+            string courseInfo = string.Empty;
+
+            if (Courses != null && Courses.Length != 0)
+            {
+                for (int i = 0; i < Courses.Length; i++)
+                {
+                    if (Courses[i] != null)
+                    {
+                        courseCounter++;
+                        courseInfo += Courses[i].ToString();
+                    }
+                }
+            }
+
+            studentDataAsStr += (courseCounter == 0) ? "\nNo Addresses are documented at the moment" :
+                              $"\n{courseCounter} addresses are documented:{courseInfo}\n";
 
 
 

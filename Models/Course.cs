@@ -11,5 +11,21 @@ namespace Cloud.Models
         public string CourseName { get; set; }
         public string Teacher { get; set; }
         public int Rate { get; set; }
+
+
+
+
+        public override string ToString()
+        {
+            string courseDataAsStr = string.Empty;
+
+            courseDataAsStr += (string.IsNullOrEmpty(CourseName)) ? "\nNo Course Name is documented at this moment" : "\nCourse Name: " + CourseName;
+
+            courseDataAsStr += (string.IsNullOrEmpty(Teacher)) ? "\nNo Teacher is documented at this moment" : "\nTeacher: " + Teacher;
+
+            courseDataAsStr += "\nRate: " + Rate;
+
+            return courseDataAsStr;
+        }
     }
 }
