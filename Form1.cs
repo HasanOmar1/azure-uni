@@ -1296,8 +1296,6 @@ namespace Cloud
         }
 
         // ex 45
-
-
         private async void btn_GetDBsEx45_Click(object sender, EventArgs e)
         {
             comboBox_GetDBsEx45.DataSource = await getDBsNamesFromCloudAccountAsync();
