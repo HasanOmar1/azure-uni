@@ -1155,5 +1155,48 @@ namespace Cloud
             }
             return totalNumOfObjsInCloud;
         }
+
+        // ex 36
+        private async void btn_CountAllObjsInInputDB_Ex36_Click(object sender, EventArgs e)
+        {
+            string requestedDB = textBox_DbForEx36.Text;
+            int totalObjectsInRequestedDB = await CountObjectsInRequestedDBInAccountAsync(requestedDB);
+            textBox_TotalObjsInInputDB_Ex36.Text = totalObjectsInRequestedDB.ToString();
+
+
+        }
+
+        private async Task<int> CountObjectsInRequestedDBInAccountAsync(string requestedDB)
+        {
+
+            int totalNumOfObjsInCloud = 0;
+
+            Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
+
+            FeedIterator<ContainerProperties> tableIterator =
+            databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+            while (tableIterator.HasMoreResults)
+            {
+                foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                {
+                    Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, currentTableProp.Id);
+
+                    FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+
+                    while (objIterator.HasMoreResults)
+                    {
+                        foreach (object currentObj in await objIterator.ReadNextAsync())
+                        {
+                            totalNumOfObjsInCloud++;
+                        }
+                    }
+                }
+            }
+            return totalNumOfObjsInCloud;
+
+        }
+
     }
 }
+

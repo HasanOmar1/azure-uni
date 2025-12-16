@@ -1837,6 +1837,7 @@
             this.btn_CountAllObjsInInputDB_Ex36.TabIndex = 5;
             this.btn_CountAllObjsInInputDB_Ex36.Text = "Count all objects in input DB";
             this.btn_CountAllObjsInInputDB_Ex36.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjsInInputDB_Ex36.Click += new System.EventHandler(this.btn_CountAllObjsInInputDB_Ex36_Click);
             // 
             // label29
             // 
