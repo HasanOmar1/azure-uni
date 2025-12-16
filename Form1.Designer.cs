@@ -161,7 +161,7 @@
             this.comboBox_DBsNamesForEx28 = new System.Windows.Forms.ComboBox();
             this.btn_GetDBNamesForEx28 = new System.Windows.Forms.Button();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
-            this.tabPage_Exercises_5 = new System.Windows.Forms.TabPage();
+            this.tabPage_Count_Objects = new System.Windows.Forms.TabPage();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.btn_CountAllObjects_Ex35 = new System.Windows.Forms.Button();
             this.textBox_TotalObjectsInCloud_Ex35 = new System.Windows.Forms.TextBox();
@@ -208,7 +208,7 @@
             this.tabPage_Ex28.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox22.SuspendLayout();
-            this.tabPage_Exercises_5.SuspendLayout();
+            this.tabPage_Count_Objects.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
@@ -238,7 +238,7 @@
             this.tabControl1.Controls.Add(this.tabPage_Exercises_4);
             this.tabControl1.Controls.Add(this.tabPage_Ex26);
             this.tabControl1.Controls.Add(this.tabPage_Ex28);
-            this.tabControl1.Controls.Add(this.tabPage_Exercises_5);
+            this.tabControl1.Controls.Add(this.tabPage_Count_Objects);
             this.tabControl1.Location = new System.Drawing.Point(12, 17);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -1757,17 +1757,17 @@
             this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
             this.btn_databaseCounter.TabIndex = 0;
             // 
-            // tabPage_Exercises_5
+            // tabPage_Count_Objects
             // 
-            this.tabPage_Exercises_5.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage_Exercises_5.Controls.Add(this.groupBox25);
-            this.tabPage_Exercises_5.Controls.Add(this.groupBox24);
-            this.tabPage_Exercises_5.Controls.Add(this.groupBox23);
-            this.tabPage_Exercises_5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_5.Name = "tabPage_Exercises_5";
-            this.tabPage_Exercises_5.Size = new System.Drawing.Size(1009, 663);
-            this.tabPage_Exercises_5.TabIndex = 8;
-            this.tabPage_Exercises_5.Text = "Exercises_5";
+            this.tabPage_Count_Objects.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Count_Objects.Controls.Add(this.groupBox25);
+            this.tabPage_Count_Objects.Controls.Add(this.groupBox24);
+            this.tabPage_Count_Objects.Controls.Add(this.groupBox23);
+            this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
+            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Count_Objects.TabIndex = 8;
+            this.tabPage_Count_Objects.Text = "Count_Objects";
             // 
             // groupBox23
             // 
@@ -1793,6 +1793,7 @@
             this.btn_CountAllObjects_Ex35.TabIndex = 5;
             this.btn_CountAllObjects_Ex35.Text = "Count all objects in Cloud Account";
             this.btn_CountAllObjects_Ex35.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjects_Ex35.Click += new System.EventHandler(this.btn_CountAllObjects_Ex35_Click);
             // 
             // textBox_TotalObjectsInCloud_Ex35
             // 
@@ -1878,7 +1879,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(20, 34);
+            this.label33.Location = new System.Drawing.Point(69, 34);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(159, 25);
             this.label33.TabIndex = 15;
@@ -1886,7 +1887,7 @@
             // 
             // textBox_DBForEx37
             // 
-            this.textBox_DBForEx37.Location = new System.Drawing.Point(185, 32);
+            this.textBox_DBForEx37.Location = new System.Drawing.Point(244, 30);
             this.textBox_DBForEx37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_DBForEx37.Name = "textBox_DBForEx37";
             this.textBox_DBForEx37.Size = new System.Drawing.Size(359, 29);
@@ -1922,10 +1923,10 @@
             // 
             // textBox_TotalObjsInInputContainer_Ex37
             // 
-            this.textBox_TotalObjsInInputContainer_Ex37.Location = new System.Drawing.Point(341, 125);
+            this.textBox_TotalObjsInInputContainer_Ex37.Location = new System.Drawing.Point(339, 125);
             this.textBox_TotalObjsInInputContainer_Ex37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_TotalObjsInInputContainer_Ex37.Name = "textBox_TotalObjsInInputContainer_Ex37";
-            this.textBox_TotalObjsInInputContainer_Ex37.Size = new System.Drawing.Size(359, 29);
+            this.textBox_TotalObjsInInputContainer_Ex37.Size = new System.Drawing.Size(157, 29);
             this.textBox_TotalObjsInInputContainer_Ex37.TabIndex = 19;
             // 
             // Form1
@@ -1988,7 +1989,7 @@
             this.groupBox21.PerformLayout();
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
-            this.tabPage_Exercises_5.ResumeLayout(false);
+            this.tabPage_Count_Objects.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
             this.groupBox23.PerformLayout();
             this.groupBox24.ResumeLayout(false);
@@ -2134,7 +2135,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox_DBsNamesForEx28;
         private System.Windows.Forms.Button btn_GetDBNamesForEx28;
-        private System.Windows.Forms.TabPage tabPage_Exercises_5;
+        private System.Windows.Forms.TabPage tabPage_Count_Objects;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.TextBox textBox_DbForEx36;
         private System.Windows.Forms.Label label29;

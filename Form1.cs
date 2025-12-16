@@ -1022,9 +1022,9 @@ namespace Cloud
             }
         }
 
-     
 
-      // Ex28
+
+        // Ex28
 
         private async void btn_GetDBNamesForEx28_Click(object sender, EventArgs e)
         {
@@ -1107,6 +1107,53 @@ namespace Cloud
             }
         }
 
-      
+        //ex 35
+        private async void btn_CountAllObjects_Ex35_Click(object sender, EventArgs e)
+        {
+            int totalObjectsInCloud = await CountObjectsInCloudAccountAsync();
+            textBox_TotalObjectsInCloud_Ex35.Text = totalObjectsInCloud.ToString();
+        }
+
+
+
+        private async Task<int> CountObjectsInCloudAccountAsync()
+        {
+
+            int totalNumOfObjsInCloud = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+
+                            while (objIterator.HasMoreResults)
+                            {
+                                foreach (object currentObj in await objIterator.ReadNextAsync())
+                                {
+                                    totalNumOfObjsInCloud++;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            return totalNumOfObjsInCloud;
+        }
     }
 }
