@@ -1274,7 +1274,6 @@ namespace Cloud
             try
             {
 
-                Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
                 Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, requestedContainer);
 
                 FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
