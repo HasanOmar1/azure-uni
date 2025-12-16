@@ -65,8 +65,6 @@ namespace Cloud.Models
             studentDataAsStr += (courseCounter == 0) ? "\nNo Addresses are documented at the moment" :
                               $"\n{courseCounter} addresses are documented:{courseInfo}\n";
 
-
-
             return studentDataAsStr;
         }
     }
