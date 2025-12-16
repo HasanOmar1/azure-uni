@@ -1295,6 +1295,54 @@ namespace Cloud
 
         }
 
+        // ex 45
+
+
+        private async void btn_GetDBsEx45_Click(object sender, EventArgs e)
+        {
+            comboBox_GetDBsEx45.DataSource = await getDBsNamesFromCloudAccountAsync();
+        }
+
+        private async void comboBox_GetDBsEx45_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get the tables names only for the selected database.
+            string dbName = comboBox_GetDBsEx45.Text;
+            comboBox_GetContainersEx45.DataSource = await getTablesNamesOfSelectedDBAsync(dbName);
+        }
+
+
+        private async void btn_GetRequestedDocEx45_Click(object sender, EventArgs e)
+        {
+            string db = comboBox_GetDBsEx45.Text;
+            string table = comboBox_GetContainersEx45.Text;
+            string requestedID = textBox_GetDocIDEx45.Text;
+
+            // option 1
+            string studentData = await getStudentDataV1Async(db, table, requestedID);
+            richTextBox_RequestedDocEx45.Text = studentData;
+
+            // option 2
+
+        }
+
+        private async Task<string> getStudentDataV1Async(string db, string table, string requestedID)
+        {
+            Student result;
+            try
+            {
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+                ItemResponse<Student> studentObj = await containerRefObj.ReadItemAsync<Student>(requestedID, new PartitionKey(requestedID));
+
+                result = studentObj.Resource;
+                return result.ToString();
+            }
+            catch
+            {
+                return $"Student with ID {requestedID} Doesnt Exist";
+            }
+
+        }
+
     }
 }
 

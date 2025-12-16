@@ -177,6 +177,16 @@
             this.textBox_ContainerForEx37 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.textBox_TotalObjsInInputContainer_Ex37 = new System.Windows.Forms.TextBox();
+            this.tabPage_ReadObjects = new System.Windows.Forms.TabPage();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.comboBox_GetContainersEx45 = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.comboBox_GetDBsEx45 = new System.Windows.Forms.ComboBox();
+            this.btn_GetDBsEx45 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox_GetDocIDEx45 = new System.Windows.Forms.TextBox();
+            this.richTextBox_RequestedDocEx45 = new System.Windows.Forms.RichTextBox();
+            this.btn_GetRequestedDocEx45 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -212,6 +222,8 @@
             this.groupBox23.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.tabPage_ReadObjects.SuspendLayout();
+            this.groupBox26.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -239,11 +251,12 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex26);
             this.tabControl1.Controls.Add(this.tabPage_Ex28);
             this.tabControl1.Controls.Add(this.tabPage_Count_Objects);
-            this.tabControl1.Location = new System.Drawing.Point(12, 17);
+            this.tabControl1.Controls.Add(this.tabPage_ReadObjects);
+            this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1017, 692);
+            this.tabControl1.Size = new System.Drawing.Size(1307, 599);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage_General
@@ -256,7 +269,7 @@
             this.tabPage_General.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_General.Name = "tabPage_General";
             this.tabPage_General.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage_General.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_General.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_General.TabIndex = 0;
             this.tabPage_General.Text = "General Details and Cosmos Client Creation";
             // 
@@ -426,7 +439,7 @@
             this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_DBandContainer.Name = "tabPage_DBandContainer";
             this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_DBandContainer.TabIndex = 1;
             this.tabPage_DBandContainer.Text = "Databases and Containers";
             // 
@@ -625,7 +638,7 @@
             this.tabPage_Exercises.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Exercises.Name = "tabPage_Exercises";
-            this.tabPage_Exercises.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Exercises.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Exercises.TabIndex = 2;
             this.tabPage_Exercises.Text = "Exercises";
             // 
@@ -853,7 +866,7 @@
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
-            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Exercises_2.TabIndex = 3;
             this.tabPage_Exercises_2.Text = "Exercises_2";
             // 
@@ -1015,7 +1028,7 @@
             this.tabPage_Exercises_3.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Exercises_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Exercises_3.Name = "tabPage_Exercises_3";
-            this.tabPage_Exercises_3.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Exercises_3.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Exercises_3.TabIndex = 4;
             this.tabPage_Exercises_3.Text = "Exercises_3";
             // 
@@ -1251,7 +1264,7 @@
             this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Exercises_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Exercises_4.Name = "tabPage_Exercises_4";
-            this.tabPage_Exercises_4.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Exercises_4.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Exercises_4.TabIndex = 5;
             this.tabPage_Exercises_4.Text = "Exercises_4(25)";
             // 
@@ -1418,7 +1431,7 @@
             this.tabPage_Ex26.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Ex26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Ex26.Name = "tabPage_Ex26";
-            this.tabPage_Ex26.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Ex26.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Ex26.TabIndex = 6;
             this.tabPage_Ex26.Text = "Ex_26";
             // 
@@ -1588,7 +1601,7 @@
             this.tabPage_Ex28.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Ex28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage_Ex28.Name = "tabPage_Ex28";
-            this.tabPage_Ex28.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Ex28.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Ex28.TabIndex = 7;
             this.tabPage_Ex28.Text = "Ex_28";
             // 
@@ -1765,7 +1778,7 @@
             this.tabPage_Count_Objects.Controls.Add(this.groupBox23);
             this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
-            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1009, 663);
+            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1299, 570);
             this.tabPage_Count_Objects.TabIndex = 8;
             this.tabPage_Count_Objects.Text = "Count_Objects";
             // 
@@ -1931,11 +1944,124 @@
             this.textBox_TotalObjsInInputContainer_Ex37.Size = new System.Drawing.Size(157, 29);
             this.textBox_TotalObjsInInputContainer_Ex37.TabIndex = 19;
             // 
+            // tabPage_ReadObjects
+            // 
+            this.tabPage_ReadObjects.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_ReadObjects.Controls.Add(this.groupBox26);
+            this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_ReadObjects.Name = "tabPage_ReadObjects";
+            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_ReadObjects.TabIndex = 9;
+            this.tabPage_ReadObjects.Text = "ReadObjects";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.BackColor = System.Drawing.Color.Tan;
+            this.groupBox26.Controls.Add(this.btn_GetRequestedDocEx45);
+            this.groupBox26.Controls.Add(this.richTextBox_RequestedDocEx45);
+            this.groupBox26.Controls.Add(this.textBox_GetDocIDEx45);
+            this.groupBox26.Controls.Add(this.label30);
+            this.groupBox26.Controls.Add(this.comboBox_GetContainersEx45);
+            this.groupBox26.Controls.Add(this.label32);
+            this.groupBox26.Controls.Add(this.comboBox_GetDBsEx45);
+            this.groupBox26.Controls.Add(this.btn_GetDBsEx45);
+            this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox26.Location = new System.Drawing.Point(21, 32);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox26.Size = new System.Drawing.Size(1239, 496);
+            this.groupBox26.TabIndex = 1;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Ex45";
+            // 
+            // comboBox_GetContainersEx45
+            // 
+            this.comboBox_GetContainersEx45.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_GetContainersEx45.FormattingEnabled = true;
+            this.comboBox_GetContainersEx45.Location = new System.Drawing.Point(285, 89);
+            this.comboBox_GetContainersEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_GetContainersEx45.Name = "comboBox_GetContainersEx45";
+            this.comboBox_GetContainersEx45.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_GetContainersEx45.TabIndex = 3;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(33, 97);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(224, 26);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Tables of selected DB";
+            // 
+            // comboBox_GetDBsEx45
+            // 
+            this.comboBox_GetDBsEx45.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_GetDBsEx45.FormattingEnabled = true;
+            this.comboBox_GetDBsEx45.Location = new System.Drawing.Point(285, 36);
+            this.comboBox_GetDBsEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_GetDBsEx45.Name = "comboBox_GetDBsEx45";
+            this.comboBox_GetDBsEx45.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_GetDBsEx45.TabIndex = 1;
+            this.comboBox_GetDBsEx45.SelectedIndexChanged += new System.EventHandler(this.comboBox_GetDBsEx45_SelectedIndexChanged);
+            // 
+            // btn_GetDBsEx45
+            // 
+            this.btn_GetDBsEx45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetDBsEx45.Location = new System.Drawing.Point(29, 36);
+            this.btn_GetDBsEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetDBsEx45.Name = "btn_GetDBsEx45";
+            this.btn_GetDBsEx45.Size = new System.Drawing.Size(228, 32);
+            this.btn_GetDBsEx45.TabIndex = 0;
+            this.btn_GetDBsEx45.Text = "Get DBs For Ex45";
+            this.btn_GetDBsEx45.UseVisualStyleBackColor = true;
+            this.btn_GetDBsEx45.Click += new System.EventHandler(this.btn_GetDBsEx45_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(164, 150);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(93, 26);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Type ID:";
+            // 
+            // textBox_GetDocIDEx45
+            // 
+            this.textBox_GetDocIDEx45.Location = new System.Drawing.Point(285, 144);
+            this.textBox_GetDocIDEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_GetDocIDEx45.Name = "textBox_GetDocIDEx45";
+            this.textBox_GetDocIDEx45.Size = new System.Drawing.Size(299, 32);
+            this.textBox_GetDocIDEx45.TabIndex = 13;
+            // 
+            // richTextBox_RequestedDocEx45
+            // 
+            this.richTextBox_RequestedDocEx45.Location = new System.Drawing.Point(617, 36);
+            this.richTextBox_RequestedDocEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_RequestedDocEx45.Name = "richTextBox_RequestedDocEx45";
+            this.richTextBox_RequestedDocEx45.Size = new System.Drawing.Size(581, 140);
+            this.richTextBox_RequestedDocEx45.TabIndex = 14;
+            this.richTextBox_RequestedDocEx45.Text = "";
+            // 
+            // btn_GetRequestedDocEx45
+            // 
+            this.btn_GetRequestedDocEx45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetRequestedDocEx45.Location = new System.Drawing.Point(692, 193);
+            this.btn_GetRequestedDocEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetRequestedDocEx45.Name = "btn_GetRequestedDocEx45";
+            this.btn_GetRequestedDocEx45.Size = new System.Drawing.Size(372, 49);
+            this.btn_GetRequestedDocEx45.TabIndex = 15;
+            this.btn_GetRequestedDocEx45.Text = "Get Requested Document";
+            this.btn_GetRequestedDocEx45.UseVisualStyleBackColor = true;
+            this.btn_GetRequestedDocEx45.Click += new System.EventHandler(this.btn_GetRequestedDocEx45_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 751);
+            this.ClientSize = new System.Drawing.Size(1369, 751);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -1998,6 +2124,9 @@
             this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.tabPage_ReadObjects.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2153,6 +2282,16 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button btn_CountAllObjsInInputContainer_Ex37;
         private System.Windows.Forms.TextBox textBox_DBForEx37;
+        private System.Windows.Forms.TabPage tabPage_ReadObjects;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.TextBox textBox_GetDocIDEx45;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox comboBox_GetContainersEx45;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ComboBox comboBox_GetDBsEx45;
+        private System.Windows.Forms.Button btn_GetDBsEx45;
+        private System.Windows.Forms.Button btn_GetRequestedDocEx45;
+        private System.Windows.Forms.RichTextBox richTextBox_RequestedDocEx45;
     }
 }
 
