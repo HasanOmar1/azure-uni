@@ -1903,6 +1903,7 @@
             this.btn_CountAllObjsInInputContainer_Ex37.TabIndex = 16;
             this.btn_CountAllObjsInInputContainer_Ex37.Text = "Count all objects in input DB";
             this.btn_CountAllObjsInInputContainer_Ex37.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjsInInputContainer_Ex37.Click += new System.EventHandler(this.btn_CountAllObjsInInputContainer_Ex37_Click);
             // 
             // textBox_ContainerForEx37
             // 

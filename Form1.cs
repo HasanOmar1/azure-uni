@@ -1171,27 +1171,78 @@ namespace Cloud
 
             int totalNumOfObjsInCloud = 0;
 
-            Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
-
-            FeedIterator<ContainerProperties> tableIterator =
-            databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
-
-            while (tableIterator.HasMoreResults)
+            try
             {
-                foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+
+                Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
+
+                FeedIterator<ContainerProperties> tableIterator =
+                databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                while (tableIterator.HasMoreResults)
                 {
-                    Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, currentTableProp.Id);
-
-                    FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
-
-                    while (objIterator.HasMoreResults)
+                    foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
                     {
-                        foreach (object currentObj in await objIterator.ReadNextAsync())
+                        Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, currentTableProp.Id);
+
+                        FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+
+                        while (objIterator.HasMoreResults)
                         {
-                            totalNumOfObjsInCloud++;
+                            foreach (object currentObj in await objIterator.ReadNextAsync())
+                            {
+                                totalNumOfObjsInCloud++;
+                            }
                         }
                     }
                 }
+
+            }
+            catch
+            {
+                totalNumOfObjsInCloud = 0;
+            }
+            return totalNumOfObjsInCloud;
+
+        }
+
+        // ex 37
+        private async void btn_CountAllObjsInInputContainer_Ex37_Click(object sender, EventArgs e)
+        {
+            string requestedDB = textBox_DBForEx37.Text;
+            string requestedContainer = textBox_ContainerForEx37.Text;
+            int totalObjectsInRequestedDB = await CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(requestedDB, requestedContainer);
+            textBox_TotalObjsInInputContainer_Ex37.Text = totalObjectsInRequestedDB.ToString();
+
+        }
+
+
+
+        private async Task<int> CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(string requestedDB, string requestedContainer)
+        {
+
+            int totalNumOfObjsInCloud = 0;
+
+            try
+            {
+
+                Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
+                Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, requestedContainer);
+
+                FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+
+                while (objIterator.HasMoreResults)
+                {
+                    foreach (object currentObj in await objIterator.ReadNextAsync())
+                    {
+                        totalNumOfObjsInCloud++;
+                    }
+                }
+
+            }
+            catch
+            {
+                totalNumOfObjsInCloud = 0;
             }
             return totalNumOfObjsInCloud;
 
