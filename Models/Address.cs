@@ -23,7 +23,6 @@ namespace Cloud.Models
 
             addressDataAsStr += (string.IsNullOrEmpty(HouseNum)) ? "\nNo HouseNum is documented at this moment" : "\nHouseNum: " + HouseNum;
 
-
             return addressDataAsStr;
         }
     }
