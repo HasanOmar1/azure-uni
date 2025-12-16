@@ -1160,13 +1160,60 @@ namespace Cloud
         private async void btn_CountAllObjsInInputDB_Ex36_Click(object sender, EventArgs e)
         {
             string requestedDB = textBox_DbForEx36.Text;
-            int totalObjectsInRequestedDB = await CountObjectsInRequestedDBInAccountAsync(requestedDB);
-            textBox_TotalObjsInInputDB_Ex36.Text = totalObjectsInRequestedDB.ToString();
+
+            // option 1 with int
+            //int totalObjectsInRequestedDB = await CountObjectsInRequestedDBInAccountV1Async(requestedDB);
+            //textBox_TotalObjsInInputDB_Ex36.Text = totalObjectsInRequestedDB.ToString();
+
+            // option 2 with string
+            textBox_TotalObjsInInputDB_Ex36.Text = await CountObjectsInRequestedDBInAccountV2Async(requestedDB);
+
 
 
         }
 
-        private async Task<int> CountObjectsInRequestedDBInAccountAsync(string requestedDB)
+        //private async Task<int> CountObjectsInRequestedDBInAccountV1Async(string requestedDB)
+        //{
+
+        //    int totalNumOfObjsInCloud = 0;
+
+        //    try
+        //    {
+
+        //        Database databaseRefObj = myCosmosClient.GetDatabase(requestedDB);
+
+        //        FeedIterator<ContainerProperties> tableIterator =
+        //        databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+        //        while (tableIterator.HasMoreResults)
+        //        {
+        //            foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+        //            {
+        //                Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(requestedDB, currentTableProp.Id);
+
+        //                FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+
+        //                while (objIterator.HasMoreResults)
+        //                {
+        //                    foreach (object currentObj in await objIterator.ReadNextAsync())
+        //                    {
+        //                        totalNumOfObjsInCloud++;
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //    }
+        //    catch
+        //    {
+        //        totalNumOfObjsInCloud = 0;
+        //    }
+        //    return totalNumOfObjsInCloud;
+
+        //}
+
+
+        private async Task<string> CountObjectsInRequestedDBInAccountV2Async(string requestedDB)
         {
 
             int totalNumOfObjsInCloud = 0;
@@ -1200,25 +1247,26 @@ namespace Cloud
             }
             catch
             {
-                totalNumOfObjsInCloud = 0;
+                return "Request Failed";
             }
-            return totalNumOfObjsInCloud;
+            return totalNumOfObjsInCloud.ToString();
 
         }
+
 
         // ex 37
         private async void btn_CountAllObjsInInputContainer_Ex37_Click(object sender, EventArgs e)
         {
             string requestedDB = textBox_DBForEx37.Text;
             string requestedContainer = textBox_ContainerForEx37.Text;
-            int totalObjectsInRequestedDB = await CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(requestedDB, requestedContainer);
-            textBox_TotalObjsInInputContainer_Ex37.Text = totalObjectsInRequestedDB.ToString();
+
+            textBox_TotalObjsInInputContainer_Ex37.Text = await CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(requestedDB, requestedContainer);
 
         }
 
 
 
-        private async Task<int> CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(string requestedDB, string requestedContainer)
+        private async Task<string> CountObjectsInRequestedDBAndRequestedContainerInAccountAsync(string requestedDB, string requestedContainer)
         {
 
             int totalNumOfObjsInCloud = 0;
@@ -1242,9 +1290,9 @@ namespace Cloud
             }
             catch
             {
-                totalNumOfObjsInCloud = 0;
+                return "Request Failed";
             }
-            return totalNumOfObjsInCloud;
+            return totalNumOfObjsInCloud.ToString();
 
         }
 
