@@ -160,33 +160,38 @@
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox_DBsNamesForEx28 = new System.Windows.Forms.ComboBox();
             this.btn_GetDBNamesForEx28 = new System.Windows.Forms.Button();
-            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabPage_Count_Objects = new System.Windows.Forms.TabPage();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.btn_CountAllObjects_Ex35 = new System.Windows.Forms.Button();
-            this.textBox_TotalObjectsInCloud_Ex35 = new System.Windows.Forms.TextBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.textBox_TotalObjsInInputDB_Ex36 = new System.Windows.Forms.TextBox();
-            this.btn_CountAllObjsInInputDB_Ex36 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox_DbForEx36 = new System.Windows.Forms.TextBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox_DBForEx37 = new System.Windows.Forms.TextBox();
-            this.btn_CountAllObjsInInputContainer_Ex37 = new System.Windows.Forms.Button();
+            this.textBox_TotalObjsInInputContainer_Ex37 = new System.Windows.Forms.TextBox();
             this.textBox_ContainerForEx37 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox_TotalObjsInInputContainer_Ex37 = new System.Windows.Forms.TextBox();
+            this.btn_CountAllObjsInInputContainer_Ex37 = new System.Windows.Forms.Button();
+            this.textBox_DBForEx37 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.textBox_DbForEx36 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox_TotalObjsInInputDB_Ex36 = new System.Windows.Forms.TextBox();
+            this.btn_CountAllObjsInInputDB_Ex36 = new System.Windows.Forms.Button();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.textBox_TotalObjectsInCloud_Ex35 = new System.Windows.Forms.TextBox();
+            this.btn_CountAllObjects_Ex35 = new System.Windows.Forms.Button();
             this.tabPage_ReadObjects = new System.Windows.Forms.TabPage();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.btn_GetRequestedDocEx45 = new System.Windows.Forms.Button();
+            this.richTextBox_RequestedDocEx45 = new System.Windows.Forms.RichTextBox();
+            this.textBox_GetDocIDEx45 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.comboBox_GetContainersEx45 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.comboBox_GetDBsEx45 = new System.Windows.Forms.ComboBox();
             this.btn_GetDBsEx45 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox_GetDocIDEx45 = new System.Windows.Forms.TextBox();
-            this.richTextBox_RequestedDocEx45 = new System.Windows.Forms.RichTextBox();
-            this.btn_GetRequestedDocEx45 = new System.Windows.Forms.Button();
+            this.tabPage_Ex38 = new System.Windows.Forms.TabPage();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.comboBox_Ex38 = new System.Windows.Forms.ComboBox();
+            this.btn_Ex38 = new System.Windows.Forms.Button();
+            this.btn_databaseCounter = new System.Windows.Forms.Button();
+            this.dataGridView_Ex38 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -219,11 +224,14 @@
             this.groupBox21.SuspendLayout();
             this.groupBox22.SuspendLayout();
             this.tabPage_Count_Objects.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
             this.tabPage_ReadObjects.SuspendLayout();
             this.groupBox26.SuspendLayout();
+            this.tabPage_Ex38.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -231,10 +239,10 @@
             this.btn_CreateCosmosClient.BackColor = System.Drawing.Color.OldLace;
             this.btn_CreateCosmosClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CreateCosmosClient.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_CreateCosmosClient.Location = new System.Drawing.Point(651, 260);
-            this.btn_CreateCosmosClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CreateCosmosClient.Location = new System.Drawing.Point(488, 211);
+            this.btn_CreateCosmosClient.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CreateCosmosClient.Name = "btn_CreateCosmosClient";
-            this.btn_CreateCosmosClient.Size = new System.Drawing.Size(312, 108);
+            this.btn_CreateCosmosClient.Size = new System.Drawing.Size(234, 88);
             this.btn_CreateCosmosClient.TabIndex = 0;
             this.btn_CreateCosmosClient.Text = "Create Database";
             this.btn_CreateCosmosClient.UseVisualStyleBackColor = false;
@@ -252,11 +260,12 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex28);
             this.tabControl1.Controls.Add(this.tabPage_Count_Objects);
             this.tabControl1.Controls.Add(this.tabPage_ReadObjects);
-            this.tabControl1.Location = new System.Drawing.Point(12, 11);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Controls.Add(this.tabPage_Ex38);
+            this.tabControl1.Location = new System.Drawing.Point(9, 9);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1307, 599);
+            this.tabControl1.Size = new System.Drawing.Size(980, 487);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage_General
@@ -265,11 +274,11 @@
             this.tabPage_General.Controls.Add(this.groupBox2);
             this.tabPage_General.Controls.Add(this.groupBox1);
             this.tabPage_General.Controls.Add(this.btn_CreateCosmosClient);
-            this.tabPage_General.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_General.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_General.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_General.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_General.Name = "tabPage_General";
-            this.tabPage_General.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage_General.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_General.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_General.Size = new System.Drawing.Size(972, 461);
             this.tabPage_General.TabIndex = 0;
             this.tabPage_General.Text = "General Details and Cosmos Client Creation";
             // 
@@ -282,11 +291,11 @@
             this.groupBox2.Controls.Add(this.textBox_URI);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(27, 176);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(20, 143);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(513, 140);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(385, 114);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Env Details";
@@ -294,20 +303,21 @@
             // textBox_EnvType
             // 
             this.textBox_EnvType.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_EnvType.Location = new System.Drawing.Point(143, 30);
-            this.textBox_EnvType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_EnvType.Location = new System.Drawing.Point(107, 24);
+            this.textBox_EnvType.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnvType.Name = "textBox_EnvType";
             this.textBox_EnvType.ReadOnly = true;
-            this.textBox_EnvType.Size = new System.Drawing.Size(236, 24);
+            this.textBox_EnvType.Size = new System.Drawing.Size(178, 21);
             this.textBox_EnvType.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 84);
+            this.label4.Location = new System.Drawing.Point(19, 68);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Primary Key";
             // 
@@ -315,39 +325,41 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 32);
+            this.label5.Location = new System.Drawing.Point(35, 26);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Env Type";
             // 
             // textBox_PrimaryKey
             // 
             this.textBox_PrimaryKey.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PrimaryKey.Location = new System.Drawing.Point(143, 84);
-            this.textBox_PrimaryKey.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_PrimaryKey.Location = new System.Drawing.Point(107, 68);
+            this.textBox_PrimaryKey.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_PrimaryKey.Name = "textBox_PrimaryKey";
             this.textBox_PrimaryKey.ReadOnly = true;
-            this.textBox_PrimaryKey.Size = new System.Drawing.Size(236, 24);
+            this.textBox_PrimaryKey.Size = new System.Drawing.Size(178, 21);
             this.textBox_PrimaryKey.TabIndex = 5;
             // 
             // textBox_URI
             // 
             this.textBox_URI.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_URI.Location = new System.Drawing.Point(143, 58);
-            this.textBox_URI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_URI.Location = new System.Drawing.Point(107, 47);
+            this.textBox_URI.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_URI.Name = "textBox_URI";
             this.textBox_URI.ReadOnly = true;
-            this.textBox_URI.Size = new System.Drawing.Size(236, 24);
+            this.textBox_URI.Size = new System.Drawing.Size(178, 21);
             this.textBox_URI.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(88, 58);
+            this.label6.Location = new System.Drawing.Point(66, 47);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 20);
+            this.label6.Size = new System.Drawing.Size(31, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "URI";
             // 
@@ -360,11 +372,11 @@
             this.groupBox1.Controls.Add(this.textBox_DevName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(20, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(513, 140);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(385, 114);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Developer Details";
@@ -372,20 +384,21 @@
             // textBox_DevId
             // 
             this.textBox_DevId.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DevId.Location = new System.Drawing.Point(143, 34);
-            this.textBox_DevId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DevId.Location = new System.Drawing.Point(107, 28);
+            this.textBox_DevId.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DevId.Name = "textBox_DevId";
             this.textBox_DevId.ReadOnly = true;
-            this.textBox_DevId.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DevId.Size = new System.Drawing.Size(178, 21);
             this.textBox_DevId.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 90);
+            this.label3.Location = new System.Drawing.Point(56, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Email";
             // 
@@ -393,39 +406,41 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 34);
+            this.label1.Location = new System.Drawing.Point(74, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID";
             // 
             // textBox_DevMail
             // 
             this.textBox_DevMail.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DevMail.Location = new System.Drawing.Point(143, 89);
-            this.textBox_DevMail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DevMail.Location = new System.Drawing.Point(107, 72);
+            this.textBox_DevMail.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DevMail.Name = "textBox_DevMail";
             this.textBox_DevMail.ReadOnly = true;
-            this.textBox_DevMail.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DevMail.Size = new System.Drawing.Size(178, 21);
             this.textBox_DevMail.TabIndex = 5;
             // 
             // textBox_DevName
             // 
             this.textBox_DevName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DevName.Location = new System.Drawing.Point(143, 62);
-            this.textBox_DevName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DevName.Location = new System.Drawing.Point(107, 50);
+            this.textBox_DevName.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DevName.Name = "textBox_DevName";
             this.textBox_DevName.ReadOnly = true;
-            this.textBox_DevName.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DevName.Size = new System.Drawing.Size(178, 21);
             this.textBox_DevName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 62);
+            this.label2.Location = new System.Drawing.Point(54, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Name";
             // 
@@ -435,11 +450,11 @@
             this.tabPage_DBandContainer.Controls.Add(this.groupBox5);
             this.tabPage_DBandContainer.Controls.Add(this.groupBox4);
             this.tabPage_DBandContainer.Controls.Add(this.groupBox3);
-            this.tabPage_DBandContainer.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_DBandContainer.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_DBandContainer.Name = "tabPage_DBandContainer";
-            this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_DBandContainer.Size = new System.Drawing.Size(972, 461);
             this.tabPage_DBandContainer.TabIndex = 1;
             this.tabPage_DBandContainer.Text = "Databases and Containers";
             // 
@@ -451,21 +466,21 @@
             this.groupBox5.Controls.Add(this.textBox_TablesCounter);
             this.groupBox5.Controls.Add(this.textBox_DBsCounter);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(27, 358);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Location = new System.Drawing.Point(20, 291);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(924, 174);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(693, 141);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Counting Entities In Cloud";
             // 
             // btn_CountTables
             // 
-            this.btn_CountTables.Location = new System.Drawing.Point(27, 98);
-            this.btn_CountTables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CountTables.Location = new System.Drawing.Point(20, 80);
+            this.btn_CountTables.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CountTables.Name = "btn_CountTables";
-            this.btn_CountTables.Size = new System.Drawing.Size(283, 30);
+            this.btn_CountTables.Size = new System.Drawing.Size(212, 24);
             this.btn_CountTables.TabIndex = 7;
             this.btn_CountTables.Text = "Count Tables in Cloud";
             this.btn_CountTables.UseVisualStyleBackColor = true;
@@ -473,10 +488,10 @@
             // 
             // btn_CountDBs
             // 
-            this.btn_CountDBs.Location = new System.Drawing.Point(27, 49);
-            this.btn_CountDBs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CountDBs.Location = new System.Drawing.Point(20, 40);
+            this.btn_CountDBs.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CountDBs.Name = "btn_CountDBs";
-            this.btn_CountDBs.Size = new System.Drawing.Size(283, 30);
+            this.btn_CountDBs.Size = new System.Drawing.Size(212, 24);
             this.btn_CountDBs.TabIndex = 6;
             this.btn_CountDBs.Text = "Count Databases in Cloud";
             this.btn_CountDBs.UseVisualStyleBackColor = true;
@@ -485,21 +500,21 @@
             // textBox_TablesCounter
             // 
             this.textBox_TablesCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TablesCounter.Location = new System.Drawing.Point(333, 98);
-            this.textBox_TablesCounter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TablesCounter.Location = new System.Drawing.Point(250, 80);
+            this.textBox_TablesCounter.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TablesCounter.Name = "textBox_TablesCounter";
             this.textBox_TablesCounter.ReadOnly = true;
-            this.textBox_TablesCounter.Size = new System.Drawing.Size(76, 29);
+            this.textBox_TablesCounter.Size = new System.Drawing.Size(58, 24);
             this.textBox_TablesCounter.TabIndex = 1;
             // 
             // textBox_DBsCounter
             // 
             this.textBox_DBsCounter.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DBsCounter.Location = new System.Drawing.Point(333, 49);
-            this.textBox_DBsCounter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DBsCounter.Location = new System.Drawing.Point(250, 40);
+            this.textBox_DBsCounter.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DBsCounter.Name = "textBox_DBsCounter";
             this.textBox_DBsCounter.ReadOnly = true;
-            this.textBox_DBsCounter.Size = new System.Drawing.Size(76, 29);
+            this.textBox_DBsCounter.Size = new System.Drawing.Size(58, 25);
             this.textBox_DBsCounter.TabIndex = 3;
             // 
             // groupBox4
@@ -510,11 +525,11 @@
             this.groupBox4.Controls.Add(this.btn_GetTablesNames);
             this.groupBox4.Controls.Add(this.btn_GetDBsNames);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(27, 180);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(20, 146);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(924, 174);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(693, 141);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Databases and Tables in Cloud";
@@ -523,28 +538,28 @@
             // 
             this.comboBox_TablesNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_TablesNames.FormattingEnabled = true;
-            this.comboBox_TablesNames.Location = new System.Drawing.Point(320, 110);
-            this.comboBox_TablesNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_TablesNames.Location = new System.Drawing.Point(240, 89);
+            this.comboBox_TablesNames.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_TablesNames.Name = "comboBox_TablesNames";
-            this.comboBox_TablesNames.Size = new System.Drawing.Size(452, 31);
+            this.comboBox_TablesNames.Size = new System.Drawing.Size(340, 28);
             this.comboBox_TablesNames.TabIndex = 12;
             // 
             // comboBox_DBsNames
             // 
             this.comboBox_DBsNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DBsNames.FormattingEnabled = true;
-            this.comboBox_DBsNames.Location = new System.Drawing.Point(320, 46);
-            this.comboBox_DBsNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsNames.Location = new System.Drawing.Point(240, 37);
+            this.comboBox_DBsNames.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsNames.Name = "comboBox_DBsNames";
-            this.comboBox_DBsNames.Size = new System.Drawing.Size(452, 31);
+            this.comboBox_DBsNames.Size = new System.Drawing.Size(340, 28);
             this.comboBox_DBsNames.TabIndex = 11;
             // 
             // btn_GetTablesNames
             // 
-            this.btn_GetTablesNames.Location = new System.Drawing.Point(15, 110);
-            this.btn_GetTablesNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetTablesNames.Location = new System.Drawing.Point(11, 89);
+            this.btn_GetTablesNames.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GetTablesNames.Name = "btn_GetTablesNames";
-            this.btn_GetTablesNames.Size = new System.Drawing.Size(283, 31);
+            this.btn_GetTablesNames.Size = new System.Drawing.Size(212, 25);
             this.btn_GetTablesNames.TabIndex = 6;
             this.btn_GetTablesNames.Text = "Get Tables Names from Cloud";
             this.btn_GetTablesNames.UseVisualStyleBackColor = true;
@@ -552,10 +567,10 @@
             // 
             // btn_GetDBsNames
             // 
-            this.btn_GetDBsNames.Location = new System.Drawing.Point(15, 46);
-            this.btn_GetDBsNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetDBsNames.Location = new System.Drawing.Point(11, 37);
+            this.btn_GetDBsNames.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GetDBsNames.Name = "btn_GetDBsNames";
-            this.btn_GetDBsNames.Size = new System.Drawing.Size(283, 31);
+            this.btn_GetDBsNames.Size = new System.Drawing.Size(212, 25);
             this.btn_GetDBsNames.TabIndex = 5;
             this.btn_GetDBsNames.Text = "Get DBs Names from Cloud";
             this.btn_GetDBsNames.UseVisualStyleBackColor = true;
@@ -570,21 +585,21 @@
             this.groupBox3.Controls.Add(this.textBox_ContainerInput);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(27, 20);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(20, 16);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(924, 156);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(693, 127);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Create Entities in Cloud";
             // 
             // btn_CreateDataInCloud
             // 
-            this.btn_CreateDataInCloud.Location = new System.Drawing.Point(373, 98);
-            this.btn_CreateDataInCloud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CreateDataInCloud.Location = new System.Drawing.Point(280, 80);
+            this.btn_CreateDataInCloud.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CreateDataInCloud.Name = "btn_CreateDataInCloud";
-            this.btn_CreateDataInCloud.Size = new System.Drawing.Size(283, 38);
+            this.btn_CreateDataInCloud.Size = new System.Drawing.Size(212, 31);
             this.btn_CreateDataInCloud.TabIndex = 5;
             this.btn_CreateDataInCloud.Text = "Create Data in Cloud";
             this.btn_CreateDataInCloud.UseVisualStyleBackColor = true;
@@ -593,38 +608,40 @@
             // textBox_DatabaseInput
             // 
             this.textBox_DatabaseInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DatabaseInput.Location = new System.Drawing.Point(205, 46);
-            this.textBox_DatabaseInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DatabaseInput.Location = new System.Drawing.Point(154, 37);
+            this.textBox_DatabaseInput.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DatabaseInput.Name = "textBox_DatabaseInput";
-            this.textBox_DatabaseInput.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DatabaseInput.Size = new System.Drawing.Size(178, 21);
             this.textBox_DatabaseInput.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(103, 46);
+            this.label8.Location = new System.Drawing.Point(77, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 25);
+            this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "Database";
             // 
             // textBox_ContainerInput
             // 
             this.textBox_ContainerInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ContainerInput.Location = new System.Drawing.Point(611, 46);
-            this.textBox_ContainerInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ContainerInput.Location = new System.Drawing.Point(458, 37);
+            this.textBox_ContainerInput.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ContainerInput.Name = "textBox_ContainerInput";
-            this.textBox_ContainerInput.Size = new System.Drawing.Size(236, 24);
+            this.textBox_ContainerInput.Size = new System.Drawing.Size(178, 21);
             this.textBox_ContainerInput.TabIndex = 3;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(508, 46);
+            this.label9.Location = new System.Drawing.Point(381, 37);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 25);
+            this.label9.Size = new System.Drawing.Size(78, 20);
             this.label9.TabIndex = 4;
             this.label9.Text = "Container";
             // 
@@ -635,10 +652,10 @@
             this.tabPage_Exercises.Controls.Add(this.groupBox8);
             this.tabPage_Exercises.Controls.Add(this.groupBox7);
             this.tabPage_Exercises.Controls.Add(this.groupBox6);
-            this.tabPage_Exercises.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_Exercises.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises.Name = "tabPage_Exercises";
-            this.tabPage_Exercises.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Exercises.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Exercises.TabIndex = 2;
             this.tabPage_Exercises.Text = "Exercises";
             // 
@@ -650,11 +667,11 @@
             this.groupBox9.Controls.Add(this.label12);
             this.groupBox9.Controls.Add(this.btn_DBsContainTable);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(25, 420);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Location = new System.Drawing.Point(19, 341);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(924, 176);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(693, 143);
             this.groupBox9.TabIndex = 11;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Databases That Contain Table";
@@ -662,37 +679,38 @@
             // textBox_TableNameInput
             // 
             this.textBox_TableNameInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TableNameInput.Location = new System.Drawing.Point(172, 59);
-            this.textBox_TableNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TableNameInput.Location = new System.Drawing.Point(129, 48);
+            this.textBox_TableNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TableNameInput.Name = "textBox_TableNameInput";
-            this.textBox_TableNameInput.Size = new System.Drawing.Size(216, 24);
+            this.textBox_TableNameInput.Size = new System.Drawing.Size(163, 21);
             this.textBox_TableNameInput.TabIndex = 7;
             // 
             // comboBox_DBsContainTable
             // 
             this.comboBox_DBsContainTable.FormattingEnabled = true;
-            this.comboBox_DBsContainTable.Location = new System.Drawing.Point(428, 53);
-            this.comboBox_DBsContainTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsContainTable.Location = new System.Drawing.Point(321, 43);
+            this.comboBox_DBsContainTable.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsContainTable.Name = "comboBox_DBsContainTable";
-            this.comboBox_DBsContainTable.Size = new System.Drawing.Size(425, 31);
+            this.comboBox_DBsContainTable.Size = new System.Drawing.Size(320, 28);
             this.comboBox_DBsContainTable.TabIndex = 6;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(41, 59);
+            this.label12.Location = new System.Drawing.Point(31, 48);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 25);
+            this.label12.Size = new System.Drawing.Size(94, 20);
             this.label12.TabIndex = 8;
             this.label12.Text = "Table Name";
             // 
             // btn_DBsContainTable
             // 
-            this.btn_DBsContainTable.Location = new System.Drawing.Point(172, 110);
-            this.btn_DBsContainTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DBsContainTable.Location = new System.Drawing.Point(129, 89);
+            this.btn_DBsContainTable.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DBsContainTable.Name = "btn_DBsContainTable";
-            this.btn_DBsContainTable.Size = new System.Drawing.Size(388, 38);
+            this.btn_DBsContainTable.Size = new System.Drawing.Size(291, 31);
             this.btn_DBsContainTable.TabIndex = 5;
             this.btn_DBsContainTable.Text = "Get Databases That Contain The Table";
             this.btn_DBsContainTable.UseVisualStyleBackColor = true;
@@ -704,11 +722,11 @@
             this.groupBox8.Controls.Add(this.comboBox_DBsWithTablesCount);
             this.groupBox8.Controls.Add(this.btn_DBsWithTablesCount);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(25, 298);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Location = new System.Drawing.Point(19, 242);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(924, 117);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Size = new System.Drawing.Size(693, 95);
             this.groupBox8.TabIndex = 10;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Databases with Count Of Tables";
@@ -716,18 +734,18 @@
             // comboBox_DBsWithTablesCount
             // 
             this.comboBox_DBsWithTablesCount.FormattingEnabled = true;
-            this.comboBox_DBsWithTablesCount.Location = new System.Drawing.Point(428, 53);
-            this.comboBox_DBsWithTablesCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsWithTablesCount.Location = new System.Drawing.Point(321, 43);
+            this.comboBox_DBsWithTablesCount.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsWithTablesCount.Name = "comboBox_DBsWithTablesCount";
-            this.comboBox_DBsWithTablesCount.Size = new System.Drawing.Size(425, 31);
+            this.comboBox_DBsWithTablesCount.Size = new System.Drawing.Size(320, 28);
             this.comboBox_DBsWithTablesCount.TabIndex = 6;
             // 
             // btn_DBsWithTablesCount
             // 
-            this.btn_DBsWithTablesCount.Location = new System.Drawing.Point(24, 49);
-            this.btn_DBsWithTablesCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DBsWithTablesCount.Location = new System.Drawing.Point(18, 40);
+            this.btn_DBsWithTablesCount.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DBsWithTablesCount.Name = "btn_DBsWithTablesCount";
-            this.btn_DBsWithTablesCount.Size = new System.Drawing.Size(384, 38);
+            this.btn_DBsWithTablesCount.Size = new System.Drawing.Size(288, 31);
             this.btn_DBsWithTablesCount.TabIndex = 5;
             this.btn_DBsWithTablesCount.Text = "Get Databases With Their Tables Count";
             this.btn_DBsWithTablesCount.UseVisualStyleBackColor = true;
@@ -741,11 +759,11 @@
             this.groupBox7.Controls.Add(this.textBox_CheckDB);
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(25, 159);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Location = new System.Drawing.Point(19, 129);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(924, 134);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Size = new System.Drawing.Size(693, 109);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Checks if Database Exists";
@@ -753,19 +771,19 @@
             // textBox_DoesDBExist
             // 
             this.textBox_DoesDBExist.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DoesDBExist.Location = new System.Drawing.Point(428, 36);
-            this.textBox_DoesDBExist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DoesDBExist.Location = new System.Drawing.Point(321, 29);
+            this.textBox_DoesDBExist.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DoesDBExist.Name = "textBox_DoesDBExist";
             this.textBox_DoesDBExist.ReadOnly = true;
-            this.textBox_DoesDBExist.Size = new System.Drawing.Size(425, 24);
+            this.textBox_DoesDBExist.Size = new System.Drawing.Size(320, 21);
             this.textBox_DoesDBExist.TabIndex = 6;
             // 
             // btn_DoesDBExist
             // 
-            this.btn_DoesDBExist.Location = new System.Drawing.Point(172, 79);
-            this.btn_DoesDBExist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DoesDBExist.Location = new System.Drawing.Point(129, 64);
+            this.btn_DoesDBExist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DoesDBExist.Name = "btn_DoesDBExist";
-            this.btn_DoesDBExist.Size = new System.Drawing.Size(283, 38);
+            this.btn_DoesDBExist.Size = new System.Drawing.Size(212, 31);
             this.btn_DoesDBExist.TabIndex = 5;
             this.btn_DoesDBExist.Text = "Search";
             this.btn_DoesDBExist.UseVisualStyleBackColor = true;
@@ -774,19 +792,20 @@
             // textBox_CheckDB
             // 
             this.textBox_CheckDB.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CheckDB.Location = new System.Drawing.Point(191, 36);
-            this.textBox_CheckDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_CheckDB.Location = new System.Drawing.Point(143, 29);
+            this.textBox_CheckDB.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CheckDB.Name = "textBox_CheckDB";
-            this.textBox_CheckDB.Size = new System.Drawing.Size(216, 24);
+            this.textBox_CheckDB.Size = new System.Drawing.Size(163, 21);
             this.textBox_CheckDB.TabIndex = 1;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 34);
+            this.label11.Location = new System.Drawing.Point(14, 28);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 25);
+            this.label11.Size = new System.Drawing.Size(125, 20);
             this.label11.TabIndex = 2;
             this.label11.Text = "Database Name";
             // 
@@ -799,11 +818,11 @@
             this.groupBox6.Controls.Add(this.label7);
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(25, 25);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Location = new System.Drawing.Point(19, 20);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(924, 129);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(693, 105);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Search Databases Using Substring";
@@ -811,18 +830,18 @@
             // comboBox_SearchedDBs
             // 
             this.comboBox_SearchedDBs.FormattingEnabled = true;
-            this.comboBox_SearchedDBs.Location = new System.Drawing.Point(469, 27);
-            this.comboBox_SearchedDBs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_SearchedDBs.Location = new System.Drawing.Point(352, 22);
+            this.comboBox_SearchedDBs.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_SearchedDBs.Name = "comboBox_SearchedDBs";
-            this.comboBox_SearchedDBs.Size = new System.Drawing.Size(121, 31);
+            this.comboBox_SearchedDBs.Size = new System.Drawing.Size(92, 28);
             this.comboBox_SearchedDBs.TabIndex = 6;
             // 
             // btn_SearchDB
             // 
-            this.btn_SearchDB.Location = new System.Drawing.Point(172, 75);
-            this.btn_SearchDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_SearchDB.Location = new System.Drawing.Point(129, 61);
+            this.btn_SearchDB.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SearchDB.Name = "btn_SearchDB";
-            this.btn_SearchDB.Size = new System.Drawing.Size(283, 38);
+            this.btn_SearchDB.Size = new System.Drawing.Size(212, 31);
             this.btn_SearchDB.TabIndex = 5;
             this.btn_SearchDB.Text = "Search";
             this.btn_SearchDB.UseVisualStyleBackColor = true;
@@ -831,19 +850,20 @@
             // textBox_SearchDB
             // 
             this.textBox_SearchDB.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SearchDB.Location = new System.Drawing.Point(92, 33);
-            this.textBox_SearchDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_SearchDB.Location = new System.Drawing.Point(69, 27);
+            this.textBox_SearchDB.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SearchDB.Name = "textBox_SearchDB";
-            this.textBox_SearchDB.Size = new System.Drawing.Size(145, 24);
+            this.textBox_SearchDB.Size = new System.Drawing.Size(110, 21);
             this.textBox_SearchDB.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 34);
+            this.label7.Location = new System.Drawing.Point(14, 28);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 25);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Name";
             // 
@@ -851,9 +871,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(357, 33);
+            this.label10.Location = new System.Drawing.Point(268, 27);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 25);
+            this.label10.Size = new System.Drawing.Size(87, 20);
             this.label10.TabIndex = 4;
             this.label10.Text = "Databases";
             // 
@@ -863,10 +884,9 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox12);
             this.tabPage_Exercises_2.Controls.Add(this.groupBox11);
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
-            this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
-            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Exercises_2.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Exercises_2.TabIndex = 3;
             this.tabPage_Exercises_2.Text = "Exercises_2";
             // 
@@ -878,11 +898,9 @@
             this.groupBox12.Controls.Add(this.textBox_TablesLengthX);
             this.groupBox12.Controls.Add(this.label14);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox12.Location = new System.Drawing.Point(56, 356);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Location = new System.Drawing.Point(42, 289);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox12.Size = new System.Drawing.Size(801, 151);
+            this.groupBox12.Size = new System.Drawing.Size(601, 123);
             this.groupBox12.TabIndex = 12;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "DBs With X Tables";
@@ -890,19 +908,19 @@
             // textBox_DBsWithLengthX
             // 
             this.textBox_DBsWithLengthX.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DBsWithLengthX.Location = new System.Drawing.Point(277, 44);
-            this.textBox_DBsWithLengthX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DBsWithLengthX.Location = new System.Drawing.Point(208, 36);
+            this.textBox_DBsWithLengthX.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DBsWithLengthX.Name = "textBox_DBsWithLengthX";
             this.textBox_DBsWithLengthX.ReadOnly = true;
-            this.textBox_DBsWithLengthX.Size = new System.Drawing.Size(425, 24);
+            this.textBox_DBsWithLengthX.Size = new System.Drawing.Size(320, 21);
             this.textBox_DBsWithLengthX.TabIndex = 11;
             // 
             // btn_TablesLengthX
             // 
-            this.btn_TablesLengthX.Location = new System.Drawing.Point(185, 85);
-            this.btn_TablesLengthX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_TablesLengthX.Location = new System.Drawing.Point(139, 69);
+            this.btn_TablesLengthX.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TablesLengthX.Name = "btn_TablesLengthX";
-            this.btn_TablesLengthX.Size = new System.Drawing.Size(283, 38);
+            this.btn_TablesLengthX.Size = new System.Drawing.Size(212, 31);
             this.btn_TablesLengthX.TabIndex = 10;
             this.btn_TablesLengthX.Text = "Search For DBs with Length";
             this.btn_TablesLengthX.UseVisualStyleBackColor = true;
@@ -911,19 +929,20 @@
             // textBox_TablesLengthX
             // 
             this.textBox_TablesLengthX.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TablesLengthX.Location = new System.Drawing.Point(116, 44);
-            this.textBox_TablesLengthX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TablesLengthX.Location = new System.Drawing.Point(87, 36);
+            this.textBox_TablesLengthX.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TablesLengthX.Name = "textBox_TablesLengthX";
-            this.textBox_TablesLengthX.Size = new System.Drawing.Size(113, 24);
+            this.textBox_TablesLengthX.Size = new System.Drawing.Size(86, 21);
             this.textBox_TablesLengthX.TabIndex = 7;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(32, 44);
+            this.label14.Location = new System.Drawing.Point(24, 36);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 25);
+            this.label14.Size = new System.Drawing.Size(59, 20);
             this.label14.TabIndex = 8;
             this.label14.Text = "Length";
             // 
@@ -933,11 +952,9 @@
             this.groupBox11.Controls.Add(this.comboBox_DBsWithConditions);
             this.groupBox11.Controls.Add(this.btn_DBsWithConditions);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox11.Location = new System.Drawing.Point(56, 197);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Location = new System.Drawing.Point(42, 160);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox11.Size = new System.Drawing.Size(801, 151);
+            this.groupBox11.Size = new System.Drawing.Size(601, 123);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "DBs With Odd Length And Contain No Tables or Greater Than 2 Tables";
@@ -945,18 +962,18 @@
             // comboBox_DBsWithConditions
             // 
             this.comboBox_DBsWithConditions.FormattingEnabled = true;
-            this.comboBox_DBsWithConditions.Location = new System.Drawing.Point(319, 44);
-            this.comboBox_DBsWithConditions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsWithConditions.Location = new System.Drawing.Point(239, 36);
+            this.comboBox_DBsWithConditions.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsWithConditions.Name = "comboBox_DBsWithConditions";
-            this.comboBox_DBsWithConditions.Size = new System.Drawing.Size(384, 28);
+            this.comboBox_DBsWithConditions.Size = new System.Drawing.Size(289, 25);
             this.comboBox_DBsWithConditions.TabIndex = 11;
             // 
             // btn_DBsWithConditions
             // 
-            this.btn_DBsWithConditions.Location = new System.Drawing.Point(37, 39);
-            this.btn_DBsWithConditions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DBsWithConditions.Location = new System.Drawing.Point(28, 32);
+            this.btn_DBsWithConditions.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DBsWithConditions.Name = "btn_DBsWithConditions";
-            this.btn_DBsWithConditions.Size = new System.Drawing.Size(219, 38);
+            this.btn_DBsWithConditions.Size = new System.Drawing.Size(164, 31);
             this.btn_DBsWithConditions.TabIndex = 10;
             this.btn_DBsWithConditions.Text = "Get Databases";
             this.btn_DBsWithConditions.UseVisualStyleBackColor = true;
@@ -970,11 +987,9 @@
             this.groupBox10.Controls.Add(this.textBox_TablesLength);
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox10.Location = new System.Drawing.Point(56, 38);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Location = new System.Drawing.Point(42, 31);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox10.Size = new System.Drawing.Size(801, 151);
+            this.groupBox10.Size = new System.Drawing.Size(601, 123);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Tables With Length Longer Than Input";
@@ -982,18 +997,18 @@
             // comboBox_TablesLength
             // 
             this.comboBox_TablesLength.FormattingEnabled = true;
-            this.comboBox_TablesLength.Location = new System.Drawing.Point(285, 39);
-            this.comboBox_TablesLength.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_TablesLength.Location = new System.Drawing.Point(214, 32);
+            this.comboBox_TablesLength.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_TablesLength.Name = "comboBox_TablesLength";
-            this.comboBox_TablesLength.Size = new System.Drawing.Size(384, 28);
+            this.comboBox_TablesLength.Size = new System.Drawing.Size(289, 25);
             this.comboBox_TablesLength.TabIndex = 11;
             // 
             // btn_TablesLength
             // 
-            this.btn_TablesLength.Location = new System.Drawing.Point(185, 85);
-            this.btn_TablesLength.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_TablesLength.Location = new System.Drawing.Point(139, 69);
+            this.btn_TablesLength.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TablesLength.Name = "btn_TablesLength";
-            this.btn_TablesLength.Size = new System.Drawing.Size(283, 38);
+            this.btn_TablesLength.Size = new System.Drawing.Size(212, 31);
             this.btn_TablesLength.TabIndex = 10;
             this.btn_TablesLength.Text = "Search For Tables";
             this.btn_TablesLength.UseVisualStyleBackColor = true;
@@ -1002,19 +1017,20 @@
             // textBox_TablesLength
             // 
             this.textBox_TablesLength.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TablesLength.Location = new System.Drawing.Point(116, 44);
-            this.textBox_TablesLength.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TablesLength.Location = new System.Drawing.Point(87, 36);
+            this.textBox_TablesLength.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TablesLength.Name = "textBox_TablesLength";
-            this.textBox_TablesLength.Size = new System.Drawing.Size(113, 24);
+            this.textBox_TablesLength.Size = new System.Drawing.Size(86, 21);
             this.textBox_TablesLength.TabIndex = 7;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(32, 44);
+            this.label13.Location = new System.Drawing.Point(24, 36);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 25);
+            this.label13.Size = new System.Drawing.Size(59, 20);
             this.label13.TabIndex = 8;
             this.label13.Text = "Length";
             // 
@@ -1025,10 +1041,10 @@
             this.tabPage_Exercises_3.Controls.Add(this.groupBox18);
             this.tabPage_Exercises_3.Controls.Add(this.groupBox17);
             this.tabPage_Exercises_3.Controls.Add(this.groupBox13);
-            this.tabPage_Exercises_3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_Exercises_3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Exercises_3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises_3.Name = "tabPage_Exercises_3";
-            this.tabPage_Exercises_3.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Exercises_3.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Exercises_3.TabIndex = 4;
             this.tabPage_Exercises_3.Text = "Exercises_3";
             // 
@@ -1038,11 +1054,11 @@
             this.groupBox19.Controls.Add(this.textBox_Ex20);
             this.groupBox19.Controls.Add(this.btn_Ex20);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(33, 457);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox19.Location = new System.Drawing.Point(25, 371);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox19.Size = new System.Drawing.Size(801, 129);
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox19.Size = new System.Drawing.Size(601, 105);
             this.groupBox19.TabIndex = 16;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Ex20";
@@ -1050,18 +1066,18 @@
             // textBox_Ex20
             // 
             this.textBox_Ex20.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex20.Location = new System.Drawing.Point(92, 27);
-            this.textBox_Ex20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex20.Location = new System.Drawing.Point(69, 22);
+            this.textBox_Ex20.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex20.Name = "textBox_Ex20";
-            this.textBox_Ex20.Size = new System.Drawing.Size(624, 33);
+            this.textBox_Ex20.Size = new System.Drawing.Size(469, 28);
             this.textBox_Ex20.TabIndex = 8;
             // 
             // btn_Ex20
             // 
-            this.btn_Ex20.Location = new System.Drawing.Point(185, 75);
-            this.btn_Ex20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex20.Location = new System.Drawing.Point(139, 61);
+            this.btn_Ex20.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex20.Name = "btn_Ex20";
-            this.btn_Ex20.Size = new System.Drawing.Size(283, 38);
+            this.btn_Ex20.Size = new System.Drawing.Size(212, 31);
             this.btn_Ex20.TabIndex = 5;
             this.btn_Ex20.Text = "Get DBs";
             this.btn_Ex20.UseVisualStyleBackColor = true;
@@ -1076,11 +1092,11 @@
             this.groupBox18.Controls.Add(this.label22);
             this.groupBox18.Controls.Add(this.label23);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(33, 322);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox18.Location = new System.Drawing.Point(25, 262);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox18.Size = new System.Drawing.Size(801, 129);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox18.Size = new System.Drawing.Size(601, 105);
             this.groupBox18.TabIndex = 15;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Ex17 - 2";
@@ -1088,18 +1104,18 @@
             // textBox_Ex17_2_Results
             // 
             this.textBox_Ex17_2_Results.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex17_2_Results.Location = new System.Drawing.Point(469, 34);
-            this.textBox_Ex17_2_Results.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex17_2_Results.Location = new System.Drawing.Point(352, 28);
+            this.textBox_Ex17_2_Results.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex17_2_Results.Name = "textBox_Ex17_2_Results";
-            this.textBox_Ex17_2_Results.Size = new System.Drawing.Size(296, 24);
+            this.textBox_Ex17_2_Results.Size = new System.Drawing.Size(223, 21);
             this.textBox_Ex17_2_Results.TabIndex = 7;
             // 
             // btn_Ex17_2
             // 
-            this.btn_Ex17_2.Location = new System.Drawing.Point(172, 75);
-            this.btn_Ex17_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex17_2.Location = new System.Drawing.Point(129, 61);
+            this.btn_Ex17_2.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex17_2.Name = "btn_Ex17_2";
-            this.btn_Ex17_2.Size = new System.Drawing.Size(283, 38);
+            this.btn_Ex17_2.Size = new System.Drawing.Size(212, 31);
             this.btn_Ex17_2.TabIndex = 5;
             this.btn_Ex17_2.Text = "Search";
             this.btn_Ex17_2.UseVisualStyleBackColor = true;
@@ -1108,19 +1124,20 @@
             // textBox_Ex17_2
             // 
             this.textBox_Ex17_2.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex17_2.Location = new System.Drawing.Point(92, 33);
-            this.textBox_Ex17_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex17_2.Location = new System.Drawing.Point(69, 27);
+            this.textBox_Ex17_2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex17_2.Name = "textBox_Ex17_2";
-            this.textBox_Ex17_2.Size = new System.Drawing.Size(145, 24);
+            this.textBox_Ex17_2.Size = new System.Drawing.Size(110, 21);
             this.textBox_Ex17_2.TabIndex = 1;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(19, 34);
+            this.label22.Location = new System.Drawing.Point(14, 28);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 25);
+            this.label22.Size = new System.Drawing.Size(51, 20);
             this.label22.TabIndex = 2;
             this.label22.Text = "String";
             // 
@@ -1128,9 +1145,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(348, 34);
+            this.label23.Location = new System.Drawing.Point(261, 28);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(106, 25);
+            this.label23.Size = new System.Drawing.Size(87, 20);
             this.label23.TabIndex = 4;
             this.label23.Text = "Databases";
             // 
@@ -1143,11 +1161,11 @@
             this.groupBox17.Controls.Add(this.label20);
             this.groupBox17.Controls.Add(this.label21);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(33, 188);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox17.Location = new System.Drawing.Point(25, 153);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox17.Size = new System.Drawing.Size(801, 129);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox17.Size = new System.Drawing.Size(601, 105);
             this.groupBox17.TabIndex = 14;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Ex17 - 1";
@@ -1155,18 +1173,18 @@
             // textBox_Ex17_1_Results
             // 
             this.textBox_Ex17_1_Results.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex17_1_Results.Location = new System.Drawing.Point(469, 34);
-            this.textBox_Ex17_1_Results.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex17_1_Results.Location = new System.Drawing.Point(352, 28);
+            this.textBox_Ex17_1_Results.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex17_1_Results.Name = "textBox_Ex17_1_Results";
-            this.textBox_Ex17_1_Results.Size = new System.Drawing.Size(296, 24);
+            this.textBox_Ex17_1_Results.Size = new System.Drawing.Size(223, 21);
             this.textBox_Ex17_1_Results.TabIndex = 7;
             // 
             // btn_Ex17_1
             // 
-            this.btn_Ex17_1.Location = new System.Drawing.Point(172, 75);
-            this.btn_Ex17_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex17_1.Location = new System.Drawing.Point(129, 61);
+            this.btn_Ex17_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex17_1.Name = "btn_Ex17_1";
-            this.btn_Ex17_1.Size = new System.Drawing.Size(283, 38);
+            this.btn_Ex17_1.Size = new System.Drawing.Size(212, 31);
             this.btn_Ex17_1.TabIndex = 5;
             this.btn_Ex17_1.Text = "Search";
             this.btn_Ex17_1.UseVisualStyleBackColor = true;
@@ -1175,19 +1193,20 @@
             // textBox_Ex17_1
             // 
             this.textBox_Ex17_1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex17_1.Location = new System.Drawing.Point(92, 33);
-            this.textBox_Ex17_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex17_1.Location = new System.Drawing.Point(69, 27);
+            this.textBox_Ex17_1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex17_1.Name = "textBox_Ex17_1";
-            this.textBox_Ex17_1.Size = new System.Drawing.Size(145, 24);
+            this.textBox_Ex17_1.Size = new System.Drawing.Size(110, 21);
             this.textBox_Ex17_1.TabIndex = 1;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(19, 34);
+            this.label20.Location = new System.Drawing.Point(14, 28);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(63, 25);
+            this.label20.Size = new System.Drawing.Size(51, 20);
             this.label20.TabIndex = 2;
             this.label20.Text = "String";
             // 
@@ -1195,9 +1214,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(348, 34);
+            this.label21.Location = new System.Drawing.Point(261, 28);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(106, 25);
+            this.label21.Size = new System.Drawing.Size(87, 20);
             this.label21.TabIndex = 4;
             this.label21.Text = "Databases";
             // 
@@ -1209,29 +1229,27 @@
             this.groupBox13.Controls.Add(this.textBox_Ex16Length);
             this.groupBox13.Controls.Add(this.label15);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox13.Location = new System.Drawing.Point(33, 44);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Location = new System.Drawing.Point(25, 36);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox13.Size = new System.Drawing.Size(801, 138);
+            this.groupBox13.Size = new System.Drawing.Size(601, 112);
             this.groupBox13.TabIndex = 13;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "DBs Names With Tables Contain Length Longer Than Input";
             // 
             // textBox_Ex16DBs
             // 
-            this.textBox_Ex16DBs.Location = new System.Drawing.Point(303, 41);
-            this.textBox_Ex16DBs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex16DBs.Location = new System.Drawing.Point(227, 33);
+            this.textBox_Ex16DBs.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex16DBs.Name = "textBox_Ex16DBs";
-            this.textBox_Ex16DBs.Size = new System.Drawing.Size(359, 27);
+            this.textBox_Ex16DBs.Size = new System.Drawing.Size(270, 23);
             this.textBox_Ex16DBs.TabIndex = 11;
             // 
             // btn_Ex16SearchForDBs
             // 
-            this.btn_Ex16SearchForDBs.Location = new System.Drawing.Point(185, 85);
-            this.btn_Ex16SearchForDBs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex16SearchForDBs.Location = new System.Drawing.Point(139, 69);
+            this.btn_Ex16SearchForDBs.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex16SearchForDBs.Name = "btn_Ex16SearchForDBs";
-            this.btn_Ex16SearchForDBs.Size = new System.Drawing.Size(283, 38);
+            this.btn_Ex16SearchForDBs.Size = new System.Drawing.Size(212, 31);
             this.btn_Ex16SearchForDBs.TabIndex = 10;
             this.btn_Ex16SearchForDBs.Text = "Search For Databases";
             this.btn_Ex16SearchForDBs.UseVisualStyleBackColor = true;
@@ -1240,19 +1258,20 @@
             // textBox_Ex16Length
             // 
             this.textBox_Ex16Length.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex16Length.Location = new System.Drawing.Point(116, 44);
-            this.textBox_Ex16Length.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex16Length.Location = new System.Drawing.Point(87, 36);
+            this.textBox_Ex16Length.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex16Length.Name = "textBox_Ex16Length";
-            this.textBox_Ex16Length.Size = new System.Drawing.Size(113, 24);
+            this.textBox_Ex16Length.Size = new System.Drawing.Size(86, 21);
             this.textBox_Ex16Length.TabIndex = 7;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(32, 44);
+            this.label15.Location = new System.Drawing.Point(24, 36);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 25);
+            this.label15.Size = new System.Drawing.Size(59, 20);
             this.label15.TabIndex = 8;
             this.label15.Text = "Length";
             // 
@@ -1261,10 +1280,10 @@
             this.tabPage_Exercises_4.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Exercises_4.Controls.Add(this.groupBox20);
             this.tabPage_Exercises_4.Controls.Add(this.groupBox14);
-            this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Exercises_4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises_4.Name = "tabPage_Exercises_4";
-            this.tabPage_Exercises_4.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Exercises_4.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Exercises_4.TabIndex = 5;
             this.tabPage_Exercises_4.Text = "Exercises_4(25)";
             // 
@@ -1279,11 +1298,11 @@
             this.groupBox20.Controls.Add(this.textBox_Ex25_ContainerName);
             this.groupBox20.Controls.Add(this.label25);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(21, 183);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox20.Location = new System.Drawing.Point(16, 149);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox20.Size = new System.Drawing.Size(924, 185);
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox20.Size = new System.Drawing.Size(693, 150);
             this.groupBox20.TabIndex = 10;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Ex25, Person Data To Cloud";
@@ -1291,28 +1310,29 @@
             // textBox_Ex25_PersonName
             // 
             this.textBox_Ex25_PersonName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex25_PersonName.Location = new System.Drawing.Point(157, 117);
-            this.textBox_Ex25_PersonName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex25_PersonName.Location = new System.Drawing.Point(118, 95);
+            this.textBox_Ex25_PersonName.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex25_PersonName.Name = "textBox_Ex25_PersonName";
-            this.textBox_Ex25_PersonName.Size = new System.Drawing.Size(236, 24);
+            this.textBox_Ex25_PersonName.Size = new System.Drawing.Size(178, 21);
             this.textBox_Ex25_PersonName.TabIndex = 6;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(12, 118);
+            this.label26.Location = new System.Drawing.Point(9, 96);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(131, 25);
+            this.label26.Size = new System.Drawing.Size(105, 20);
             this.label26.TabIndex = 7;
             this.label26.Text = "Person Name";
             // 
             // btn_Ex25_PersonData
             // 
-            this.btn_Ex25_PersonData.Location = new System.Drawing.Point(423, 48);
-            this.btn_Ex25_PersonData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex25_PersonData.Location = new System.Drawing.Point(317, 39);
+            this.btn_Ex25_PersonData.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex25_PersonData.Name = "btn_Ex25_PersonData";
-            this.btn_Ex25_PersonData.Size = new System.Drawing.Size(283, 38);
+            this.btn_Ex25_PersonData.Size = new System.Drawing.Size(212, 31);
             this.btn_Ex25_PersonData.TabIndex = 5;
             this.btn_Ex25_PersonData.Text = "Create Data in Cloud";
             this.btn_Ex25_PersonData.UseVisualStyleBackColor = true;
@@ -1321,38 +1341,40 @@
             // textBox_Ex25_DBName
             // 
             this.textBox_Ex25_DBName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex25_DBName.Location = new System.Drawing.Point(123, 34);
-            this.textBox_Ex25_DBName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex25_DBName.Location = new System.Drawing.Point(92, 28);
+            this.textBox_Ex25_DBName.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex25_DBName.Name = "textBox_Ex25_DBName";
-            this.textBox_Ex25_DBName.Size = new System.Drawing.Size(236, 24);
+            this.textBox_Ex25_DBName.Size = new System.Drawing.Size(178, 21);
             this.textBox_Ex25_DBName.TabIndex = 1;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(21, 34);
+            this.label24.Location = new System.Drawing.Point(16, 28);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(96, 25);
+            this.label24.Size = new System.Drawing.Size(79, 20);
             this.label24.TabIndex = 2;
             this.label24.Text = "Database";
             // 
             // textBox_Ex25_ContainerName
             // 
             this.textBox_Ex25_ContainerName.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex25_ContainerName.Location = new System.Drawing.Point(123, 74);
-            this.textBox_Ex25_ContainerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Ex25_ContainerName.Location = new System.Drawing.Point(92, 60);
+            this.textBox_Ex25_ContainerName.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Ex25_ContainerName.Name = "textBox_Ex25_ContainerName";
-            this.textBox_Ex25_ContainerName.Size = new System.Drawing.Size(236, 24);
+            this.textBox_Ex25_ContainerName.Size = new System.Drawing.Size(178, 21);
             this.textBox_Ex25_ContainerName.TabIndex = 3;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(20, 74);
+            this.label25.Location = new System.Drawing.Point(15, 60);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(97, 25);
+            this.label25.Size = new System.Drawing.Size(78, 20);
             this.label25.TabIndex = 4;
             this.label25.Text = "Container";
             // 
@@ -1365,21 +1387,21 @@
             this.groupBox14.Controls.Add(this.textBox_ContainerNameEx25);
             this.groupBox14.Controls.Add(this.label17);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(21, 43);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox14.Location = new System.Drawing.Point(16, 35);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Size = new System.Drawing.Size(924, 135);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox14.Size = new System.Drawing.Size(693, 110);
             this.groupBox14.TabIndex = 9;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Demo For Ex25, Add Driver Data To Cloud";
             // 
             // btn_SaveDriverDataInCloud
             // 
-            this.btn_SaveDriverDataInCloud.Location = new System.Drawing.Point(423, 48);
-            this.btn_SaveDriverDataInCloud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_SaveDriverDataInCloud.Location = new System.Drawing.Point(317, 39);
+            this.btn_SaveDriverDataInCloud.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SaveDriverDataInCloud.Name = "btn_SaveDriverDataInCloud";
-            this.btn_SaveDriverDataInCloud.Size = new System.Drawing.Size(283, 38);
+            this.btn_SaveDriverDataInCloud.Size = new System.Drawing.Size(212, 31);
             this.btn_SaveDriverDataInCloud.TabIndex = 5;
             this.btn_SaveDriverDataInCloud.Text = "Create Data in Cloud";
             this.btn_SaveDriverDataInCloud.UseVisualStyleBackColor = true;
@@ -1388,38 +1410,40 @@
             // textBox_DBNameEx25
             // 
             this.textBox_DBNameEx25.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_DBNameEx25.Location = new System.Drawing.Point(123, 34);
-            this.textBox_DBNameEx25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_DBNameEx25.Location = new System.Drawing.Point(92, 28);
+            this.textBox_DBNameEx25.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DBNameEx25.Name = "textBox_DBNameEx25";
-            this.textBox_DBNameEx25.Size = new System.Drawing.Size(236, 24);
+            this.textBox_DBNameEx25.Size = new System.Drawing.Size(178, 21);
             this.textBox_DBNameEx25.TabIndex = 1;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 34);
+            this.label16.Location = new System.Drawing.Point(16, 28);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 25);
+            this.label16.Size = new System.Drawing.Size(79, 20);
             this.label16.TabIndex = 2;
             this.label16.Text = "Database";
             // 
             // textBox_ContainerNameEx25
             // 
             this.textBox_ContainerNameEx25.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ContainerNameEx25.Location = new System.Drawing.Point(123, 74);
-            this.textBox_ContainerNameEx25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ContainerNameEx25.Location = new System.Drawing.Point(92, 60);
+            this.textBox_ContainerNameEx25.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ContainerNameEx25.Name = "textBox_ContainerNameEx25";
-            this.textBox_ContainerNameEx25.Size = new System.Drawing.Size(236, 24);
+            this.textBox_ContainerNameEx25.Size = new System.Drawing.Size(178, 21);
             this.textBox_ContainerNameEx25.TabIndex = 3;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 74);
+            this.label17.Location = new System.Drawing.Point(15, 60);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 25);
+            this.label17.Size = new System.Drawing.Size(78, 20);
             this.label17.TabIndex = 4;
             this.label17.Text = "Container";
             // 
@@ -1428,10 +1452,10 @@
             this.tabPage_Ex26.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Ex26.Controls.Add(this.groupBox16);
             this.tabPage_Ex26.Controls.Add(this.groupBox15);
-            this.tabPage_Ex26.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage_Ex26.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex26.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Ex26.Name = "tabPage_Ex26";
-            this.tabPage_Ex26.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Ex26.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Ex26.TabIndex = 6;
             this.tabPage_Ex26.Text = "Ex_26";
             // 
@@ -1443,21 +1467,21 @@
             this.groupBox16.Controls.Add(this.radioButton_Replace);
             this.groupBox16.Controls.Add(this.radioButton_Insert);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox16.Location = new System.Drawing.Point(47, 411);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox16.Location = new System.Drawing.Point(35, 334);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox16.Size = new System.Drawing.Size(932, 103);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Size = new System.Drawing.Size(699, 84);
             this.groupBox16.TabIndex = 1;
             this.groupBox16.TabStop = false;
             // 
             // btn_PerformSelectedActivity
             // 
             this.btn_PerformSelectedActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PerformSelectedActivity.Location = new System.Drawing.Point(475, 31);
-            this.btn_PerformSelectedActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_PerformSelectedActivity.Location = new System.Drawing.Point(356, 25);
+            this.btn_PerformSelectedActivity.Margin = new System.Windows.Forms.Padding(2);
             this.btn_PerformSelectedActivity.Name = "btn_PerformSelectedActivity";
-            this.btn_PerformSelectedActivity.Size = new System.Drawing.Size(433, 39);
+            this.btn_PerformSelectedActivity.Size = new System.Drawing.Size(325, 32);
             this.btn_PerformSelectedActivity.TabIndex = 5;
             this.btn_PerformSelectedActivity.Text = "Perform Selected Activity In Cloud";
             this.btn_PerformSelectedActivity.UseVisualStyleBackColor = true;
@@ -1466,10 +1490,10 @@
             // radioButton_Delete
             // 
             this.radioButton_Delete.AutoSize = true;
-            this.radioButton_Delete.Location = new System.Drawing.Point(172, 39);
-            this.radioButton_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Delete.Location = new System.Drawing.Point(129, 32);
+            this.radioButton_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Delete.Name = "radioButton_Delete";
-            this.radioButton_Delete.Size = new System.Drawing.Size(96, 30);
+            this.radioButton_Delete.Size = new System.Drawing.Size(80, 26);
             this.radioButton_Delete.TabIndex = 2;
             this.radioButton_Delete.TabStop = true;
             this.radioButton_Delete.Text = "Delete";
@@ -1478,10 +1502,10 @@
             // radioButton_Replace
             // 
             this.radioButton_Replace.AutoSize = true;
-            this.radioButton_Replace.Location = new System.Drawing.Point(313, 39);
-            this.radioButton_Replace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Replace.Location = new System.Drawing.Point(235, 32);
+            this.radioButton_Replace.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Replace.Name = "radioButton_Replace";
-            this.radioButton_Replace.Size = new System.Drawing.Size(113, 30);
+            this.radioButton_Replace.Size = new System.Drawing.Size(94, 26);
             this.radioButton_Replace.TabIndex = 1;
             this.radioButton_Replace.TabStop = true;
             this.radioButton_Replace.Text = "Replace";
@@ -1490,10 +1514,10 @@
             // radioButton_Insert
             // 
             this.radioButton_Insert.AutoSize = true;
-            this.radioButton_Insert.Location = new System.Drawing.Point(27, 39);
-            this.radioButton_Insert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Insert.Location = new System.Drawing.Point(20, 32);
+            this.radioButton_Insert.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Insert.Name = "radioButton_Insert";
-            this.radioButton_Insert.Size = new System.Drawing.Size(87, 30);
+            this.radioButton_Insert.Size = new System.Drawing.Size(72, 26);
             this.radioButton_Insert.TabIndex = 0;
             this.radioButton_Insert.TabStop = true;
             this.radioButton_Insert.Text = "Insert";
@@ -1510,11 +1534,11 @@
             this.groupBox15.Controls.Add(this.comboBox_DBsNamesForEx26);
             this.groupBox15.Controls.Add(this.btn_GetDBNamesForEx26);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(47, 34);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox15.Location = new System.Drawing.Point(35, 28);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox15.Size = new System.Drawing.Size(932, 370);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Size = new System.Drawing.Size(699, 301);
             this.groupBox15.TabIndex = 0;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Ex26";
@@ -1523,19 +1547,20 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(21, 144);
+            this.label19.Location = new System.Drawing.Point(16, 117);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(273, 24);
+            this.label19.Size = new System.Drawing.Size(215, 18);
             this.label19.TabIndex = 5;
             this.label19.Text = "Type JSON or Select From File";
             // 
             // btn_LoadJsonIntoScreen
             // 
             this.btn_LoadJsonIntoScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadJsonIntoScreen.Location = new System.Drawing.Point(27, 324);
-            this.btn_LoadJsonIntoScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_LoadJsonIntoScreen.Location = new System.Drawing.Point(20, 263);
+            this.btn_LoadJsonIntoScreen.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LoadJsonIntoScreen.Name = "btn_LoadJsonIntoScreen";
-            this.btn_LoadJsonIntoScreen.Size = new System.Drawing.Size(228, 32);
+            this.btn_LoadJsonIntoScreen.Size = new System.Drawing.Size(171, 26);
             this.btn_LoadJsonIntoScreen.TabIndex = 4;
             this.btn_LoadJsonIntoScreen.Text = "Load JSON File";
             this.btn_LoadJsonIntoScreen.UseVisualStyleBackColor = true;
@@ -1545,18 +1570,18 @@
             // 
             this.comboBox_ContainersForEx26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ContainersForEx26.FormattingEnabled = true;
-            this.comboBox_ContainersForEx26.Location = new System.Drawing.Point(285, 94);
-            this.comboBox_ContainersForEx26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_ContainersForEx26.Location = new System.Drawing.Point(214, 76);
+            this.comboBox_ContainersForEx26.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_ContainersForEx26.Name = "comboBox_ContainersForEx26";
-            this.comboBox_ContainersForEx26.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_ContainersForEx26.Size = new System.Drawing.Size(225, 28);
             this.comboBox_ContainersForEx26.TabIndex = 3;
             // 
             // richTextBox_JsonData
             // 
-            this.richTextBox_JsonData.Location = new System.Drawing.Point(27, 174);
-            this.richTextBox_JsonData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_JsonData.Location = new System.Drawing.Point(20, 141);
+            this.richTextBox_JsonData.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox_JsonData.Name = "richTextBox_JsonData";
-            this.richTextBox_JsonData.Size = new System.Drawing.Size(833, 132);
+            this.richTextBox_JsonData.Size = new System.Drawing.Size(626, 108);
             this.richTextBox_JsonData.TabIndex = 0;
             this.richTextBox_JsonData.Text = "";
             // 
@@ -1564,9 +1589,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(13, 94);
+            this.label18.Location = new System.Drawing.Point(10, 76);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(224, 26);
+            this.label18.Size = new System.Drawing.Size(187, 22);
             this.label18.TabIndex = 2;
             this.label18.Text = "Tables of selected DB";
             // 
@@ -1574,20 +1600,20 @@
             // 
             this.comboBox_DBsNamesForEx26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DBsNamesForEx26.FormattingEnabled = true;
-            this.comboBox_DBsNamesForEx26.Location = new System.Drawing.Point(285, 36);
-            this.comboBox_DBsNamesForEx26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsNamesForEx26.Location = new System.Drawing.Point(214, 29);
+            this.comboBox_DBsNamesForEx26.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsNamesForEx26.Name = "comboBox_DBsNamesForEx26";
-            this.comboBox_DBsNamesForEx26.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_DBsNamesForEx26.Size = new System.Drawing.Size(225, 28);
             this.comboBox_DBsNamesForEx26.TabIndex = 1;
             this.comboBox_DBsNamesForEx26.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChangedEx26);
             // 
             // btn_GetDBNamesForEx26
             // 
             this.btn_GetDBNamesForEx26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GetDBNamesForEx26.Location = new System.Drawing.Point(19, 36);
-            this.btn_GetDBNamesForEx26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetDBNamesForEx26.Location = new System.Drawing.Point(14, 29);
+            this.btn_GetDBNamesForEx26.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GetDBNamesForEx26.Name = "btn_GetDBNamesForEx26";
-            this.btn_GetDBNamesForEx26.Size = new System.Drawing.Size(228, 32);
+            this.btn_GetDBNamesForEx26.Size = new System.Drawing.Size(171, 26);
             this.btn_GetDBNamesForEx26.TabIndex = 0;
             this.btn_GetDBNamesForEx26.Text = "Get DBs For Ex26";
             this.btn_GetDBNamesForEx26.UseVisualStyleBackColor = true;
@@ -1598,10 +1624,9 @@
             this.tabPage_Ex28.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Ex28.Controls.Add(this.groupBox21);
             this.tabPage_Ex28.Controls.Add(this.groupBox22);
-            this.tabPage_Ex28.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex28.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex28.Name = "tabPage_Ex28";
-            this.tabPage_Ex28.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Ex28.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Ex28.TabIndex = 7;
             this.tabPage_Ex28.Text = "Ex_28";
             // 
@@ -1613,21 +1638,21 @@
             this.groupBox21.Controls.Add(this.radioButton_Replace_Ex28);
             this.groupBox21.Controls.Add(this.radioButton_Insert_Ex28);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(39, 411);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox21.Location = new System.Drawing.Point(29, 334);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox21.Size = new System.Drawing.Size(932, 103);
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox21.Size = new System.Drawing.Size(699, 84);
             this.groupBox21.TabIndex = 3;
             this.groupBox21.TabStop = false;
             // 
             // btn_PerformSelectedActivity_Ex28
             // 
             this.btn_PerformSelectedActivity_Ex28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PerformSelectedActivity_Ex28.Location = new System.Drawing.Point(475, 31);
-            this.btn_PerformSelectedActivity_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_PerformSelectedActivity_Ex28.Location = new System.Drawing.Point(356, 25);
+            this.btn_PerformSelectedActivity_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.btn_PerformSelectedActivity_Ex28.Name = "btn_PerformSelectedActivity_Ex28";
-            this.btn_PerformSelectedActivity_Ex28.Size = new System.Drawing.Size(433, 39);
+            this.btn_PerformSelectedActivity_Ex28.Size = new System.Drawing.Size(325, 32);
             this.btn_PerformSelectedActivity_Ex28.TabIndex = 5;
             this.btn_PerformSelectedActivity_Ex28.Text = "Perform Selected Activity In Cloud";
             this.btn_PerformSelectedActivity_Ex28.UseVisualStyleBackColor = true;
@@ -1636,10 +1661,10 @@
             // radioButton_Delete_Ex28
             // 
             this.radioButton_Delete_Ex28.AutoSize = true;
-            this.radioButton_Delete_Ex28.Location = new System.Drawing.Point(172, 39);
-            this.radioButton_Delete_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Delete_Ex28.Location = new System.Drawing.Point(129, 32);
+            this.radioButton_Delete_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Delete_Ex28.Name = "radioButton_Delete_Ex28";
-            this.radioButton_Delete_Ex28.Size = new System.Drawing.Size(96, 30);
+            this.radioButton_Delete_Ex28.Size = new System.Drawing.Size(80, 26);
             this.radioButton_Delete_Ex28.TabIndex = 2;
             this.radioButton_Delete_Ex28.TabStop = true;
             this.radioButton_Delete_Ex28.Text = "Delete";
@@ -1648,10 +1673,10 @@
             // radioButton_Replace_Ex28
             // 
             this.radioButton_Replace_Ex28.AutoSize = true;
-            this.radioButton_Replace_Ex28.Location = new System.Drawing.Point(313, 39);
-            this.radioButton_Replace_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Replace_Ex28.Location = new System.Drawing.Point(235, 32);
+            this.radioButton_Replace_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Replace_Ex28.Name = "radioButton_Replace_Ex28";
-            this.radioButton_Replace_Ex28.Size = new System.Drawing.Size(113, 30);
+            this.radioButton_Replace_Ex28.Size = new System.Drawing.Size(94, 26);
             this.radioButton_Replace_Ex28.TabIndex = 1;
             this.radioButton_Replace_Ex28.TabStop = true;
             this.radioButton_Replace_Ex28.Text = "Replace";
@@ -1660,10 +1685,10 @@
             // radioButton_Insert_Ex28
             // 
             this.radioButton_Insert_Ex28.AutoSize = true;
-            this.radioButton_Insert_Ex28.Location = new System.Drawing.Point(27, 39);
-            this.radioButton_Insert_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Insert_Ex28.Location = new System.Drawing.Point(20, 32);
+            this.radioButton_Insert_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton_Insert_Ex28.Name = "radioButton_Insert_Ex28";
-            this.radioButton_Insert_Ex28.Size = new System.Drawing.Size(87, 30);
+            this.radioButton_Insert_Ex28.Size = new System.Drawing.Size(72, 26);
             this.radioButton_Insert_Ex28.TabIndex = 0;
             this.radioButton_Insert_Ex28.TabStop = true;
             this.radioButton_Insert_Ex28.Text = "Insert";
@@ -1680,11 +1705,11 @@
             this.groupBox22.Controls.Add(this.comboBox_DBsNamesForEx28);
             this.groupBox22.Controls.Add(this.btn_GetDBNamesForEx28);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.Location = new System.Drawing.Point(39, 36);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox22.Location = new System.Drawing.Point(29, 29);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox22.Size = new System.Drawing.Size(932, 370);
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox22.Size = new System.Drawing.Size(699, 301);
             this.groupBox22.TabIndex = 2;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Ex28";
@@ -1693,19 +1718,20 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(21, 144);
+            this.label27.Location = new System.Drawing.Point(16, 117);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(273, 24);
+            this.label27.Size = new System.Drawing.Size(215, 18);
             this.label27.TabIndex = 5;
             this.label27.Text = "Type JSON or Select From File";
             // 
             // btn_LoadJsonIntoScreen_Ex28
             // 
             this.btn_LoadJsonIntoScreen_Ex28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadJsonIntoScreen_Ex28.Location = new System.Drawing.Point(27, 324);
-            this.btn_LoadJsonIntoScreen_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_LoadJsonIntoScreen_Ex28.Location = new System.Drawing.Point(20, 263);
+            this.btn_LoadJsonIntoScreen_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LoadJsonIntoScreen_Ex28.Name = "btn_LoadJsonIntoScreen_Ex28";
-            this.btn_LoadJsonIntoScreen_Ex28.Size = new System.Drawing.Size(228, 32);
+            this.btn_LoadJsonIntoScreen_Ex28.Size = new System.Drawing.Size(171, 26);
             this.btn_LoadJsonIntoScreen_Ex28.TabIndex = 4;
             this.btn_LoadJsonIntoScreen_Ex28.Text = "Load JSON File";
             this.btn_LoadJsonIntoScreen_Ex28.UseVisualStyleBackColor = true;
@@ -1715,18 +1741,18 @@
             // 
             this.comboBox_ContainersForEx28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ContainersForEx28.FormattingEnabled = true;
-            this.comboBox_ContainersForEx28.Location = new System.Drawing.Point(285, 94);
-            this.comboBox_ContainersForEx28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_ContainersForEx28.Location = new System.Drawing.Point(214, 76);
+            this.comboBox_ContainersForEx28.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_ContainersForEx28.Name = "comboBox_ContainersForEx28";
-            this.comboBox_ContainersForEx28.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_ContainersForEx28.Size = new System.Drawing.Size(225, 28);
             this.comboBox_ContainersForEx28.TabIndex = 3;
             // 
             // richTextBox_JsonData_Ex28
             // 
-            this.richTextBox_JsonData_Ex28.Location = new System.Drawing.Point(27, 174);
-            this.richTextBox_JsonData_Ex28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_JsonData_Ex28.Location = new System.Drawing.Point(20, 141);
+            this.richTextBox_JsonData_Ex28.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox_JsonData_Ex28.Name = "richTextBox_JsonData_Ex28";
-            this.richTextBox_JsonData_Ex28.Size = new System.Drawing.Size(833, 132);
+            this.richTextBox_JsonData_Ex28.Size = new System.Drawing.Size(626, 108);
             this.richTextBox_JsonData_Ex28.TabIndex = 0;
             this.richTextBox_JsonData_Ex28.Text = "";
             // 
@@ -1734,9 +1760,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(13, 94);
+            this.label28.Location = new System.Drawing.Point(10, 76);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(224, 26);
+            this.label28.Size = new System.Drawing.Size(187, 22);
             this.label28.TabIndex = 2;
             this.label28.Text = "Tables of selected DB";
             // 
@@ -1744,31 +1771,24 @@
             // 
             this.comboBox_DBsNamesForEx28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DBsNamesForEx28.FormattingEnabled = true;
-            this.comboBox_DBsNamesForEx28.Location = new System.Drawing.Point(285, 36);
-            this.comboBox_DBsNamesForEx28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_DBsNamesForEx28.Location = new System.Drawing.Point(214, 29);
+            this.comboBox_DBsNamesForEx28.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_DBsNamesForEx28.Name = "comboBox_DBsNamesForEx28";
-            this.comboBox_DBsNamesForEx28.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_DBsNamesForEx28.Size = new System.Drawing.Size(225, 28);
             this.comboBox_DBsNamesForEx28.TabIndex = 1;
             this.comboBox_DBsNamesForEx28.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChangedEx28);
             // 
             // btn_GetDBNamesForEx28
             // 
             this.btn_GetDBNamesForEx28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GetDBNamesForEx28.Location = new System.Drawing.Point(19, 36);
-            this.btn_GetDBNamesForEx28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetDBNamesForEx28.Location = new System.Drawing.Point(14, 29);
+            this.btn_GetDBNamesForEx28.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GetDBNamesForEx28.Name = "btn_GetDBNamesForEx28";
-            this.btn_GetDBNamesForEx28.Size = new System.Drawing.Size(228, 32);
+            this.btn_GetDBNamesForEx28.Size = new System.Drawing.Size(171, 26);
             this.btn_GetDBNamesForEx28.TabIndex = 0;
             this.btn_GetDBNamesForEx28.Text = "Get DBs For Ex28";
             this.btn_GetDBNamesForEx28.UseVisualStyleBackColor = true;
             this.btn_GetDBNamesForEx28.Click += new System.EventHandler(this.btn_GetDBNamesForEx28_Click);
-            // 
-            // btn_databaseCounter
-            // 
-            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
-            this.btn_databaseCounter.Name = "btn_databaseCounter";
-            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
-            this.btn_databaseCounter.TabIndex = 0;
             // 
             // tabPage_Count_Objects
             // 
@@ -1776,99 +1796,12 @@
             this.tabPage_Count_Objects.Controls.Add(this.groupBox25);
             this.tabPage_Count_Objects.Controls.Add(this.groupBox24);
             this.tabPage_Count_Objects.Controls.Add(this.groupBox23);
-            this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Count_Objects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
-            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_Count_Objects.Size = new System.Drawing.Size(972, 461);
             this.tabPage_Count_Objects.TabIndex = 8;
             this.tabPage_Count_Objects.Text = "Count_Objects";
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.BackColor = System.Drawing.Color.Tan;
-            this.groupBox23.Controls.Add(this.textBox_TotalObjectsInCloud_Ex35);
-            this.groupBox23.Controls.Add(this.btn_CountAllObjects_Ex35);
-            this.groupBox23.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.Location = new System.Drawing.Point(17, 34);
-            this.groupBox23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox23.Size = new System.Drawing.Size(924, 117);
-            this.groupBox23.TabIndex = 11;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Ex35";
-            // 
-            // btn_CountAllObjects_Ex35
-            // 
-            this.btn_CountAllObjects_Ex35.Location = new System.Drawing.Point(24, 49);
-            this.btn_CountAllObjects_Ex35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_CountAllObjects_Ex35.Name = "btn_CountAllObjects_Ex35";
-            this.btn_CountAllObjects_Ex35.Size = new System.Drawing.Size(384, 38);
-            this.btn_CountAllObjects_Ex35.TabIndex = 5;
-            this.btn_CountAllObjects_Ex35.Text = "Count all objects in Cloud Account";
-            this.btn_CountAllObjects_Ex35.UseVisualStyleBackColor = true;
-            this.btn_CountAllObjects_Ex35.Click += new System.EventHandler(this.btn_CountAllObjects_Ex35_Click);
-            // 
-            // textBox_TotalObjectsInCloud_Ex35
-            // 
-            this.textBox_TotalObjectsInCloud_Ex35.Location = new System.Drawing.Point(441, 54);
-            this.textBox_TotalObjectsInCloud_Ex35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_TotalObjectsInCloud_Ex35.Name = "textBox_TotalObjectsInCloud_Ex35";
-            this.textBox_TotalObjectsInCloud_Ex35.Size = new System.Drawing.Size(359, 29);
-            this.textBox_TotalObjectsInCloud_Ex35.TabIndex = 12;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.BackColor = System.Drawing.Color.Tan;
-            this.groupBox24.Controls.Add(this.textBox_DbForEx36);
-            this.groupBox24.Controls.Add(this.label29);
-            this.groupBox24.Controls.Add(this.textBox_TotalObjsInInputDB_Ex36);
-            this.groupBox24.Controls.Add(this.btn_CountAllObjsInInputDB_Ex36);
-            this.groupBox24.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(17, 155);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox24.Size = new System.Drawing.Size(924, 162);
-            this.groupBox24.TabIndex = 13;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Ex36";
-            // 
-            // textBox_TotalObjsInInputDB_Ex36
-            // 
-            this.textBox_TotalObjsInInputDB_Ex36.Location = new System.Drawing.Point(441, 96);
-            this.textBox_TotalObjsInInputDB_Ex36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_TotalObjsInInputDB_Ex36.Name = "textBox_TotalObjsInInputDB_Ex36";
-            this.textBox_TotalObjsInInputDB_Ex36.Size = new System.Drawing.Size(359, 29);
-            this.textBox_TotalObjsInInputDB_Ex36.TabIndex = 12;
-            // 
-            // btn_CountAllObjsInInputDB_Ex36
-            // 
-            this.btn_CountAllObjsInInputDB_Ex36.Location = new System.Drawing.Point(24, 91);
-            this.btn_CountAllObjsInInputDB_Ex36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_CountAllObjsInInputDB_Ex36.Name = "btn_CountAllObjsInInputDB_Ex36";
-            this.btn_CountAllObjsInInputDB_Ex36.Size = new System.Drawing.Size(384, 38);
-            this.btn_CountAllObjsInInputDB_Ex36.TabIndex = 5;
-            this.btn_CountAllObjsInInputDB_Ex36.Text = "Count all objects in input DB";
-            this.btn_CountAllObjsInInputDB_Ex36.UseVisualStyleBackColor = true;
-            this.btn_CountAllObjsInInputDB_Ex36.Click += new System.EventHandler(this.btn_CountAllObjsInInputDB_Ex36_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(156, 37);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(159, 25);
-            this.label29.TabIndex = 14;
-            this.label29.Text = "Type a DB name";
-            // 
-            // textBox_DbForEx36
-            // 
-            this.textBox_DbForEx36.Location = new System.Drawing.Point(364, 37);
-            this.textBox_DbForEx36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_DbForEx36.Name = "textBox_DbForEx36";
-            this.textBox_DbForEx36.Size = new System.Drawing.Size(359, 29);
-            this.textBox_DbForEx36.TabIndex = 15;
             // 
             // groupBox25
             // 
@@ -1880,77 +1813,169 @@
             this.groupBox25.Controls.Add(this.textBox_DBForEx37);
             this.groupBox25.Controls.Add(this.label33);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox25.Location = new System.Drawing.Point(17, 321);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox25.Location = new System.Drawing.Point(13, 261);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox25.Size = new System.Drawing.Size(924, 185);
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox25.Size = new System.Drawing.Size(693, 150);
             this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Ex37";
             // 
-            // label33
+            // textBox_TotalObjsInInputContainer_Ex37
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(69, 34);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(159, 25);
-            this.label33.TabIndex = 15;
-            this.label33.Text = "Type a DB name";
-            // 
-            // textBox_DBForEx37
-            // 
-            this.textBox_DBForEx37.Location = new System.Drawing.Point(244, 30);
-            this.textBox_DBForEx37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_DBForEx37.Name = "textBox_DBForEx37";
-            this.textBox_DBForEx37.Size = new System.Drawing.Size(359, 29);
-            this.textBox_DBForEx37.TabIndex = 16;
-            // 
-            // btn_CountAllObjsInInputContainer_Ex37
-            // 
-            this.btn_CountAllObjsInInputContainer_Ex37.Location = new System.Drawing.Point(25, 116);
-            this.btn_CountAllObjsInInputContainer_Ex37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_CountAllObjsInInputContainer_Ex37.Name = "btn_CountAllObjsInInputContainer_Ex37";
-            this.btn_CountAllObjsInInputContainer_Ex37.Size = new System.Drawing.Size(298, 38);
-            this.btn_CountAllObjsInInputContainer_Ex37.TabIndex = 16;
-            this.btn_CountAllObjsInInputContainer_Ex37.Text = "Count all objects in input DB";
-            this.btn_CountAllObjsInInputContainer_Ex37.UseVisualStyleBackColor = true;
-            this.btn_CountAllObjsInInputContainer_Ex37.Click += new System.EventHandler(this.btn_CountAllObjsInInputContainer_Ex37_Click);
+            this.textBox_TotalObjsInInputContainer_Ex37.Location = new System.Drawing.Point(254, 102);
+            this.textBox_TotalObjsInInputContainer_Ex37.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalObjsInInputContainer_Ex37.Name = "textBox_TotalObjsInInputContainer_Ex37";
+            this.textBox_TotalObjsInInputContainer_Ex37.Size = new System.Drawing.Size(119, 25);
+            this.textBox_TotalObjsInInputContainer_Ex37.TabIndex = 19;
             // 
             // textBox_ContainerForEx37
             // 
-            this.textBox_ContainerForEx37.Location = new System.Drawing.Point(244, 74);
-            this.textBox_ContainerForEx37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ContainerForEx37.Location = new System.Drawing.Point(183, 60);
+            this.textBox_ContainerForEx37.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ContainerForEx37.Name = "textBox_ContainerForEx37";
-            this.textBox_ContainerForEx37.Size = new System.Drawing.Size(359, 29);
+            this.textBox_ContainerForEx37.Size = new System.Drawing.Size(270, 25);
             this.textBox_ContainerForEx37.TabIndex = 18;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(21, 76);
+            this.label31.Location = new System.Drawing.Point(16, 62);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(217, 25);
+            this.label31.Size = new System.Drawing.Size(173, 20);
             this.label31.TabIndex = 17;
             this.label31.Text = "Type a Container name";
             // 
-            // textBox_TotalObjsInInputContainer_Ex37
+            // btn_CountAllObjsInInputContainer_Ex37
             // 
-            this.textBox_TotalObjsInInputContainer_Ex37.Location = new System.Drawing.Point(339, 125);
-            this.textBox_TotalObjsInInputContainer_Ex37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_TotalObjsInInputContainer_Ex37.Name = "textBox_TotalObjsInInputContainer_Ex37";
-            this.textBox_TotalObjsInInputContainer_Ex37.Size = new System.Drawing.Size(157, 29);
-            this.textBox_TotalObjsInInputContainer_Ex37.TabIndex = 19;
+            this.btn_CountAllObjsInInputContainer_Ex37.Location = new System.Drawing.Point(19, 94);
+            this.btn_CountAllObjsInInputContainer_Ex37.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CountAllObjsInInputContainer_Ex37.Name = "btn_CountAllObjsInInputContainer_Ex37";
+            this.btn_CountAllObjsInInputContainer_Ex37.Size = new System.Drawing.Size(224, 31);
+            this.btn_CountAllObjsInInputContainer_Ex37.TabIndex = 16;
+            this.btn_CountAllObjsInInputContainer_Ex37.Text = "Count all objects in input DB";
+            this.btn_CountAllObjsInInputContainer_Ex37.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjsInInputContainer_Ex37.Click += new System.EventHandler(this.btn_CountAllObjsInInputContainer_Ex37_Click);
+            // 
+            // textBox_DBForEx37
+            // 
+            this.textBox_DBForEx37.Location = new System.Drawing.Point(183, 24);
+            this.textBox_DBForEx37.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DBForEx37.Name = "textBox_DBForEx37";
+            this.textBox_DBForEx37.Size = new System.Drawing.Size(270, 25);
+            this.textBox_DBForEx37.TabIndex = 16;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(52, 28);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(127, 20);
+            this.label33.TabIndex = 15;
+            this.label33.Text = "Type a DB name";
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.BackColor = System.Drawing.Color.Tan;
+            this.groupBox24.Controls.Add(this.textBox_DbForEx36);
+            this.groupBox24.Controls.Add(this.label29);
+            this.groupBox24.Controls.Add(this.textBox_TotalObjsInInputDB_Ex36);
+            this.groupBox24.Controls.Add(this.btn_CountAllObjsInInputDB_Ex36);
+            this.groupBox24.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox24.Location = new System.Drawing.Point(13, 126);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox24.Size = new System.Drawing.Size(693, 132);
+            this.groupBox24.TabIndex = 13;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Ex36";
+            // 
+            // textBox_DbForEx36
+            // 
+            this.textBox_DbForEx36.Location = new System.Drawing.Point(273, 30);
+            this.textBox_DbForEx36.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DbForEx36.Name = "textBox_DbForEx36";
+            this.textBox_DbForEx36.Size = new System.Drawing.Size(270, 25);
+            this.textBox_DbForEx36.TabIndex = 15;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(117, 30);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(127, 20);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Type a DB name";
+            // 
+            // textBox_TotalObjsInInputDB_Ex36
+            // 
+            this.textBox_TotalObjsInInputDB_Ex36.Location = new System.Drawing.Point(331, 78);
+            this.textBox_TotalObjsInInputDB_Ex36.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalObjsInInputDB_Ex36.Name = "textBox_TotalObjsInInputDB_Ex36";
+            this.textBox_TotalObjsInInputDB_Ex36.Size = new System.Drawing.Size(270, 25);
+            this.textBox_TotalObjsInInputDB_Ex36.TabIndex = 12;
+            // 
+            // btn_CountAllObjsInInputDB_Ex36
+            // 
+            this.btn_CountAllObjsInInputDB_Ex36.Location = new System.Drawing.Point(18, 74);
+            this.btn_CountAllObjsInInputDB_Ex36.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CountAllObjsInInputDB_Ex36.Name = "btn_CountAllObjsInInputDB_Ex36";
+            this.btn_CountAllObjsInInputDB_Ex36.Size = new System.Drawing.Size(288, 31);
+            this.btn_CountAllObjsInInputDB_Ex36.TabIndex = 5;
+            this.btn_CountAllObjsInInputDB_Ex36.Text = "Count all objects in input DB";
+            this.btn_CountAllObjsInInputDB_Ex36.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjsInInputDB_Ex36.Click += new System.EventHandler(this.btn_CountAllObjsInInputDB_Ex36_Click);
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.BackColor = System.Drawing.Color.Tan;
+            this.groupBox23.Controls.Add(this.textBox_TotalObjectsInCloud_Ex35);
+            this.groupBox23.Controls.Add(this.btn_CountAllObjects_Ex35);
+            this.groupBox23.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox23.Location = new System.Drawing.Point(13, 28);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox23.Size = new System.Drawing.Size(693, 95);
+            this.groupBox23.TabIndex = 11;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Ex35";
+            // 
+            // textBox_TotalObjectsInCloud_Ex35
+            // 
+            this.textBox_TotalObjectsInCloud_Ex35.Location = new System.Drawing.Point(331, 44);
+            this.textBox_TotalObjectsInCloud_Ex35.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalObjectsInCloud_Ex35.Name = "textBox_TotalObjectsInCloud_Ex35";
+            this.textBox_TotalObjectsInCloud_Ex35.Size = new System.Drawing.Size(270, 25);
+            this.textBox_TotalObjectsInCloud_Ex35.TabIndex = 12;
+            // 
+            // btn_CountAllObjects_Ex35
+            // 
+            this.btn_CountAllObjects_Ex35.Location = new System.Drawing.Point(18, 40);
+            this.btn_CountAllObjects_Ex35.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CountAllObjects_Ex35.Name = "btn_CountAllObjects_Ex35";
+            this.btn_CountAllObjects_Ex35.Size = new System.Drawing.Size(288, 31);
+            this.btn_CountAllObjects_Ex35.TabIndex = 5;
+            this.btn_CountAllObjects_Ex35.Text = "Count all objects in Cloud Account";
+            this.btn_CountAllObjects_Ex35.UseVisualStyleBackColor = true;
+            this.btn_CountAllObjects_Ex35.Click += new System.EventHandler(this.btn_CountAllObjects_Ex35_Click);
             // 
             // tabPage_ReadObjects
             // 
             this.tabPage_ReadObjects.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_ReadObjects.Controls.Add(this.groupBox26);
-            this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_ReadObjects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_ReadObjects.Name = "tabPage_ReadObjects";
-            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1299, 570);
+            this.tabPage_ReadObjects.Size = new System.Drawing.Size(972, 461);
             this.tabPage_ReadObjects.TabIndex = 9;
             this.tabPage_ReadObjects.Text = "ReadObjects";
             // 
@@ -1966,32 +1991,73 @@
             this.groupBox26.Controls.Add(this.comboBox_GetDBsEx45);
             this.groupBox26.Controls.Add(this.btn_GetDBsEx45);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(21, 32);
-            this.groupBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox26.Location = new System.Drawing.Point(16, 26);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox26.Size = new System.Drawing.Size(1239, 496);
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox26.Size = new System.Drawing.Size(929, 403);
             this.groupBox26.TabIndex = 1;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Ex45";
+            // 
+            // btn_GetRequestedDocEx45
+            // 
+            this.btn_GetRequestedDocEx45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetRequestedDocEx45.Location = new System.Drawing.Point(519, 157);
+            this.btn_GetRequestedDocEx45.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_GetRequestedDocEx45.Name = "btn_GetRequestedDocEx45";
+            this.btn_GetRequestedDocEx45.Size = new System.Drawing.Size(279, 40);
+            this.btn_GetRequestedDocEx45.TabIndex = 15;
+            this.btn_GetRequestedDocEx45.Text = "Get Requested Document";
+            this.btn_GetRequestedDocEx45.UseVisualStyleBackColor = true;
+            this.btn_GetRequestedDocEx45.Click += new System.EventHandler(this.btn_GetRequestedDocEx45_Click);
+            // 
+            // richTextBox_RequestedDocEx45
+            // 
+            this.richTextBox_RequestedDocEx45.Location = new System.Drawing.Point(463, 29);
+            this.richTextBox_RequestedDocEx45.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_RequestedDocEx45.Name = "richTextBox_RequestedDocEx45";
+            this.richTextBox_RequestedDocEx45.Size = new System.Drawing.Size(437, 114);
+            this.richTextBox_RequestedDocEx45.TabIndex = 14;
+            this.richTextBox_RequestedDocEx45.Text = "";
+            // 
+            // textBox_GetDocIDEx45
+            // 
+            this.textBox_GetDocIDEx45.Location = new System.Drawing.Point(214, 117);
+            this.textBox_GetDocIDEx45.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_GetDocIDEx45.Name = "textBox_GetDocIDEx45";
+            this.textBox_GetDocIDEx45.Size = new System.Drawing.Size(225, 27);
+            this.textBox_GetDocIDEx45.TabIndex = 13;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(123, 122);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(78, 22);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Type ID:";
             // 
             // comboBox_GetContainersEx45
             // 
             this.comboBox_GetContainersEx45.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_GetContainersEx45.FormattingEnabled = true;
-            this.comboBox_GetContainersEx45.Location = new System.Drawing.Point(285, 89);
-            this.comboBox_GetContainersEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_GetContainersEx45.Location = new System.Drawing.Point(214, 72);
+            this.comboBox_GetContainersEx45.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_GetContainersEx45.Name = "comboBox_GetContainersEx45";
-            this.comboBox_GetContainersEx45.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_GetContainersEx45.Size = new System.Drawing.Size(225, 28);
             this.comboBox_GetContainersEx45.TabIndex = 3;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(33, 97);
+            this.label32.Location = new System.Drawing.Point(25, 79);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(224, 26);
+            this.label32.Size = new System.Drawing.Size(187, 22);
             this.label32.TabIndex = 2;
             this.label32.Text = "Tables of selected DB";
             // 
@@ -1999,71 +2065,95 @@
             // 
             this.comboBox_GetDBsEx45.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_GetDBsEx45.FormattingEnabled = true;
-            this.comboBox_GetDBsEx45.Location = new System.Drawing.Point(285, 36);
-            this.comboBox_GetDBsEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_GetDBsEx45.Location = new System.Drawing.Point(214, 29);
+            this.comboBox_GetDBsEx45.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_GetDBsEx45.Name = "comboBox_GetDBsEx45";
-            this.comboBox_GetDBsEx45.Size = new System.Drawing.Size(299, 34);
+            this.comboBox_GetDBsEx45.Size = new System.Drawing.Size(225, 28);
             this.comboBox_GetDBsEx45.TabIndex = 1;
             this.comboBox_GetDBsEx45.SelectedIndexChanged += new System.EventHandler(this.comboBox_GetDBsEx45_SelectedIndexChanged);
             // 
             // btn_GetDBsEx45
             // 
             this.btn_GetDBsEx45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GetDBsEx45.Location = new System.Drawing.Point(29, 36);
-            this.btn_GetDBsEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_GetDBsEx45.Location = new System.Drawing.Point(22, 29);
+            this.btn_GetDBsEx45.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GetDBsEx45.Name = "btn_GetDBsEx45";
-            this.btn_GetDBsEx45.Size = new System.Drawing.Size(228, 32);
+            this.btn_GetDBsEx45.Size = new System.Drawing.Size(171, 26);
             this.btn_GetDBsEx45.TabIndex = 0;
             this.btn_GetDBsEx45.Text = "Get DBs For Ex45";
             this.btn_GetDBsEx45.UseVisualStyleBackColor = true;
             this.btn_GetDBsEx45.Click += new System.EventHandler(this.btn_GetDBsEx45_Click);
             // 
-            // label30
+            // tabPage_Ex38
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(164, 150);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 26);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "Type ID:";
+            this.tabPage_Ex38.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Ex38.Controls.Add(this.groupBox27);
+            this.tabPage_Ex38.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex38.Name = "tabPage_Ex38";
+            this.tabPage_Ex38.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Ex38.TabIndex = 10;
+            this.tabPage_Ex38.Text = "Ex38";
             // 
-            // textBox_GetDocIDEx45
+            // groupBox27
             // 
-            this.textBox_GetDocIDEx45.Location = new System.Drawing.Point(285, 144);
-            this.textBox_GetDocIDEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_GetDocIDEx45.Name = "textBox_GetDocIDEx45";
-            this.textBox_GetDocIDEx45.Size = new System.Drawing.Size(299, 32);
-            this.textBox_GetDocIDEx45.TabIndex = 13;
+            this.groupBox27.BackColor = System.Drawing.Color.Tan;
+            this.groupBox27.Controls.Add(this.dataGridView_Ex38);
+            this.groupBox27.Controls.Add(this.comboBox_Ex38);
+            this.groupBox27.Controls.Add(this.btn_Ex38);
+            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox27.Location = new System.Drawing.Point(22, 29);
+            this.groupBox27.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox27.Size = new System.Drawing.Size(929, 403);
+            this.groupBox27.TabIndex = 2;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Ex38";
             // 
-            // richTextBox_RequestedDocEx45
+            // comboBox_Ex38
             // 
-            this.richTextBox_RequestedDocEx45.Location = new System.Drawing.Point(617, 36);
-            this.richTextBox_RequestedDocEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_RequestedDocEx45.Name = "richTextBox_RequestedDocEx45";
-            this.richTextBox_RequestedDocEx45.Size = new System.Drawing.Size(581, 140);
-            this.richTextBox_RequestedDocEx45.TabIndex = 14;
-            this.richTextBox_RequestedDocEx45.Text = "";
+            this.comboBox_Ex38.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Ex38.FormattingEnabled = true;
+            this.comboBox_Ex38.Location = new System.Drawing.Point(87, 98);
+            this.comboBox_Ex38.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_Ex38.Name = "comboBox_Ex38";
+            this.comboBox_Ex38.Size = new System.Drawing.Size(764, 28);
+            this.comboBox_Ex38.TabIndex = 1;
             // 
-            // btn_GetRequestedDocEx45
+            // btn_Ex38
             // 
-            this.btn_GetRequestedDocEx45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GetRequestedDocEx45.Location = new System.Drawing.Point(692, 193);
-            this.btn_GetRequestedDocEx45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_GetRequestedDocEx45.Name = "btn_GetRequestedDocEx45";
-            this.btn_GetRequestedDocEx45.Size = new System.Drawing.Size(372, 49);
-            this.btn_GetRequestedDocEx45.TabIndex = 15;
-            this.btn_GetRequestedDocEx45.Text = "Get Requested Document";
-            this.btn_GetRequestedDocEx45.UseVisualStyleBackColor = true;
-            this.btn_GetRequestedDocEx45.Click += new System.EventHandler(this.btn_GetRequestedDocEx45_Click);
+            this.btn_Ex38.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex38.Location = new System.Drawing.Point(374, 48);
+            this.btn_Ex38.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex38.Name = "btn_Ex38";
+            this.btn_Ex38.Size = new System.Drawing.Size(171, 26);
+            this.btn_Ex38.TabIndex = 0;
+            this.btn_Ex38.Text = "Get DBs For Ex38";
+            this.btn_Ex38.UseVisualStyleBackColor = true;
+            this.btn_Ex38.Click += new System.EventHandler(this.btn_Ex38_Click);
+            // 
+            // btn_databaseCounter
+            // 
+            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
+            this.btn_databaseCounter.Name = "btn_databaseCounter";
+            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
+            this.btn_databaseCounter.TabIndex = 0;
+            // 
+            // dataGridView_Ex38
+            // 
+            this.dataGridView_Ex38.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Ex38.Location = new System.Drawing.Point(87, 144);
+            this.dataGridView_Ex38.Name = "dataGridView_Ex38";
+            this.dataGridView_Ex38.Size = new System.Drawing.Size(764, 236);
+            this.dataGridView_Ex38.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 751);
+            this.ClientSize = new System.Drawing.Size(1027, 610);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "it ";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2118,15 +2208,18 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
             this.tabPage_Count_Objects.ResumeLayout(false);
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
             this.tabPage_ReadObjects.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
+            this.tabPage_Ex38.ResumeLayout(false);
+            this.groupBox27.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2292,6 +2385,11 @@
         private System.Windows.Forms.Button btn_GetDBsEx45;
         private System.Windows.Forms.Button btn_GetRequestedDocEx45;
         private System.Windows.Forms.RichTextBox richTextBox_RequestedDocEx45;
+        private System.Windows.Forms.TabPage tabPage_Ex38;
+        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.ComboBox comboBox_Ex38;
+        private System.Windows.Forms.Button btn_Ex38;
+        private System.Windows.Forms.DataGridView dataGridView_Ex38;
     }
 }
 

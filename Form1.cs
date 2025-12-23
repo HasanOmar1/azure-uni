@@ -1,17 +1,19 @@
-﻿using System;
+﻿using Cloud.DataStructures;
+using Cloud.Models;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Linq;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
-using Cloud.Models;
-using System.IO;
 
 
 namespace Cloud
@@ -1316,13 +1318,21 @@ namespace Cloud
             string requestedID = textBox_GetDocIDEx45.Text;
 
             // option 1
-            string studentData = await getStudentDataV1Async(db, table, requestedID);
-            richTextBox_RequestedDocEx45.Text = studentData;
+            //string studentData = await getStudentDataV1Async(db, table, requestedID);
+            //richTextBox_RequestedDocEx45.Text = studentData;
 
             // option 2
+            //Student studentData = await getStudentDataV2Async(db, table, requestedID);
+            //richTextBox_RequestedDocEx45.Text = (studentData == null) ?
+            //    $"Student ID{requestedID} doesnt exist with table '{table}' in a '{db}'" : studentData.ToString();
 
+            // option 3
+            string studentData = await getStudentDataV3Async(db, table, requestedID);
+            richTextBox_RequestedDocEx45.Text = studentData;
         }
 
+
+        // opt1
         private async Task<string> getStudentDataV1Async(string db, string table, string requestedID)
         {
             Student result;
@@ -1338,9 +1348,162 @@ namespace Cloud
             {
                 return $"Student with ID {requestedID} Doesnt Exist";
             }
-
         }
 
+        // opt2
+        private async Task<Student> getStudentDataV2Async(string db, string table, string requestedID)
+        {
+            Student result;
+            try
+            {
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+                ItemResponse<Student> studentObj = await containerRefObj.ReadItemAsync<Student>
+                    (requestedID, new PartitionKey(requestedID));
+
+                result = studentObj.Resource;
+                return result;
+            }
+            catch
+            {
+                //return $"Student ID{requestedID} doesnt exist with table '{table}' in a '{db}'";
+                return null;
+            }
+        }
+
+        // opt3
+        private async Task<string> getStudentDataV3Async(string db, string table, string requestedID)
+        {
+            Student student;
+            try
+            {
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(db, table);
+                ItemResponse<object> obj = await containerRefObj.ReadItemAsync<object>
+                    (requestedID, new PartitionKey(requestedID));
+                JToken token = (JToken)obj.Resource;
+                //string ssssssssssssss = token["ObjType"];
+
+                string type = token["ObjType"]?.ToString();
+                
+                if (type == Targil45.Student.ToString())
+                {
+                    student = token.ToObject<Student>();
+                    return student.ToString();
+                }
+                else
+                    return $" ID{requestedID} of type {type}";
+            }
+            catch
+            {
+                return $"Student ID{requestedID} doesnt exist with table '{table}' in a '{db}'";
+            }
+        }
+
+        // ex 38
+        private async void btn_Ex38_Click(object sender, EventArgs e)
+        {
+            //Task1
+            List<string> results = await getTotalNumOfObjForEachTable();
+            comboBox_Ex38.DataSource = results;
+
+            //Task2
+            List<Targil38SearchResults> resultsAsListOfClasses = await getTotalNumOfObjForEachTableClassView();
+            dataGridView_Ex38.DataSource = resultsAsListOfClasses;
+
+            dataGridView_Ex38.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_Ex38.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 18);
+                c.DefaultCellStyle.ForeColor = Color.DarkGreen;
+            }
+        }
+        //1
+        private async Task<List<string>> getTotalNumOfObjForEachTable()
+        {
+            int totalNumOfObjsInCurrentTable = 0;
+            List<string> result = new List<string>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+                            totalNumOfObjsInCurrentTable = 0;
+                            while (objIterator.HasMoreResults)
+                            {
+                                foreach (object currentObj in await objIterator.ReadNextAsync())
+                                {
+                                    totalNumOfObjsInCurrentTable++;
+                                }
+                            }
+                            result.Add($"DB '{currentDBProp.Id}' - Table '{currentTableProp.Id}' - '{totalNumOfObjsInCurrentTable}' Obj");
+                        }
+                    }
+
+                }
+            }
+            return result;
+        }
+        //2
+        private async Task<List<Targil38SearchResults>> getTotalNumOfObjForEachTableClassView()
+        {
+            int totalNumOfObjsInCurrentTable = 0;
+            List<Targil38SearchResults> result = new List<Targil38SearchResults>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+                            totalNumOfObjsInCurrentTable = 0;
+                            while (objIterator.HasMoreResults)
+                            {
+                                foreach (object currentObj in await objIterator.ReadNextAsync())
+                                {
+                                    totalNumOfObjsInCurrentTable++;
+                                }
+                            }
+                            result.Add(new Targil38SearchResults
+                            {
+                                DatabaseName = currentDBProp.Id,
+                                ContainerName = currentTableProp.Id,
+                                TotalNumOfObjects = totalNumOfObjsInCurrentTable,
+                            }
+                            );
+                        }
+                    }
+
+                }
+            }
+            return result;
+        }
     }
+
+
 }
 

@@ -9,11 +9,18 @@ namespace Cloud.Models
     public class Student
     {
         public string id { get; set; }
+        public string ObjType { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public double AvgGrade { get; set; }
         public Address[] Addresses { get; set; }
         public Course[] Courses { get; set; }
+
+
+        public Student()
+        {
+            ObjType = this.GetType().Name;
+        }
 
         public static List<Student> ConvertStringIntoList(string studentsAsList)
         {
@@ -67,5 +74,9 @@ namespace Cloud.Models
 
             return studentDataAsStr;
         }
+
+
+
+
     }
 }
