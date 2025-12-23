@@ -1454,7 +1454,7 @@ namespace Cloud
                 }
             }
             return result;
-        }**
+        }
         private async Task<List<Targil38SearchResults>> getTotalNumOfObjForEachTableClassView()
         {
             int totalNumOfObjsInCurrentTable = 0;
