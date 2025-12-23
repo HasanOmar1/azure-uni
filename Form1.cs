@@ -1380,8 +1380,8 @@ namespace Cloud
                 ItemResponse<object> obj = await containerRefObj.ReadItemAsync<object>
                     (requestedID, new PartitionKey(requestedID));
                 JToken token = (JToken)obj.Resource;
-                //string ssssssssssssss = token["ObjType"];
 
+                // token = the object
                 string type = token["ObjType"]?.ToString();
                 
                 if (type == Targil45.Student.ToString())
@@ -1416,7 +1416,6 @@ namespace Cloud
                 c.DefaultCellStyle.ForeColor = Color.DarkGreen;
             }
         }
-        //1
         private async Task<List<string>> getTotalNumOfObjForEachTable()
         {
             int totalNumOfObjsInCurrentTable = 0;
@@ -1455,8 +1454,7 @@ namespace Cloud
                 }
             }
             return result;
-        }
-        //2
+        }**
         private async Task<List<Targil38SearchResults>> getTotalNumOfObjForEachTableClassView()
         {
             int totalNumOfObjsInCurrentTable = 0;
