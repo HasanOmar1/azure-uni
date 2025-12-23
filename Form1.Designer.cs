@@ -2126,7 +2126,7 @@
             this.btn_Ex38.Location = new System.Drawing.Point(374, 48);
             this.btn_Ex38.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex38.Name = "btn_Ex38";
-            this.btn_Ex38.Size = new System.Drawing.Size(171, 26);
+            this.btn_Ex38.Size = new System.Drawing.Size(171, 33);
             this.btn_Ex38.TabIndex = 0;
             this.btn_Ex38.Text = "Get DBs For Ex38";
             this.btn_Ex38.UseVisualStyleBackColor = true;
