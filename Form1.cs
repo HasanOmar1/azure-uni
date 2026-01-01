@@ -1669,7 +1669,7 @@ namespace Cloud
                                                 DatabaseName = currentDBProp.Id,
                                                 ContainerName = currentTableProp.Id,
                                                 StudentId = currentStudent.id,
-                                                FullName = currentStudent.FirstName + currentStudent.LastName,
+                                                FullName = currentStudent.FirstName + " " + currentStudent.LastName,
                                                 Grade = course.Grade
                                             });
                                         }
