@@ -10,7 +10,9 @@ namespace Cloud.Models
     {
         public string CourseName { get; set; }
         public string Teacher { get; set; }
-        public int Rate { get; set; }
+        public int Year { get; set; }
+        public int SemesterNum { get; set; }
+        public int Grade { get; set; }
 
 
 
@@ -23,7 +25,6 @@ namespace Cloud.Models
 
             courseDataAsStr += (string.IsNullOrEmpty(Teacher)) ? "\nNo Teacher is documented at this moment" : "\nTeacher: " + Teacher;
 
-            courseDataAsStr += "\nRate: " + Rate;
 
             return courseDataAsStr;
         }

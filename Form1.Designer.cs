@@ -188,10 +188,40 @@
             this.btn_GetDBsEx45 = new System.Windows.Forms.Button();
             this.tabPage_Ex38 = new System.Windows.Forms.TabPage();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.dataGridView_Ex38 = new System.Windows.Forms.DataGridView();
             this.comboBox_Ex38 = new System.Windows.Forms.ComboBox();
             this.btn_Ex38 = new System.Windows.Forms.Button();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
-            this.dataGridView_Ex38 = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.dataGridView_SearchResults30 = new System.Windows.Forms.DataGridView();
+            this.btn_SearchStudents30 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox_MinNumOfCourses30 = new System.Windows.Forms.TextBox();
+            this.textBox_ExactNumOfAddresse30 = new System.Windows.Forms.TextBox();
+            this.textBox_FirstNameStartWith30 = new System.Windows.Forms.TextBox();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.textBox_MinGradeTargil62 = new System.Windows.Forms.TextBox();
+            this.textBox_CourseNameTargil62 = new System.Windows.Forms.TextBox();
+            this.textBox_TeacherNameTargil62 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_PresentStudentTargil62 = new System.Windows.Forms.Button();
+            this.dataGridView_ResultsTargil62 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox_DefineFactorTargil62 = new System.Windows.Forms.TextBox();
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox_TotalStudentDeletedTargil62 = new System.Windows.Forms.TextBox();
+            this.btn_DeleteTheAbovePopulationTargil62 = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -232,6 +262,16 @@
             this.tabPage_Ex38.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -261,11 +301,13 @@
             this.tabControl1.Controls.Add(this.tabPage_Count_Objects);
             this.tabControl1.Controls.Add(this.tabPage_ReadObjects);
             this.tabControl1.Controls.Add(this.tabPage_Ex38);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(980, 487);
+            this.tabControl1.Size = new System.Drawing.Size(1283, 570);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage_General
@@ -278,7 +320,7 @@
             this.tabPage_General.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_General.Name = "tabPage_General";
             this.tabPage_General.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage_General.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_General.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_General.TabIndex = 0;
             this.tabPage_General.Text = "General Details and Cosmos Client Creation";
             // 
@@ -454,7 +496,7 @@
             this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_DBandContainer.Name = "tabPage_DBandContainer";
             this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_DBandContainer.TabIndex = 1;
             this.tabPage_DBandContainer.Text = "Databases and Containers";
             // 
@@ -655,7 +697,7 @@
             this.tabPage_Exercises.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises.Name = "tabPage_Exercises";
-            this.tabPage_Exercises.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Exercises.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Exercises.TabIndex = 2;
             this.tabPage_Exercises.Text = "Exercises";
             // 
@@ -886,7 +928,7 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
-            this.tabPage_Exercises_2.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Exercises_2.TabIndex = 3;
             this.tabPage_Exercises_2.Text = "Exercises_2";
             // 
@@ -1044,7 +1086,7 @@
             this.tabPage_Exercises_3.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises_3.Name = "tabPage_Exercises_3";
-            this.tabPage_Exercises_3.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Exercises_3.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Exercises_3.TabIndex = 4;
             this.tabPage_Exercises_3.Text = "Exercises_3";
             // 
@@ -1283,7 +1325,7 @@
             this.tabPage_Exercises_4.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises_4.Name = "tabPage_Exercises_4";
-            this.tabPage_Exercises_4.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Exercises_4.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Exercises_4.TabIndex = 5;
             this.tabPage_Exercises_4.Text = "Exercises_4(25)";
             // 
@@ -1455,7 +1497,7 @@
             this.tabPage_Ex26.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex26.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Ex26.Name = "tabPage_Ex26";
-            this.tabPage_Ex26.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Ex26.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Ex26.TabIndex = 6;
             this.tabPage_Ex26.Text = "Ex_26";
             // 
@@ -1626,7 +1668,7 @@
             this.tabPage_Ex28.Controls.Add(this.groupBox22);
             this.tabPage_Ex28.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex28.Name = "tabPage_Ex28";
-            this.tabPage_Ex28.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Ex28.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Ex28.TabIndex = 7;
             this.tabPage_Ex28.Text = "Ex_28";
             // 
@@ -1799,7 +1841,7 @@
             this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Count_Objects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
-            this.tabPage_Count_Objects.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Count_Objects.TabIndex = 8;
             this.tabPage_Count_Objects.Text = "Count_Objects";
             // 
@@ -1975,7 +2017,7 @@
             this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ReadObjects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_ReadObjects.Name = "tabPage_ReadObjects";
-            this.tabPage_ReadObjects.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_ReadObjects.TabIndex = 9;
             this.tabPage_ReadObjects.Text = "ReadObjects";
             // 
@@ -2090,7 +2132,7 @@
             this.tabPage_Ex38.Controls.Add(this.groupBox27);
             this.tabPage_Ex38.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex38.Name = "tabPage_Ex38";
-            this.tabPage_Ex38.Size = new System.Drawing.Size(972, 461);
+            this.tabPage_Ex38.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Ex38.TabIndex = 10;
             this.tabPage_Ex38.Text = "Ex38";
             // 
@@ -2109,6 +2151,14 @@
             this.groupBox27.TabIndex = 2;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Ex38";
+            // 
+            // dataGridView_Ex38
+            // 
+            this.dataGridView_Ex38.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Ex38.Location = new System.Drawing.Point(87, 144);
+            this.dataGridView_Ex38.Name = "dataGridView_Ex38";
+            this.dataGridView_Ex38.Size = new System.Drawing.Size(764, 236);
+            this.dataGridView_Ex38.TabIndex = 2;
             // 
             // comboBox_Ex38
             // 
@@ -2139,19 +2189,333 @@
             this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
             this.btn_databaseCounter.TabIndex = 0;
             // 
-            // dataGridView_Ex38
+            // tabPage1
             // 
-            this.dataGridView_Ex38.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Ex38.Location = new System.Drawing.Point(87, 144);
-            this.dataGridView_Ex38.Name = "dataGridView_Ex38";
-            this.dataGridView_Ex38.Size = new System.Drawing.Size(764, 236);
-            this.dataGridView_Ex38.TabIndex = 2;
+            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.groupBox28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage1.TabIndex = 11;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.groupBox29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage2.TabIndex = 12;
+            this.tabPage2.Text = "Ex 62";
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.BackColor = System.Drawing.Color.Tan;
+            this.groupBox28.Controls.Add(this.textBox_FirstNameStartWith30);
+            this.groupBox28.Controls.Add(this.textBox_ExactNumOfAddresse30);
+            this.groupBox28.Controls.Add(this.textBox_MinNumOfCourses30);
+            this.groupBox28.Controls.Add(this.label36);
+            this.groupBox28.Controls.Add(this.label35);
+            this.groupBox28.Controls.Add(this.label34);
+            this.groupBox28.Controls.Add(this.panel1);
+            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox28.Location = new System.Drawing.Point(173, 29);
+            this.groupBox28.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox28.Size = new System.Drawing.Size(929, 467);
+            this.groupBox28.TabIndex = 3;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Ex??";
+            // 
+            // dataGridView_SearchResults30
+            // 
+            this.dataGridView_SearchResults30.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_SearchResults30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SearchResults30.Location = new System.Drawing.Point(22, 19);
+            this.dataGridView_SearchResults30.Name = "dataGridView_SearchResults30";
+            this.dataGridView_SearchResults30.Size = new System.Drawing.Size(574, 258);
+            this.dataGridView_SearchResults30.TabIndex = 2;
+            // 
+            // btn_SearchStudents30
+            // 
+            this.btn_SearchStudents30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchStudents30.Location = new System.Drawing.Point(613, 19);
+            this.btn_SearchStudents30.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SearchStudents30.Name = "btn_SearchStudents30";
+            this.btn_SearchStudents30.Size = new System.Drawing.Size(171, 33);
+            this.btn_SearchStudents30.TabIndex = 3;
+            this.btn_SearchStudents30.Text = "Get Result";
+            this.btn_SearchStudents30.UseVisualStyleBackColor = true;
+            this.btn_SearchStudents30.Click += new System.EventHandler(this.btn_SearchStudents30_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btn_SearchStudents30);
+            this.panel1.Controls.Add(this.dataGridView_SearchResults30);
+            this.panel1.Location = new System.Drawing.Point(67, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(802, 290);
+            this.panel1.TabIndex = 4;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(156, 103);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(153, 22);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "Num Of Courses :";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(88, 69);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(221, 22);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Exact Num Of Addresses :";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(109, 37);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(200, 22);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "First Name Starts With :";
+            // 
+            // textBox_MinNumOfCourses30
+            // 
+            this.textBox_MinNumOfCourses30.Location = new System.Drawing.Point(329, 103);
+            this.textBox_MinNumOfCourses30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinNumOfCourses30.Name = "textBox_MinNumOfCourses30";
+            this.textBox_MinNumOfCourses30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_MinNumOfCourses30.TabIndex = 13;
+            // 
+            // textBox_ExactNumOfAddresse30
+            // 
+            this.textBox_ExactNumOfAddresse30.Location = new System.Drawing.Point(329, 69);
+            this.textBox_ExactNumOfAddresse30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ExactNumOfAddresse30.Name = "textBox_ExactNumOfAddresse30";
+            this.textBox_ExactNumOfAddresse30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_ExactNumOfAddresse30.TabIndex = 14;
+            // 
+            // textBox_FirstNameStartWith30
+            // 
+            this.textBox_FirstNameStartWith30.Location = new System.Drawing.Point(329, 32);
+            this.textBox_FirstNameStartWith30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_FirstNameStartWith30.Name = "textBox_FirstNameStartWith30";
+            this.textBox_FirstNameStartWith30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_FirstNameStartWith30.TabIndex = 15;
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.BackColor = System.Drawing.Color.Tan;
+            this.groupBox29.Controls.Add(this.panel4);
+            this.groupBox29.Controls.Add(this.panel3);
+            this.groupBox29.Controls.Add(this.panel2);
+            this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox29.Location = new System.Drawing.Point(159, 39);
+            this.groupBox29.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox29.Size = new System.Drawing.Size(943, 451);
+            this.groupBox29.TabIndex = 4;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Ex 62";
+            // 
+            // textBox_MinGradeTargil62
+            // 
+            this.textBox_MinGradeTargil62.Location = new System.Drawing.Point(167, 86);
+            this.textBox_MinGradeTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinGradeTargil62.Name = "textBox_MinGradeTargil62";
+            this.textBox_MinGradeTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_MinGradeTargil62.TabIndex = 15;
+            // 
+            // textBox_CourseNameTargil62
+            // 
+            this.textBox_CourseNameTargil62.Location = new System.Drawing.Point(167, 15);
+            this.textBox_CourseNameTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CourseNameTargil62.Name = "textBox_CourseNameTargil62";
+            this.textBox_CourseNameTargil62.Size = new System.Drawing.Size(143, 27);
+            this.textBox_CourseNameTargil62.TabIndex = 14;
+            // 
+            // textBox_TeacherNameTargil62
+            // 
+            this.textBox_TeacherNameTargil62.Location = new System.Drawing.Point(167, 49);
+            this.textBox_TeacherNameTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TeacherNameTargil62.Name = "textBox_TeacherNameTargil62";
+            this.textBox_TeacherNameTargil62.Size = new System.Drawing.Size(143, 27);
+            this.textBox_TeacherNameTargil62.TabIndex = 13;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(17, 18);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(130, 22);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "Course Name :";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(8, 54);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(139, 22);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Teacher Name :";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(44, 91);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(103, 22);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "Min Grade :";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.textBox_CourseNameTargil62);
+            this.panel2.Controls.Add(this.textBox_MinGradeTargil62);
+            this.panel2.Controls.Add(this.textBox_TeacherNameTargil62);
+            this.panel2.Controls.Add(this.btn_PresentStudentTargil62);
+            this.panel2.Controls.Add(this.dataGridView_ResultsTargil62);
+            this.panel2.Controls.Add(this.label39);
+            this.panel2.Controls.Add(this.label37);
+            this.panel2.Controls.Add(this.label38);
+            this.panel2.Location = new System.Drawing.Point(29, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 219);
+            this.panel2.TabIndex = 4;
+            // 
+            // btn_PresentStudentTargil62
+            // 
+            this.btn_PresentStudentTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PresentStudentTargil62.Location = new System.Drawing.Point(80, 151);
+            this.btn_PresentStudentTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_PresentStudentTargil62.Name = "btn_PresentStudentTargil62";
+            this.btn_PresentStudentTargil62.Size = new System.Drawing.Size(171, 33);
+            this.btn_PresentStudentTargil62.TabIndex = 3;
+            this.btn_PresentStudentTargil62.Text = "Present Student";
+            this.btn_PresentStudentTargil62.UseVisualStyleBackColor = true;
+            this.btn_PresentStudentTargil62.Click += new System.EventHandler(this.btn_PresentStudentTargil62_Click);
+            // 
+            // dataGridView_ResultsTargil62
+            // 
+            this.dataGridView_ResultsTargil62.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_ResultsTargil62.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ResultsTargil62.Location = new System.Drawing.Point(419, 13);
+            this.dataGridView_ResultsTargil62.Name = "dataGridView_ResultsTargil62";
+            this.dataGridView_ResultsTargil62.Size = new System.Drawing.Size(437, 186);
+            this.dataGridView_ResultsTargil62.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Controls.Add(this.label40);
+            this.panel3.Controls.Add(this.textBox_DefineFactorTargil62);
+            this.panel3.Controls.Add(this.btn_ApplyFactorOnTheAbovePopulationTargil62);
+            this.panel3.Location = new System.Drawing.Point(29, 260);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(891, 58);
+            this.panel3.TabIndex = 16;
+            // 
+            // textBox_DefineFactorTargil62
+            // 
+            this.textBox_DefineFactorTargil62.Location = new System.Drawing.Point(185, 17);
+            this.textBox_DefineFactorTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DefineFactorTargil62.Name = "textBox_DefineFactorTargil62";
+            this.textBox_DefineFactorTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_DefineFactorTargil62.TabIndex = 15;
+            // 
+            // btn_ApplyFactorOnTheAbovePopulationTargil62
+            // 
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Location = new System.Drawing.Point(419, 14);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Name = "btn_ApplyFactorOnTheAbovePopulationTargil62";
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.TabIndex = 3;
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Text = "Apply Factor on the Above Population";
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_ApplyFactorOnTheAbovePopulationTargil62_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.label41);
+            this.panel4.Controls.Add(this.textBox_TotalStudentDeletedTargil62);
+            this.panel4.Controls.Add(this.btn_DeleteTheAbovePopulationTargil62);
+            this.panel4.Location = new System.Drawing.Point(29, 334);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(891, 58);
+            this.panel4.TabIndex = 17;
+            // 
+            // textBox_TotalStudentDeletedTargil62
+            // 
+            this.textBox_TotalStudentDeletedTargil62.Location = new System.Drawing.Point(726, 16);
+            this.textBox_TotalStudentDeletedTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalStudentDeletedTargil62.Name = "textBox_TotalStudentDeletedTargil62";
+            this.textBox_TotalStudentDeletedTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_TotalStudentDeletedTargil62.TabIndex = 15;
+            // 
+            // btn_DeleteTheAbovePopulationTargil62
+            // 
+            this.btn_DeleteTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteTheAbovePopulationTargil62.Location = new System.Drawing.Point(12, 13);
+            this.btn_DeleteTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DeleteTheAbovePopulationTargil62.Name = "btn_DeleteTheAbovePopulationTargil62";
+            this.btn_DeleteTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
+            this.btn_DeleteTheAbovePopulationTargil62.TabIndex = 3;
+            this.btn_DeleteTheAbovePopulationTargil62.Text = "Delete the Above Population";
+            this.btn_DeleteTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
+            this.btn_DeleteTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_DeleteTheAbovePopulationTargil62_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(44, 17);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(128, 22);
+            this.label40.TabIndex = 16;
+            this.label40.Text = "Define Factor :";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(498, 19);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(204, 22);
+            this.label41.TabIndex = 17;
+            this.label41.Text = "Total Students Deleted :";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 610);
+            this.ClientSize = new System.Drawing.Size(1381, 610);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -2220,6 +2584,20 @@
             this.tabPage_Ex38.ResumeLayout(false);
             this.groupBox27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.groupBox29.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2390,6 +2768,36 @@
         private System.Windows.Forms.ComboBox comboBox_Ex38;
         private System.Windows.Forms.Button btn_Ex38;
         private System.Windows.Forms.DataGridView dataGridView_Ex38;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.TextBox textBox_FirstNameStartWith30;
+        private System.Windows.Forms.TextBox textBox_ExactNumOfAddresse30;
+        private System.Windows.Forms.TextBox textBox_MinNumOfCourses30;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_SearchStudents30;
+        private System.Windows.Forms.DataGridView dataGridView_SearchResults30;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.TextBox textBox_MinGradeTargil62;
+        private System.Windows.Forms.TextBox textBox_CourseNameTargil62;
+        private System.Windows.Forms.TextBox textBox_TeacherNameTargil62;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_PresentStudentTargil62;
+        private System.Windows.Forms.DataGridView dataGridView_ResultsTargil62;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox_TotalStudentDeletedTargil62;
+        private System.Windows.Forms.Button btn_DeleteTheAbovePopulationTargil62;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox_DefineFactorTargil62;
+        private System.Windows.Forms.Button btn_ApplyFactorOnTheAbovePopulationTargil62;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
     }
 }
 

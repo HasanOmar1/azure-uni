@@ -976,9 +976,9 @@ namespace Cloud
         private async void btn_PerformSelectedActivity_Click(object sender, EventArgs e)
         {
             // Read the user choice
-            string selectedActivity = radioButton_Delete.Checked ? "Delete" :
-                                      radioButton_Replace.Checked ? "Replace" :
-                                       "Insert";
+            string selectedActivity = radioButton_Delete.Checked ? CloudActivityTypes.Delete.ToString() :
+                                      radioButton_Replace.Checked ? CloudActivityTypes.Replace.ToString() :
+                                       CloudActivityTypes.Insert.ToString();
 
             // Read the selected destination (DB, Table)
             string db = comboBox_DBsNamesForEx26.Text;
@@ -1012,11 +1012,11 @@ namespace Cloud
                     isStudentExist = false;
                 }
 
-                if (selectedActivity == "Insert" && !isStudentExist)
+                if (selectedActivity == CloudActivityTypes.Insert.ToString() && !isStudentExist)
                     await containerRefObj.CreateItemAsync<Student>(student);
-                else if (selectedActivity == "Delete" && isStudentExist)
+                else if (selectedActivity == CloudActivityTypes.Delete.ToString() && isStudentExist)
                     await containerRefObj.DeleteItemAsync<Student>(student.id, new PartitionKey(student.id));
-                else if (selectedActivity == "Replace" && isStudentExist)
+                else if (selectedActivity == CloudActivityTypes.Replace.ToString() && isStudentExist)
                     await containerRefObj.ReplaceItemAsync<Student>(student, student.id, new PartitionKey(student.id));
 
 
@@ -1499,6 +1499,323 @@ namespace Cloud
                 }
             }
             return result;
+        }
+
+
+        // ex 30/12/2025    
+        private async void btn_SearchStudents30_Click(object sender, EventArgs e)
+        {
+
+            string firstNamePrefix = textBox_FirstNameStartWith30.Text;
+            int requestesnumOfAddr = Convert.ToInt32(textBox_ExactNumOfAddresse30.Text);
+            int numOfCourses = Convert.ToInt32(textBox_MinNumOfCourses30.Text);
+
+            List<OutputFor30> resultsAsListOfClasses = await getResultsForSearch30(firstNamePrefix, requestesnumOfAddr, numOfCourses);
+            dataGridView_SearchResults30.DataSource = resultsAsListOfClasses;
+
+            dataGridView_SearchResults30.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_SearchResults30.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 14);
+                c.DefaultCellStyle.ForeColor = Color.Blue;
+            }
+
+        }
+
+        private async Task<List<OutputFor30>> getResultsForSearch30(string firstNamePrefix, int requestesnumOfAddr, int numOfCourses)
+        {
+            string firstNameOfCurrentStudent = null;
+
+            Address[] adresses;
+            int counterForAddrOfCurrentStudent = 0;
+
+            Course[] courses;
+            int counterForCoursesOfCurrentStudent = 0;
+
+            List<OutputFor30> result = new List<OutputFor30>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<Student> studentIterator = tableRefObj.GetItemQueryIterator<Student>();
+
+                            while (studentIterator.HasMoreResults)
+                            {
+                                foreach (Student currentStudent in await studentIterator.ReadNextAsync())
+                                {
+                                    firstNameOfCurrentStudent = currentStudent.FirstName;
+                                    if (string.IsNullOrEmpty(firstNameOfCurrentStudent) ||
+                                        !firstNameOfCurrentStudent.ToLower().StartsWith(firstNamePrefix.ToLower())) continue;
+
+                                    adresses = currentStudent.Addresses;
+                                    if (adresses == null || adresses.Length == 0) continue;
+
+                                    counterForAddrOfCurrentStudent = 0;
+                                    foreach (Address address in adresses)
+                                        if (address != null) counterForAddrOfCurrentStudent++;
+
+                                    if (requestesnumOfAddr != counterForAddrOfCurrentStudent) continue;
+
+                                    courses = currentStudent.Courses;
+                                    if (courses == null || courses.Length == 0) continue;
+
+                                    counterForCoursesOfCurrentStudent = 0;
+                                    foreach (Course course in courses)
+                                    {
+                                        if (courses != null) counterForCoursesOfCurrentStudent++;
+
+                                        if (counterForCoursesOfCurrentStudent == numOfCourses)
+                                        {
+                                            result.Add(new OutputFor30
+                                            {
+                                                DatabaseName = currentDBProp.Id,
+                                                ContainerName = currentTableProp.Id,
+                                                StudentId = currentStudent.id,
+                                                FirstName = currentStudent.FirstName,
+                                                LastName = (string.IsNullOrEmpty(currentStudent.LastName)) ?
+                                                "No last name" : currentStudent.LastName
+                                            }
+
+                                            );
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+            return result;
+        }
+
+        // ex 62
+        private async void btn_PresentStudentTargil62_Click(object sender, EventArgs e)
+        {
+            string requestedCourseName = textBox_CourseNameTargil62.Text;
+            string requestedTeacher = textBox_TeacherNameTargil62.Text;
+            int minGrade = Convert.ToInt32(textBox_MinGradeTargil62.Text);
+
+            List<OutputTargil62> resultsAsListOfClasses = await getResultsTargil62(requestedCourseName, requestedTeacher, minGrade);
+            dataGridView_ResultsTargil62.DataSource = resultsAsListOfClasses;
+
+            dataGridView_ResultsTargil62.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_ResultsTargil62.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 10);
+                c.DefaultCellStyle.ForeColor = Color.Blue;
+            }
+        }
+
+        // ----------------------------------------------- << a >>
+        private async Task<List<OutputTargil62>> getResultsTargil62(string requestedCourseName, string requestedTeacher, int minGrade)
+        {
+            Course[] courses;
+            List<OutputTargil62> result = new List<OutputTargil62>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<Student> studentIterator = tableRefObj.GetItemQueryIterator<Student>();
+
+                            while (studentIterator.HasMoreResults)
+                            {
+                                foreach (Student currentStudent in await studentIterator.ReadNextAsync())
+                                {
+                                    courses = currentStudent.Courses;
+                                    if (courses == null || courses.Length == 0) continue;
+
+                                    foreach (Course course in courses)
+                                    {
+                                        if (courses == null) continue;
+                                        if (!string.IsNullOrEmpty(course.CourseName)
+                                            && course.CourseName.Equals(requestedCourseName)
+                                            && !string.IsNullOrEmpty(course.Teacher)
+                                            && course.Teacher.Equals(requestedTeacher)
+                                            && course.Grade > minGrade)
+                                        {
+                                            result.Add(new OutputTargil62
+                                            {
+                                                DatabaseName = currentDBProp.Id,
+                                                ContainerName = currentTableProp.Id,
+                                                StudentId = currentStudent.id,
+                                                FullName = currentStudent.FirstName + currentStudent.LastName,
+                                                Grade = course.Grade
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        // ----------------------------------------------- << b >>
+        private async void btn_ApplyFactorOnTheAbovePopulationTargil62_Click(object sender, EventArgs e)
+        {
+            string requestedCourseName = textBox_CourseNameTargil62.Text;
+            string requestedTeacher = textBox_TeacherNameTargil62.Text;
+            int minGrade = Convert.ToInt32(textBox_MinGradeTargil62.Text);
+            int factor = Convert.ToInt32(textBox_DefineFactorTargil62.Text);
+            await updateFactorForSearchTargil62(requestedCourseName, requestedTeacher, minGrade, factor);
+        }
+
+        private async Task updateFactorForSearchTargil62(string requestedCourseName, string requestedTeacher, int minGrade, int factor)
+        {
+            Course[] courses;
+            List<OutputTargil62> result = new List<OutputTargil62>();
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<Student> studentIterator = tableRefObj.GetItemQueryIterator<Student>();
+
+                            while (studentIterator.HasMoreResults)
+                            {
+                                foreach (Student currentStudent in await studentIterator.ReadNextAsync())
+                                {
+                                    courses = currentStudent.Courses;
+                                    if (courses == null || courses.Length == 0) continue;
+
+                                    foreach (Course course in courses)
+                                    {
+                                        if (courses == null) continue;
+                                        if (!string.IsNullOrEmpty(course.CourseName)
+                                            && course.CourseName.Equals(requestedCourseName)
+                                            && !string.IsNullOrEmpty(course.Teacher)
+                                            && course.Teacher.Equals(requestedTeacher)
+                                            && course.Grade > minGrade)
+
+                                        {
+                                            // update
+                                            course.Grade = Math.Min(100, course.Grade + factor);
+                                            course.Grade = Math.Max(0, course.Grade);
+
+                                            await tableRefObj.ReplaceItemAsync(currentStudent,
+                                            currentStudent.id,
+                                            new PartitionKey(currentStudent.id));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // ----------------------------------------------- << c >>  
+        private async void btn_DeleteTheAbovePopulationTargil62_Click(object sender, EventArgs e)
+        {
+            string requestedCourseName = textBox_CourseNameTargil62.Text;
+            string requestedTeacher = textBox_TeacherNameTargil62.Text;
+            int minGrade = Convert.ToInt32(textBox_MinGradeTargil62.Text);
+            int result = await deleteFactorTargil62(requestedCourseName, requestedTeacher, minGrade);
+            textBox_TotalStudentDeletedTargil62.Text = result.ToString();
+        }
+
+        private async Task<int> deleteFactorTargil62(string requestedCourseName, string requestedTeacher, int minGrade)
+        {
+            Course[] courses;
+            int count = 0;
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<Student> studentIterator = tableRefObj.GetItemQueryIterator<Student>();
+
+                            while (studentIterator.HasMoreResults)
+                            {
+                                foreach (Student currentStudent in await studentIterator.ReadNextAsync())
+                                {
+                                    courses = currentStudent.Courses;
+                                    if (courses == null || courses.Length == 0) continue;
+
+                                    foreach (Course course in courses)
+                                    {
+                                        if (courses == null) continue;
+                                        if (!string.IsNullOrEmpty(course.CourseName)
+                                            && course.CourseName.Equals(requestedCourseName)
+                                            && !string.IsNullOrEmpty(course.Teacher)
+                                            && course.Teacher.Equals(requestedTeacher)
+                                            && course.Grade > minGrade)
+
+                                        {
+                                            count++;
+
+                                            await tableRefObj.DeleteItemAsync<Student>(
+                                                currentStudent.id,
+                                                new PartitionKey(currentStudent.id));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return count;
         }
     }
 

@@ -12,7 +12,10 @@ namespace Cloud.Models
         public string ObjType { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string StudentName { get; set; }
         public double AvgGrade { get; set; }
+        public string FacultyName { get; set; }
+        public int SemesterNum { get; set; }
         public Address[] Addresses { get; set; }
         public Course[] Courses { get; set; }
 
