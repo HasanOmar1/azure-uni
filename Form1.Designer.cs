@@ -177,6 +177,11 @@
             this.textBox_TotalObjectsInCloud_Ex35 = new System.Windows.Forms.TextBox();
             this.btn_CountAllObjects_Ex35 = new System.Windows.Forms.Button();
             this.tabPage_ReadObjects = new System.Windows.Forms.TabPage();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.btn_Ex46 = new System.Windows.Forms.Button();
+            this.textBox_LastName_Ex46 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.btn_GetRequestedDocEx45 = new System.Windows.Forms.Button();
             this.richTextBox_RequestedDocEx45 = new System.Windows.Forms.RichTextBox();
@@ -187,6 +192,9 @@
             this.comboBox_GetDBsEx45 = new System.Windows.Forms.ComboBox();
             this.btn_GetDBsEx45 = new System.Windows.Forms.Button();
             this.tabPage_Ex38_39 = new System.Windows.Forms.TabPage();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.textBox_Ex39 = new System.Windows.Forms.TextBox();
+            this.btn_Ex39 = new System.Windows.Forms.Button();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Ex38 = new System.Windows.Forms.DataGridView();
             this.comboBox_Ex38 = new System.Windows.Forms.ComboBox();
@@ -221,10 +229,14 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.tabPage_Ex46 = new System.Windows.Forms.TabPage();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.btn_Ex39 = new System.Windows.Forms.Button();
-            this.textBox_Ex39 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox_ObjId_Ex46 = new System.Windows.Forms.TextBox();
+            this.textBox_TableName_Ex46 = new System.Windows.Forms.TextBox();
+            this.textBox_DBName_Ex46 = new System.Windows.Forms.TextBox();
+            this.richTextBox_Ex46 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -261,8 +273,10 @@
             this.groupBox24.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.tabPage_ReadObjects.SuspendLayout();
+            this.groupBox31.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.tabPage_Ex38_39.SuspendLayout();
+            this.groupBox30.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).BeginInit();
             this.tabPage_30_12.SuspendLayout();
@@ -275,7 +289,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).BeginInit();
-            this.groupBox30.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -307,6 +320,7 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex38_39);
             this.tabControl1.Controls.Add(this.tabPage_30_12);
             this.tabControl1.Controls.Add(this.tabPage_Ex62);
+            this.tabControl1.Controls.Add(this.tabPage_Ex46);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -2017,6 +2031,7 @@
             // tabPage_ReadObjects
             // 
             this.tabPage_ReadObjects.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_ReadObjects.Controls.Add(this.groupBox31);
             this.tabPage_ReadObjects.Controls.Add(this.groupBox26);
             this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ReadObjects.Margin = new System.Windows.Forms.Padding(2);
@@ -2024,6 +2039,71 @@
             this.tabPage_ReadObjects.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_ReadObjects.TabIndex = 9;
             this.tabPage_ReadObjects.Text = "ReadObjects";
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.BackColor = System.Drawing.Color.Tan;
+            this.groupBox31.Controls.Add(this.richTextBox_Ex46);
+            this.groupBox31.Controls.Add(this.textBox_DBName_Ex46);
+            this.groupBox31.Controls.Add(this.textBox_TableName_Ex46);
+            this.groupBox31.Controls.Add(this.textBox_ObjId_Ex46);
+            this.groupBox31.Controls.Add(this.label45);
+            this.groupBox31.Controls.Add(this.label44);
+            this.groupBox31.Controls.Add(this.btn_Ex46);
+            this.groupBox31.Controls.Add(this.textBox_LastName_Ex46);
+            this.groupBox31.Controls.Add(this.label42);
+            this.groupBox31.Controls.Add(this.label43);
+            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox31.Location = new System.Drawing.Point(16, 252);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox31.Size = new System.Drawing.Size(929, 212);
+            this.groupBox31.TabIndex = 16;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Ex46";
+            // 
+            // btn_Ex46
+            // 
+            this.btn_Ex46.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex46.Location = new System.Drawing.Point(495, 25);
+            this.btn_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex46.Name = "btn_Ex46";
+            this.btn_Ex46.Size = new System.Drawing.Size(279, 40);
+            this.btn_Ex46.TabIndex = 15;
+            this.btn_Ex46.Text = "Is Data In DB";
+            this.btn_Ex46.UseVisualStyleBackColor = true;
+            this.btn_Ex46.Click += new System.EventHandler(this.btn_Ex46_Click);
+            // 
+            // textBox_LastName_Ex46
+            // 
+            this.textBox_LastName_Ex46.Location = new System.Drawing.Point(214, 154);
+            this.textBox_LastName_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_LastName_Ex46.Name = "textBox_LastName_Ex46";
+            this.textBox_LastName_Ex46.Size = new System.Drawing.Size(225, 27);
+            this.textBox_LastName_Ex46.TabIndex = 13;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(120, 122);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(73, 22);
+            this.label42.TabIndex = 4;
+            this.label42.Text = "Type ID";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(85, 78);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(108, 22);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "Table Name";
             // 
             // groupBox26
             // 
@@ -2041,7 +2121,7 @@
             this.groupBox26.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox26.Size = new System.Drawing.Size(929, 403);
+            this.groupBox26.Size = new System.Drawing.Size(929, 212);
             this.groupBox26.TabIndex = 1;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Ex45";
@@ -2079,7 +2159,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(123, 122);
+            this.label30.Location = new System.Drawing.Point(115, 122);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(78, 22);
@@ -2100,7 +2180,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(25, 79);
+            this.label32.Location = new System.Drawing.Point(6, 78);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(187, 22);
@@ -2140,6 +2220,41 @@
             this.tabPage_Ex38_39.Size = new System.Drawing.Size(1275, 544);
             this.tabPage_Ex38_39.TabIndex = 10;
             this.tabPage_Ex38_39.Text = "Ex38_39";
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.BackColor = System.Drawing.Color.Tan;
+            this.groupBox30.Controls.Add(this.textBox_Ex39);
+            this.groupBox30.Controls.Add(this.btn_Ex39);
+            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.Location = new System.Drawing.Point(22, 434);
+            this.groupBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox30.Size = new System.Drawing.Size(929, 79);
+            this.groupBox30.TabIndex = 3;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Ex39";
+            // 
+            // textBox_Ex39
+            // 
+            this.textBox_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex39.Location = new System.Drawing.Point(232, 30);
+            this.textBox_Ex39.Name = "textBox_Ex39";
+            this.textBox_Ex39.Size = new System.Drawing.Size(619, 23);
+            this.textBox_Ex39.TabIndex = 1;
+            // 
+            // btn_Ex39
+            // 
+            this.btn_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex39.Location = new System.Drawing.Point(18, 24);
+            this.btn_Ex39.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex39.Name = "btn_Ex39";
+            this.btn_Ex39.Size = new System.Drawing.Size(171, 33);
+            this.btn_Ex39.TabIndex = 0;
+            this.btn_Ex39.Text = "Get DBs For Ex39";
+            this.btn_Ex39.UseVisualStyleBackColor = true;
+            this.btn_Ex39.Click += new System.EventHandler(this.btn_Ex39_Click);
             // 
             // groupBox27
             // 
@@ -2509,6 +2624,15 @@
             this.label38.TabIndex = 6;
             this.label38.Text = "Teacher Name :";
             // 
+            // tabPage_Ex46
+            // 
+            this.tabPage_Ex46.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex46.Name = "tabPage_Ex46";
+            this.tabPage_Ex46.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex46.TabIndex = 13;
+            this.tabPage_Ex46.Text = "Ex46";
+            this.tabPage_Ex46.UseVisualStyleBackColor = true;
+            // 
             // btn_databaseCounter
             // 
             this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
@@ -2516,40 +2640,60 @@
             this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
             this.btn_databaseCounter.TabIndex = 0;
             // 
-            // groupBox30
+            // label44
             // 
-            this.groupBox30.BackColor = System.Drawing.Color.Tan;
-            this.groupBox30.Controls.Add(this.textBox_Ex39);
-            this.groupBox30.Controls.Add(this.btn_Ex39);
-            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.Location = new System.Drawing.Point(22, 434);
-            this.groupBox30.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox30.Size = new System.Drawing.Size(929, 79);
-            this.groupBox30.TabIndex = 3;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Ex39";
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(54, 32);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(139, 22);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "Database Name";
             // 
-            // btn_Ex39
+            // label45
             // 
-            this.btn_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ex39.Location = new System.Drawing.Point(18, 24);
-            this.btn_Ex39.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Ex39.Name = "btn_Ex39";
-            this.btn_Ex39.Size = new System.Drawing.Size(171, 33);
-            this.btn_Ex39.TabIndex = 0;
-            this.btn_Ex39.Text = "Get DBs For Ex39";
-            this.btn_Ex39.UseVisualStyleBackColor = true;
-            this.btn_Ex39.Click += new System.EventHandler(this.btn_Ex39_Click);
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(97, 159);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(96, 22);
+            this.label45.TabIndex = 17;
+            this.label45.Text = "Last Name";
             // 
-            // textBox_Ex39
+            // textBox_ObjId_Ex46
             // 
-            this.textBox_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ex39.Location = new System.Drawing.Point(232, 30);
-            this.textBox_Ex39.Name = "textBox_Ex39";
-            this.textBox_Ex39.Size = new System.Drawing.Size(619, 23);
-            this.textBox_Ex39.TabIndex = 1;
+            this.textBox_ObjId_Ex46.Location = new System.Drawing.Point(214, 117);
+            this.textBox_ObjId_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ObjId_Ex46.Name = "textBox_ObjId_Ex46";
+            this.textBox_ObjId_Ex46.Size = new System.Drawing.Size(225, 27);
+            this.textBox_ObjId_Ex46.TabIndex = 18;
+            // 
+            // textBox_TableName_Ex46
+            // 
+            this.textBox_TableName_Ex46.Location = new System.Drawing.Point(214, 75);
+            this.textBox_TableName_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TableName_Ex46.Name = "textBox_TableName_Ex46";
+            this.textBox_TableName_Ex46.Size = new System.Drawing.Size(225, 27);
+            this.textBox_TableName_Ex46.TabIndex = 19;
+            // 
+            // textBox_DBName_Ex46
+            // 
+            this.textBox_DBName_Ex46.Location = new System.Drawing.Point(214, 32);
+            this.textBox_DBName_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DBName_Ex46.Name = "textBox_DBName_Ex46";
+            this.textBox_DBName_Ex46.Size = new System.Drawing.Size(225, 27);
+            this.textBox_DBName_Ex46.TabIndex = 20;
+            // 
+            // richTextBox_Ex46
+            // 
+            this.richTextBox_Ex46.Location = new System.Drawing.Point(463, 78);
+            this.richTextBox_Ex46.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_Ex46.Name = "richTextBox_Ex46";
+            this.richTextBox_Ex46.Size = new System.Drawing.Size(437, 114);
+            this.richTextBox_Ex46.TabIndex = 16;
+            this.richTextBox_Ex46.Text = "";
             // 
             // Form1
             // 
@@ -2619,9 +2763,13 @@
             this.groupBox23.ResumeLayout(false);
             this.groupBox23.PerformLayout();
             this.tabPage_ReadObjects.ResumeLayout(false);
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox31.PerformLayout();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             this.tabPage_Ex38_39.ResumeLayout(false);
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
             this.groupBox27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).EndInit();
             this.tabPage_30_12.ResumeLayout(false);
@@ -2638,8 +2786,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).EndInit();
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox30.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2843,6 +2989,18 @@
         private System.Windows.Forms.GroupBox groupBox30;
         private System.Windows.Forms.TextBox textBox_Ex39;
         private System.Windows.Forms.Button btn_Ex39;
+        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.Button btn_Ex46;
+        private System.Windows.Forms.TextBox textBox_LastName_Ex46;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TabPage tabPage_Ex46;
+        private System.Windows.Forms.TextBox textBox_DBName_Ex46;
+        private System.Windows.Forms.TextBox textBox_TableName_Ex46;
+        private System.Windows.Forms.TextBox textBox_ObjId_Ex46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.RichTextBox richTextBox_Ex46;
     }
 }
 

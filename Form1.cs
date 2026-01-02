@@ -2,6 +2,7 @@
 using Cloud.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
+using Microsoft.Azure.Cosmos.Serialization.HybridRow;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -1821,10 +1822,10 @@ namespace Cloud
         // ex 39
         private async void btn_Ex39_Click(object sender, EventArgs e)
         {
-            textBox_Ex39.Text = await tablesWithMaxObjects();
+            textBox_Ex39.Text = await tablesWithMaxObjectsAsync();
         }
 
-        private async Task<string> tablesWithMaxObjects()
+        private async Task<string> tablesWithMaxObjectsAsync()
         {
             int maxObjCounter = 0;
             string tablesWithMaxObjs = "The following tables with max num of objects ";
@@ -1907,7 +1908,55 @@ namespace Cloud
             return tablesWithMaxObjs;
            
         }
-    }
+
+
+        // ex 46
+        private async void btn_Ex46_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex46.Text;
+            string containerName = textBox_TableName_Ex46.Text;
+            string objID = textBox_ObjId_Ex46.Text;
+            string lastName = textBox_LastName_Ex46.Text;
+            bool result = await IsDataInDBAsync(dbName, containerName, objID, lastName);
+            richTextBox_Ex46.Text = result == true ? "True" : "False";
+        }
+
+        private async Task<bool> IsDataInDBAsync(string dbName, string containerName, string objID, string lastName)
+        {
+            richTextBox_Ex46.ForeColor = Color.White;
+
+            try
+            { 
+            Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+            if (dbRefObj == null) return false;
+
+            Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, containerName);
+            if (containerRefObj == null) return false;
+
+            ItemResponse<object> studentObj = await containerRefObj.ReadItemAsync<object>(objID, new PartitionKey(objID));
+            if (studentObj == null) return false;
+            else
+            {
+                JToken token = (JToken)studentObj.Resource;
+                string currentLastName = token["LastName"]?.ToString();
+                if (string.IsNullOrEmpty(currentLastName)) return false;
+                if (!currentLastName.Equals(lastName)) return false;
+
+            }
+
+            }
+            catch
+            {
+                richTextBox_Ex46.BackColor = Color.Red;
+                return false;
+            }
+
+            richTextBox_Ex46.BackColor = Color.Green;
+            
+                return true;
+        }
+            
+        }
 
 
 }
