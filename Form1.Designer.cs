@@ -186,42 +186,45 @@
             this.label32 = new System.Windows.Forms.Label();
             this.comboBox_GetDBsEx45 = new System.Windows.Forms.ComboBox();
             this.btn_GetDBsEx45 = new System.Windows.Forms.Button();
-            this.tabPage_Ex38 = new System.Windows.Forms.TabPage();
+            this.tabPage_Ex38_39 = new System.Windows.Forms.TabPage();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Ex38 = new System.Windows.Forms.DataGridView();
             this.comboBox_Ex38 = new System.Windows.Forms.ComboBox();
             this.btn_Ex38 = new System.Windows.Forms.Button();
-            this.btn_databaseCounter = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage_30_12 = new System.Windows.Forms.TabPage();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.dataGridView_SearchResults30 = new System.Windows.Forms.DataGridView();
-            this.btn_SearchStudents30 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox_MinNumOfCourses30 = new System.Windows.Forms.TextBox();
-            this.textBox_ExactNumOfAddresse30 = new System.Windows.Forms.TextBox();
             this.textBox_FirstNameStartWith30 = new System.Windows.Forms.TextBox();
+            this.textBox_ExactNumOfAddresse30 = new System.Windows.Forms.TextBox();
+            this.textBox_MinNumOfCourses30 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_SearchStudents30 = new System.Windows.Forms.Button();
+            this.dataGridView_SearchResults30 = new System.Windows.Forms.DataGridView();
+            this.tabPage_Ex62 = new System.Windows.Forms.TabPage();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.textBox_MinGradeTargil62 = new System.Windows.Forms.TextBox();
-            this.textBox_CourseNameTargil62 = new System.Windows.Forms.TextBox();
-            this.textBox_TeacherNameTargil62 = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_PresentStudentTargil62 = new System.Windows.Forms.Button();
-            this.dataGridView_ResultsTargil62 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox_DefineFactorTargil62 = new System.Windows.Forms.TextBox();
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
             this.textBox_TotalStudentDeletedTargil62 = new System.Windows.Forms.TextBox();
             this.btn_DeleteTheAbovePopulationTargil62 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.textBox_DefineFactorTargil62 = new System.Windows.Forms.TextBox();
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_CourseNameTargil62 = new System.Windows.Forms.TextBox();
+            this.textBox_MinGradeTargil62 = new System.Windows.Forms.TextBox();
+            this.textBox_TeacherNameTargil62 = new System.Windows.Forms.TextBox();
+            this.btn_PresentStudentTargil62 = new System.Windows.Forms.Button();
+            this.dataGridView_ResultsTargil62 = new System.Windows.Forms.DataGridView();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.btn_databaseCounter = new System.Windows.Forms.Button();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.btn_Ex39 = new System.Windows.Forms.Button();
+            this.textBox_Ex39 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -259,19 +262,20 @@
             this.groupBox23.SuspendLayout();
             this.tabPage_ReadObjects.SuspendLayout();
             this.groupBox26.SuspendLayout();
-            this.tabPage_Ex38.SuspendLayout();
+            this.tabPage_Ex38_39.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage_30_12.SuspendLayout();
             this.groupBox28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).BeginInit();
+            this.tabPage_Ex62.SuspendLayout();
             this.groupBox29.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.groupBox30.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -300,9 +304,9 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex28);
             this.tabControl1.Controls.Add(this.tabPage_Count_Objects);
             this.tabControl1.Controls.Add(this.tabPage_ReadObjects);
-            this.tabControl1.Controls.Add(this.tabPage_Ex38);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage_Ex38_39);
+            this.tabControl1.Controls.Add(this.tabPage_30_12);
+            this.tabControl1.Controls.Add(this.tabPage_Ex62);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -2126,15 +2130,16 @@
             this.btn_GetDBsEx45.UseVisualStyleBackColor = true;
             this.btn_GetDBsEx45.Click += new System.EventHandler(this.btn_GetDBsEx45_Click);
             // 
-            // tabPage_Ex38
+            // tabPage_Ex38_39
             // 
-            this.tabPage_Ex38.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage_Ex38.Controls.Add(this.groupBox27);
-            this.tabPage_Ex38.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Ex38.Name = "tabPage_Ex38";
-            this.tabPage_Ex38.Size = new System.Drawing.Size(1275, 544);
-            this.tabPage_Ex38.TabIndex = 10;
-            this.tabPage_Ex38.Text = "Ex38";
+            this.tabPage_Ex38_39.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Ex38_39.Controls.Add(this.groupBox30);
+            this.tabPage_Ex38_39.Controls.Add(this.groupBox27);
+            this.tabPage_Ex38_39.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex38_39.Name = "tabPage_Ex38_39";
+            this.tabPage_Ex38_39.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex38_39.TabIndex = 10;
+            this.tabPage_Ex38_39.Text = "Ex38_39";
             // 
             // groupBox27
             // 
@@ -2182,32 +2187,15 @@
             this.btn_Ex38.UseVisualStyleBackColor = true;
             this.btn_Ex38.Click += new System.EventHandler(this.btn_Ex38_Click);
             // 
-            // btn_databaseCounter
+            // tabPage_30_12
             // 
-            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
-            this.btn_databaseCounter.Name = "btn_databaseCounter";
-            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
-            this.btn_databaseCounter.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.groupBox28);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1275, 544);
-            this.tabPage1.TabIndex = 11;
-            this.tabPage1.Text = "tabPage1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage2.Controls.Add(this.groupBox29);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1275, 544);
-            this.tabPage2.TabIndex = 12;
-            this.tabPage2.Text = "Ex 62";
+            this.tabPage_30_12.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_30_12.Controls.Add(this.groupBox28);
+            this.tabPage_30_12.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_30_12.Name = "tabPage_30_12";
+            this.tabPage_30_12.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_30_12.TabIndex = 11;
+            this.tabPage_30_12.Text = "30/12";
             // 
             // groupBox28
             // 
@@ -2229,14 +2217,72 @@
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "Ex??";
             // 
-            // dataGridView_SearchResults30
+            // textBox_FirstNameStartWith30
             // 
-            this.dataGridView_SearchResults30.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView_SearchResults30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_SearchResults30.Location = new System.Drawing.Point(22, 19);
-            this.dataGridView_SearchResults30.Name = "dataGridView_SearchResults30";
-            this.dataGridView_SearchResults30.Size = new System.Drawing.Size(574, 258);
-            this.dataGridView_SearchResults30.TabIndex = 2;
+            this.textBox_FirstNameStartWith30.Location = new System.Drawing.Point(329, 32);
+            this.textBox_FirstNameStartWith30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_FirstNameStartWith30.Name = "textBox_FirstNameStartWith30";
+            this.textBox_FirstNameStartWith30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_FirstNameStartWith30.TabIndex = 15;
+            // 
+            // textBox_ExactNumOfAddresse30
+            // 
+            this.textBox_ExactNumOfAddresse30.Location = new System.Drawing.Point(329, 69);
+            this.textBox_ExactNumOfAddresse30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ExactNumOfAddresse30.Name = "textBox_ExactNumOfAddresse30";
+            this.textBox_ExactNumOfAddresse30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_ExactNumOfAddresse30.TabIndex = 14;
+            // 
+            // textBox_MinNumOfCourses30
+            // 
+            this.textBox_MinNumOfCourses30.Location = new System.Drawing.Point(329, 103);
+            this.textBox_MinNumOfCourses30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinNumOfCourses30.Name = "textBox_MinNumOfCourses30";
+            this.textBox_MinNumOfCourses30.Size = new System.Drawing.Size(270, 27);
+            this.textBox_MinNumOfCourses30.TabIndex = 13;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(109, 37);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(200, 22);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "First Name Starts With :";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(88, 69);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(221, 22);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Exact Num Of Addresses :";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(156, 103);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(153, 22);
+            this.label34.TabIndex = 5;
+            this.label34.Text = "Num Of Courses :";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btn_SearchStudents30);
+            this.panel1.Controls.Add(this.dataGridView_SearchResults30);
+            this.panel1.Location = new System.Drawing.Point(67, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(802, 290);
+            this.panel1.TabIndex = 4;
             // 
             // btn_SearchStudents30
             // 
@@ -2250,72 +2296,24 @@
             this.btn_SearchStudents30.UseVisualStyleBackColor = true;
             this.btn_SearchStudents30.Click += new System.EventHandler(this.btn_SearchStudents30_Click);
             // 
-            // panel1
+            // dataGridView_SearchResults30
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.btn_SearchStudents30);
-            this.panel1.Controls.Add(this.dataGridView_SearchResults30);
-            this.panel1.Location = new System.Drawing.Point(67, 157);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 290);
-            this.panel1.TabIndex = 4;
+            this.dataGridView_SearchResults30.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_SearchResults30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SearchResults30.Location = new System.Drawing.Point(22, 19);
+            this.dataGridView_SearchResults30.Name = "dataGridView_SearchResults30";
+            this.dataGridView_SearchResults30.Size = new System.Drawing.Size(574, 258);
+            this.dataGridView_SearchResults30.TabIndex = 2;
             // 
-            // label34
+            // tabPage_Ex62
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(156, 103);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(153, 22);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "Num Of Courses :";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(88, 69);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(221, 22);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "Exact Num Of Addresses :";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(109, 37);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(200, 22);
-            this.label36.TabIndex = 7;
-            this.label36.Text = "First Name Starts With :";
-            // 
-            // textBox_MinNumOfCourses30
-            // 
-            this.textBox_MinNumOfCourses30.Location = new System.Drawing.Point(329, 103);
-            this.textBox_MinNumOfCourses30.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_MinNumOfCourses30.Name = "textBox_MinNumOfCourses30";
-            this.textBox_MinNumOfCourses30.Size = new System.Drawing.Size(270, 27);
-            this.textBox_MinNumOfCourses30.TabIndex = 13;
-            // 
-            // textBox_ExactNumOfAddresse30
-            // 
-            this.textBox_ExactNumOfAddresse30.Location = new System.Drawing.Point(329, 69);
-            this.textBox_ExactNumOfAddresse30.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ExactNumOfAddresse30.Name = "textBox_ExactNumOfAddresse30";
-            this.textBox_ExactNumOfAddresse30.Size = new System.Drawing.Size(270, 27);
-            this.textBox_ExactNumOfAddresse30.TabIndex = 14;
-            // 
-            // textBox_FirstNameStartWith30
-            // 
-            this.textBox_FirstNameStartWith30.Location = new System.Drawing.Point(329, 32);
-            this.textBox_FirstNameStartWith30.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_FirstNameStartWith30.Name = "textBox_FirstNameStartWith30";
-            this.textBox_FirstNameStartWith30.Size = new System.Drawing.Size(270, 27);
-            this.textBox_FirstNameStartWith30.TabIndex = 15;
+            this.tabPage_Ex62.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Ex62.Controls.Add(this.groupBox29);
+            this.tabPage_Ex62.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex62.Name = "tabPage_Ex62";
+            this.tabPage_Ex62.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex62.TabIndex = 12;
+            this.tabPage_Ex62.Text = "Ex 62";
             // 
             // groupBox29
             // 
@@ -2333,13 +2331,105 @@
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "Ex 62";
             // 
-            // textBox_MinGradeTargil62
+            // panel4
             // 
-            this.textBox_MinGradeTargil62.Location = new System.Drawing.Point(167, 86);
-            this.textBox_MinGradeTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_MinGradeTargil62.Name = "textBox_MinGradeTargil62";
-            this.textBox_MinGradeTargil62.Size = new System.Drawing.Size(84, 27);
-            this.textBox_MinGradeTargil62.TabIndex = 15;
+            this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.label41);
+            this.panel4.Controls.Add(this.textBox_TotalStudentDeletedTargil62);
+            this.panel4.Controls.Add(this.btn_DeleteTheAbovePopulationTargil62);
+            this.panel4.Location = new System.Drawing.Point(29, 334);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(891, 58);
+            this.panel4.TabIndex = 17;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(498, 19);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(204, 22);
+            this.label41.TabIndex = 17;
+            this.label41.Text = "Total Students Deleted :";
+            // 
+            // textBox_TotalStudentDeletedTargil62
+            // 
+            this.textBox_TotalStudentDeletedTargil62.Location = new System.Drawing.Point(726, 16);
+            this.textBox_TotalStudentDeletedTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalStudentDeletedTargil62.Name = "textBox_TotalStudentDeletedTargil62";
+            this.textBox_TotalStudentDeletedTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_TotalStudentDeletedTargil62.TabIndex = 15;
+            // 
+            // btn_DeleteTheAbovePopulationTargil62
+            // 
+            this.btn_DeleteTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteTheAbovePopulationTargil62.Location = new System.Drawing.Point(12, 13);
+            this.btn_DeleteTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DeleteTheAbovePopulationTargil62.Name = "btn_DeleteTheAbovePopulationTargil62";
+            this.btn_DeleteTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
+            this.btn_DeleteTheAbovePopulationTargil62.TabIndex = 3;
+            this.btn_DeleteTheAbovePopulationTargil62.Text = "Delete the Above Population";
+            this.btn_DeleteTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
+            this.btn_DeleteTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_DeleteTheAbovePopulationTargil62_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Controls.Add(this.label40);
+            this.panel3.Controls.Add(this.textBox_DefineFactorTargil62);
+            this.panel3.Controls.Add(this.btn_ApplyFactorOnTheAbovePopulationTargil62);
+            this.panel3.Location = new System.Drawing.Point(29, 260);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(891, 58);
+            this.panel3.TabIndex = 16;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(44, 17);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(128, 22);
+            this.label40.TabIndex = 16;
+            this.label40.Text = "Define Factor :";
+            // 
+            // textBox_DefineFactorTargil62
+            // 
+            this.textBox_DefineFactorTargil62.Location = new System.Drawing.Point(185, 17);
+            this.textBox_DefineFactorTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DefineFactorTargil62.Name = "textBox_DefineFactorTargil62";
+            this.textBox_DefineFactorTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_DefineFactorTargil62.TabIndex = 15;
+            // 
+            // btn_ApplyFactorOnTheAbovePopulationTargil62
+            // 
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Location = new System.Drawing.Point(419, 14);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Name = "btn_ApplyFactorOnTheAbovePopulationTargil62";
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.TabIndex = 3;
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Text = "Apply Factor on the Above Population";
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
+            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_ApplyFactorOnTheAbovePopulationTargil62_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.textBox_CourseNameTargil62);
+            this.panel2.Controls.Add(this.textBox_MinGradeTargil62);
+            this.panel2.Controls.Add(this.textBox_TeacherNameTargil62);
+            this.panel2.Controls.Add(this.btn_PresentStudentTargil62);
+            this.panel2.Controls.Add(this.dataGridView_ResultsTargil62);
+            this.panel2.Controls.Add(this.label39);
+            this.panel2.Controls.Add(this.label37);
+            this.panel2.Controls.Add(this.label38);
+            this.panel2.Location = new System.Drawing.Point(29, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 219);
+            this.panel2.TabIndex = 4;
             // 
             // textBox_CourseNameTargil62
             // 
@@ -2349,6 +2439,14 @@
             this.textBox_CourseNameTargil62.Size = new System.Drawing.Size(143, 27);
             this.textBox_CourseNameTargil62.TabIndex = 14;
             // 
+            // textBox_MinGradeTargil62
+            // 
+            this.textBox_MinGradeTargil62.Location = new System.Drawing.Point(167, 86);
+            this.textBox_MinGradeTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinGradeTargil62.Name = "textBox_MinGradeTargil62";
+            this.textBox_MinGradeTargil62.Size = new System.Drawing.Size(84, 27);
+            this.textBox_MinGradeTargil62.TabIndex = 15;
+            // 
             // textBox_TeacherNameTargil62
             // 
             this.textBox_TeacherNameTargil62.Location = new System.Drawing.Point(167, 49);
@@ -2356,6 +2454,38 @@
             this.textBox_TeacherNameTargil62.Name = "textBox_TeacherNameTargil62";
             this.textBox_TeacherNameTargil62.Size = new System.Drawing.Size(143, 27);
             this.textBox_TeacherNameTargil62.TabIndex = 13;
+            // 
+            // btn_PresentStudentTargil62
+            // 
+            this.btn_PresentStudentTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PresentStudentTargil62.Location = new System.Drawing.Point(80, 151);
+            this.btn_PresentStudentTargil62.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_PresentStudentTargil62.Name = "btn_PresentStudentTargil62";
+            this.btn_PresentStudentTargil62.Size = new System.Drawing.Size(171, 33);
+            this.btn_PresentStudentTargil62.TabIndex = 3;
+            this.btn_PresentStudentTargil62.Text = "Present Student";
+            this.btn_PresentStudentTargil62.UseVisualStyleBackColor = true;
+            this.btn_PresentStudentTargil62.Click += new System.EventHandler(this.btn_PresentStudentTargil62_Click);
+            // 
+            // dataGridView_ResultsTargil62
+            // 
+            this.dataGridView_ResultsTargil62.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_ResultsTargil62.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ResultsTargil62.Location = new System.Drawing.Point(419, 13);
+            this.dataGridView_ResultsTargil62.Name = "dataGridView_ResultsTargil62";
+            this.dataGridView_ResultsTargil62.Size = new System.Drawing.Size(437, 186);
+            this.dataGridView_ResultsTargil62.TabIndex = 2;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(44, 91);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(103, 22);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "Min Grade :";
             // 
             // label37
             // 
@@ -2379,143 +2509,53 @@
             this.label38.TabIndex = 6;
             this.label38.Text = "Teacher Name :";
             // 
-            // label39
+            // btn_databaseCounter
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(44, 91);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(103, 22);
-            this.label39.TabIndex = 5;
-            this.label39.Text = "Min Grade :";
+            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
+            this.btn_databaseCounter.Name = "btn_databaseCounter";
+            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
+            this.btn_databaseCounter.TabIndex = 0;
             // 
-            // panel2
+            // groupBox30
             // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.textBox_CourseNameTargil62);
-            this.panel2.Controls.Add(this.textBox_MinGradeTargil62);
-            this.panel2.Controls.Add(this.textBox_TeacherNameTargil62);
-            this.panel2.Controls.Add(this.btn_PresentStudentTargil62);
-            this.panel2.Controls.Add(this.dataGridView_ResultsTargil62);
-            this.panel2.Controls.Add(this.label39);
-            this.panel2.Controls.Add(this.label37);
-            this.panel2.Controls.Add(this.label38);
-            this.panel2.Location = new System.Drawing.Point(29, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 219);
-            this.panel2.TabIndex = 4;
+            this.groupBox30.BackColor = System.Drawing.Color.Tan;
+            this.groupBox30.Controls.Add(this.textBox_Ex39);
+            this.groupBox30.Controls.Add(this.btn_Ex39);
+            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.Location = new System.Drawing.Point(22, 434);
+            this.groupBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox30.Size = new System.Drawing.Size(929, 79);
+            this.groupBox30.TabIndex = 3;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Ex39";
             // 
-            // btn_PresentStudentTargil62
+            // btn_Ex39
             // 
-            this.btn_PresentStudentTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PresentStudentTargil62.Location = new System.Drawing.Point(80, 151);
-            this.btn_PresentStudentTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_PresentStudentTargil62.Name = "btn_PresentStudentTargil62";
-            this.btn_PresentStudentTargil62.Size = new System.Drawing.Size(171, 33);
-            this.btn_PresentStudentTargil62.TabIndex = 3;
-            this.btn_PresentStudentTargil62.Text = "Present Student";
-            this.btn_PresentStudentTargil62.UseVisualStyleBackColor = true;
-            this.btn_PresentStudentTargil62.Click += new System.EventHandler(this.btn_PresentStudentTargil62_Click);
+            this.btn_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex39.Location = new System.Drawing.Point(18, 24);
+            this.btn_Ex39.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex39.Name = "btn_Ex39";
+            this.btn_Ex39.Size = new System.Drawing.Size(171, 33);
+            this.btn_Ex39.TabIndex = 0;
+            this.btn_Ex39.Text = "Get DBs For Ex39";
+            this.btn_Ex39.UseVisualStyleBackColor = true;
+            this.btn_Ex39.Click += new System.EventHandler(this.btn_Ex39_Click);
             // 
-            // dataGridView_ResultsTargil62
+            // textBox_Ex39
             // 
-            this.dataGridView_ResultsTargil62.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView_ResultsTargil62.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ResultsTargil62.Location = new System.Drawing.Point(419, 13);
-            this.dataGridView_ResultsTargil62.Name = "dataGridView_ResultsTargil62";
-            this.dataGridView_ResultsTargil62.Size = new System.Drawing.Size(437, 186);
-            this.dataGridView_ResultsTargil62.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Teal;
-            this.panel3.Controls.Add(this.label40);
-            this.panel3.Controls.Add(this.textBox_DefineFactorTargil62);
-            this.panel3.Controls.Add(this.btn_ApplyFactorOnTheAbovePopulationTargil62);
-            this.panel3.Location = new System.Drawing.Point(29, 260);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 58);
-            this.panel3.TabIndex = 16;
-            // 
-            // textBox_DefineFactorTargil62
-            // 
-            this.textBox_DefineFactorTargil62.Location = new System.Drawing.Point(185, 17);
-            this.textBox_DefineFactorTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_DefineFactorTargil62.Name = "textBox_DefineFactorTargil62";
-            this.textBox_DefineFactorTargil62.Size = new System.Drawing.Size(84, 27);
-            this.textBox_DefineFactorTargil62.TabIndex = 15;
-            // 
-            // btn_ApplyFactorOnTheAbovePopulationTargil62
-            // 
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Location = new System.Drawing.Point(419, 14);
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Name = "btn_ApplyFactorOnTheAbovePopulationTargil62";
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.TabIndex = 3;
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Text = "Apply Factor on the Above Population";
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
-            this.btn_ApplyFactorOnTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_ApplyFactorOnTheAbovePopulationTargil62_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Teal;
-            this.panel4.Controls.Add(this.label41);
-            this.panel4.Controls.Add(this.textBox_TotalStudentDeletedTargil62);
-            this.panel4.Controls.Add(this.btn_DeleteTheAbovePopulationTargil62);
-            this.panel4.Location = new System.Drawing.Point(29, 334);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 58);
-            this.panel4.TabIndex = 17;
-            // 
-            // textBox_TotalStudentDeletedTargil62
-            // 
-            this.textBox_TotalStudentDeletedTargil62.Location = new System.Drawing.Point(726, 16);
-            this.textBox_TotalStudentDeletedTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_TotalStudentDeletedTargil62.Name = "textBox_TotalStudentDeletedTargil62";
-            this.textBox_TotalStudentDeletedTargil62.Size = new System.Drawing.Size(84, 27);
-            this.textBox_TotalStudentDeletedTargil62.TabIndex = 15;
-            // 
-            // btn_DeleteTheAbovePopulationTargil62
-            // 
-            this.btn_DeleteTheAbovePopulationTargil62.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteTheAbovePopulationTargil62.Location = new System.Drawing.Point(12, 13);
-            this.btn_DeleteTheAbovePopulationTargil62.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_DeleteTheAbovePopulationTargil62.Name = "btn_DeleteTheAbovePopulationTargil62";
-            this.btn_DeleteTheAbovePopulationTargil62.Size = new System.Drawing.Size(409, 33);
-            this.btn_DeleteTheAbovePopulationTargil62.TabIndex = 3;
-            this.btn_DeleteTheAbovePopulationTargil62.Text = "Delete the Above Population";
-            this.btn_DeleteTheAbovePopulationTargil62.UseVisualStyleBackColor = true;
-            this.btn_DeleteTheAbovePopulationTargil62.Click += new System.EventHandler(this.btn_DeleteTheAbovePopulationTargil62_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(44, 17);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(128, 22);
-            this.label40.TabIndex = 16;
-            this.label40.Text = "Define Factor :";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(498, 19);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(204, 22);
-            this.label41.TabIndex = 17;
-            this.label41.Text = "Total Students Deleted :";
+            this.textBox_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ex39.Location = new System.Drawing.Point(232, 30);
+            this.textBox_Ex39.Name = "textBox_Ex39";
+            this.textBox_Ex39.Size = new System.Drawing.Size(619, 23);
+            this.textBox_Ex39.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 610);
+            this.ClientSize = new System.Drawing.Size(1381, 591);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -2581,23 +2621,25 @@
             this.tabPage_ReadObjects.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
-            this.tabPage_Ex38.ResumeLayout(false);
+            this.tabPage_Ex38_39.ResumeLayout(false);
             this.groupBox27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ex38)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage_30_12.ResumeLayout(false);
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SearchResults30)).EndInit();
+            this.tabPage_Ex62.ResumeLayout(false);
             this.groupBox29.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2763,13 +2805,13 @@
         private System.Windows.Forms.Button btn_GetDBsEx45;
         private System.Windows.Forms.Button btn_GetRequestedDocEx45;
         private System.Windows.Forms.RichTextBox richTextBox_RequestedDocEx45;
-        private System.Windows.Forms.TabPage tabPage_Ex38;
+        private System.Windows.Forms.TabPage tabPage_Ex38_39;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.ComboBox comboBox_Ex38;
         private System.Windows.Forms.Button btn_Ex38;
         private System.Windows.Forms.DataGridView dataGridView_Ex38;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_30_12;
+        private System.Windows.Forms.TabPage tabPage_Ex62;
         private System.Windows.Forms.GroupBox groupBox28;
         private System.Windows.Forms.TextBox textBox_FirstNameStartWith30;
         private System.Windows.Forms.TextBox textBox_ExactNumOfAddresse30;
@@ -2798,6 +2840,9 @@
         private System.Windows.Forms.Button btn_ApplyFactorOnTheAbovePopulationTargil62;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.TextBox textBox_Ex39;
+        private System.Windows.Forms.Button btn_Ex39;
     }
 }
 

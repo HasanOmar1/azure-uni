@@ -1817,6 +1817,96 @@ namespace Cloud
             }
             return count;
         }
+
+        // ex 39
+        private async void btn_Ex39_Click(object sender, EventArgs e)
+        {
+            textBox_Ex39.Text = await tablesWithMaxObjects();
+        }
+
+        private async Task<string> tablesWithMaxObjects()
+        {
+            int maxObjCounter = 0;
+            string tablesWithMaxObjs = "The following tables with max num of objects ";
+
+            FeedIterator<DatabaseProperties> dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+
+                            int totalNumOfObjsInCurrentTable = 0;
+
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+                            totalNumOfObjsInCurrentTable = 0;
+                            while (objIterator.HasMoreResults)
+                            {
+                                foreach (object currentObj in await objIterator.ReadNextAsync())
+                                {
+                                    totalNumOfObjsInCurrentTable++;
+                                }
+                            }
+                           if(totalNumOfObjsInCurrentTable > maxObjCounter)
+                                maxObjCounter = totalNumOfObjsInCurrentTable;
+                        }
+                    }
+
+                }
+            }
+            tablesWithMaxObjs += $"({maxObjCounter} objects) : ";
+
+             dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+
+            while (dbIterator.HasMoreResults)
+            {
+                foreach (DatabaseProperties currentDBProp in await dbIterator.ReadNextAsync())
+                {
+                    Database databaseRefObj = myCosmosClient.GetDatabase(currentDBProp.Id);
+
+                    FeedIterator<ContainerProperties> tableIterator =
+                    databaseRefObj.GetContainerQueryIterator<ContainerProperties>();
+
+                    while (tableIterator.HasMoreResults)
+                    {
+                        foreach (ContainerProperties currentTableProp in await tableIterator.ReadNextAsync())
+                        {
+
+                            int totalNumOfObjsInCurrentTable = 0;
+
+                            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
+
+                            FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
+                            totalNumOfObjsInCurrentTable = 0;
+                            while (objIterator.HasMoreResults)
+                            {
+                                foreach (object currentObj in await objIterator.ReadNextAsync())
+                                {
+                                    totalNumOfObjsInCurrentTable++;
+                                }
+                            }
+                            if (totalNumOfObjsInCurrentTable == maxObjCounter)
+                               tablesWithMaxObjs += $"'{currentDBProp.Id}' - Table '{currentTableProp.Id}' - ";
+                        }
+                    }
+
+                }
+            }
+
+            return tablesWithMaxObjs;
+           
+        }
     }
 
 
