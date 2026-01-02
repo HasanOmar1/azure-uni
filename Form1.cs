@@ -1955,8 +1955,56 @@ namespace Cloud
             
                 return true;
         }
-            
+
+        // ex 47
+        private async void btn_Ex47_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex47.Text;
+            string containerName = textBox_TableName_Ex47.Text;
+            string objID = textBox_ObjID_Ex47.Text;
+
+            richTextBox_Ex47.Text = await CountCoursesForStudentDBAsync(dbName, containerName, objID);
         }
+
+        private async Task<string> CountCoursesForStudentDBAsync(string dbName, string containerName, string objID)
+        {
+            int courseCount = 0;
+
+            try
+            {
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return "No Courses";
+
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, containerName);
+                if (containerRefObj == null) return "No Courses";
+
+                ItemResponse<object> studentObj = await containerRefObj.ReadItemAsync<object>(objID, new PartitionKey(objID));
+                if (studentObj == null) return "No Courses";
+                else
+                {
+
+                    JToken token = (JToken)studentObj.Resource;
+                    Course[] courses = token["Courses"]?.ToObject<Course[]>();
+
+                    if (courses == null || courses.Length == 0) return "No Courses";
+
+                    foreach (Course c in courses)
+                    {
+                        if (c != null)
+                            courseCount++;
+                    }
+
+                }
+
+            }
+            catch
+            {
+                return "No Courses";
+            }
+
+            return $"The Student with the id of {textBox_ObjID_Ex47.Text} has {courseCount} Courses";
+        }
+    }
 
 
 }

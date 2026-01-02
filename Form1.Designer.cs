@@ -229,7 +229,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.tabPage_Ex46 = new System.Windows.Forms.TabPage();
+            this.tabPage_Ex47 = new System.Windows.Forms.TabPage();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -237,6 +237,15 @@
             this.textBox_TableName_Ex46 = new System.Windows.Forms.TextBox();
             this.textBox_DBName_Ex46 = new System.Windows.Forms.TextBox();
             this.richTextBox_Ex46 = new System.Windows.Forms.RichTextBox();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.richTextBox_Ex47 = new System.Windows.Forms.RichTextBox();
+            this.textBox_DBName_Ex47 = new System.Windows.Forms.TextBox();
+            this.textBox_TableName_Ex47 = new System.Windows.Forms.TextBox();
+            this.textBox_ObjID_Ex47 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.btn_Ex47 = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -289,6 +298,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).BeginInit();
+            this.tabPage_Ex47.SuspendLayout();
+            this.groupBox32.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -296,7 +307,7 @@
             this.btn_CreateCosmosClient.BackColor = System.Drawing.Color.OldLace;
             this.btn_CreateCosmosClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CreateCosmosClient.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_CreateCosmosClient.Location = new System.Drawing.Point(488, 211);
+            this.btn_CreateCosmosClient.Location = new System.Drawing.Point(468, 100);
             this.btn_CreateCosmosClient.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CreateCosmosClient.Name = "btn_CreateCosmosClient";
             this.btn_CreateCosmosClient.Size = new System.Drawing.Size(234, 88);
@@ -320,7 +331,7 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex38_39);
             this.tabControl1.Controls.Add(this.tabPage_30_12);
             this.tabControl1.Controls.Add(this.tabPage_Ex62);
-            this.tabControl1.Controls.Add(this.tabPage_Ex46);
+            this.tabControl1.Controls.Add(this.tabPage_Ex47);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -2624,14 +2635,15 @@
             this.label38.TabIndex = 6;
             this.label38.Text = "Teacher Name :";
             // 
-            // tabPage_Ex46
+            // tabPage_Ex47
             // 
-            this.tabPage_Ex46.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Ex46.Name = "tabPage_Ex46";
-            this.tabPage_Ex46.Size = new System.Drawing.Size(1275, 544);
-            this.tabPage_Ex46.TabIndex = 13;
-            this.tabPage_Ex46.Text = "Ex46";
-            this.tabPage_Ex46.UseVisualStyleBackColor = true;
+            this.tabPage_Ex47.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Ex47.Controls.Add(this.groupBox32);
+            this.tabPage_Ex47.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ex47.Name = "tabPage_Ex47";
+            this.tabPage_Ex47.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex47.TabIndex = 13;
+            this.tabPage_Ex47.Text = "Ex47";
             // 
             // btn_databaseCounter
             // 
@@ -2695,11 +2707,110 @@
             this.richTextBox_Ex46.TabIndex = 16;
             this.richTextBox_Ex46.Text = "";
             // 
+            // groupBox32
+            // 
+            this.groupBox32.BackColor = System.Drawing.Color.Tan;
+            this.groupBox32.Controls.Add(this.richTextBox_Ex47);
+            this.groupBox32.Controls.Add(this.textBox_DBName_Ex47);
+            this.groupBox32.Controls.Add(this.textBox_TableName_Ex47);
+            this.groupBox32.Controls.Add(this.textBox_ObjID_Ex47);
+            this.groupBox32.Controls.Add(this.label47);
+            this.groupBox32.Controls.Add(this.btn_Ex47);
+            this.groupBox32.Controls.Add(this.label48);
+            this.groupBox32.Controls.Add(this.label49);
+            this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox32.Location = new System.Drawing.Point(22, 32);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox32.Size = new System.Drawing.Size(929, 212);
+            this.groupBox32.TabIndex = 17;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Ex47";
+            // 
+            // richTextBox_Ex47
+            // 
+            this.richTextBox_Ex47.Location = new System.Drawing.Point(463, 78);
+            this.richTextBox_Ex47.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_Ex47.Name = "richTextBox_Ex47";
+            this.richTextBox_Ex47.Size = new System.Drawing.Size(437, 114);
+            this.richTextBox_Ex47.TabIndex = 16;
+            this.richTextBox_Ex47.Text = "";
+            // 
+            // textBox_DBName_Ex47
+            // 
+            this.textBox_DBName_Ex47.Location = new System.Drawing.Point(214, 32);
+            this.textBox_DBName_Ex47.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DBName_Ex47.Name = "textBox_DBName_Ex47";
+            this.textBox_DBName_Ex47.Size = new System.Drawing.Size(225, 27);
+            this.textBox_DBName_Ex47.TabIndex = 20;
+            // 
+            // textBox_TableName_Ex47
+            // 
+            this.textBox_TableName_Ex47.Location = new System.Drawing.Point(214, 75);
+            this.textBox_TableName_Ex47.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TableName_Ex47.Name = "textBox_TableName_Ex47";
+            this.textBox_TableName_Ex47.Size = new System.Drawing.Size(225, 27);
+            this.textBox_TableName_Ex47.TabIndex = 19;
+            // 
+            // textBox_ObjID_Ex47
+            // 
+            this.textBox_ObjID_Ex47.Location = new System.Drawing.Point(214, 117);
+            this.textBox_ObjID_Ex47.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ObjID_Ex47.Name = "textBox_ObjID_Ex47";
+            this.textBox_ObjID_Ex47.Size = new System.Drawing.Size(225, 27);
+            this.textBox_ObjID_Ex47.TabIndex = 18;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(54, 32);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(139, 22);
+            this.label47.TabIndex = 16;
+            this.label47.Text = "Database Name";
+            // 
+            // btn_Ex47
+            // 
+            this.btn_Ex47.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex47.Location = new System.Drawing.Point(495, 25);
+            this.btn_Ex47.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex47.Name = "btn_Ex47";
+            this.btn_Ex47.Size = new System.Drawing.Size(279, 40);
+            this.btn_Ex47.TabIndex = 15;
+            this.btn_Ex47.Text = "Get Number of Courses ";
+            this.btn_Ex47.UseVisualStyleBackColor = true;
+            this.btn_Ex47.Click += new System.EventHandler(this.btn_Ex47_Click);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(120, 122);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(73, 22);
+            this.label48.TabIndex = 4;
+            this.label48.Text = "Type ID";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(85, 78);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(108, 22);
+            this.label49.TabIndex = 2;
+            this.label49.Text = "Table Name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 591);
+            this.ClientSize = new System.Drawing.Size(1381, 594);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -2786,6 +2897,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ResultsTargil62)).EndInit();
+            this.tabPage_Ex47.ResumeLayout(false);
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2994,13 +3108,22 @@
         private System.Windows.Forms.TextBox textBox_LastName_Ex46;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TabPage tabPage_Ex46;
+        private System.Windows.Forms.TabPage tabPage_Ex47;
         private System.Windows.Forms.TextBox textBox_DBName_Ex46;
         private System.Windows.Forms.TextBox textBox_TableName_Ex46;
         private System.Windows.Forms.TextBox textBox_ObjId_Ex46;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.RichTextBox richTextBox_Ex46;
+        private System.Windows.Forms.GroupBox groupBox32;
+        private System.Windows.Forms.RichTextBox richTextBox_Ex47;
+        private System.Windows.Forms.TextBox textBox_DBName_Ex47;
+        private System.Windows.Forms.TextBox textBox_TableName_Ex47;
+        private System.Windows.Forms.TextBox textBox_ObjID_Ex47;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button btn_Ex47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
     }
 }
 
