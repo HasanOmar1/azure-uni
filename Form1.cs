@@ -12,6 +12,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -2003,6 +2004,82 @@ namespace Cloud
             }
 
             return $"The Student with the id of {textBox_ObjID_Ex47.Text} has {courseCount} Courses";
+        }
+
+        // ex 55
+        private async void btn_Ex55_A_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex55_A.Text;
+            string tableName = textBox_TableName_Ex55_A.Text;
+            textBox_Result_Ex55_A.Text = await getStudentsNumWithSpecificCriteriaAsyncV1(dbName, tableName);
+
+        }
+
+        private async Task<string> getStudentsNumWithSpecificCriteriaAsyncV1(string dbName, string tableName)
+        {
+            int countOfStudents = 0;
+
+            bool containsL = false;
+            bool hasAtLeastOneAddressInHaifa = false;
+            bool inTwoCourses = false;
+
+            try
+            {
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return "No Such Students";
+
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, tableName);
+                if (containerRefObj == null) return "No Such Students";
+
+                FeedIterator<Student> studentIterator = containerRefObj.GetItemQueryIterator<Student>();
+
+                while (studentIterator.HasMoreResults)
+                {
+                    foreach (Student student in await studentIterator.ReadNextAsync())
+                    {
+                        containsL = student.FirstName.Contains("L") || student.LastName.Contains("L");
+                        
+                        Address[] addresses = student.Addresses;
+                        string haifa = "haifa";
+                        foreach(Address addr in addresses)
+                        {
+                            if(addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.ToLower().Equals(haifa))
+                            {
+                                hasAtLeastOneAddressInHaifa = true;
+                                break;
+                            }
+                        }
+
+
+                        int courseCount = 0;
+                        Course[] courses = student.Courses;
+                        foreach(Course c in courses)
+                        {
+                           if(c != null)
+                                courseCount++;
+                        }
+
+                        inTwoCourses = courseCount == 2;
+
+                        if(containsL && hasAtLeastOneAddressInHaifa && inTwoCourses)
+                            countOfStudents++;
+
+                        // reset for next student
+                        containsL = false;
+                        hasAtLeastOneAddressInHaifa = false;
+                        inTwoCourses = false;
+
+                    }
+                }
+
+
+            }
+            catch
+            {
+                return "No Such Students";
+            }
+
+            return countOfStudents != 0 ? $"There are {countOfStudents} Students" : "No Such Students";
         }
     }
 
