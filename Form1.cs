@@ -1852,7 +1852,7 @@ namespace Cloud
                             Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
 
                             FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
-                            totalNumOfObjsInCurrentTable = 0;
+
                             while (objIterator.HasMoreResults)
                             {
                                 foreach (object currentObj in await objIterator.ReadNextAsync())
@@ -1890,7 +1890,7 @@ namespace Cloud
                             Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(currentDBProp.Id, currentTableProp.Id);
 
                             FeedIterator<object> objIterator = tableRefObj.GetItemQueryIterator<object>();
-                            totalNumOfObjsInCurrentTable = 0;
+
                             while (objIterator.HasMoreResults)
                             {
                                 foreach (object currentObj in await objIterator.ReadNextAsync())
