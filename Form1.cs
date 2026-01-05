@@ -1664,7 +1664,7 @@ namespace Cloud
                                             && course.CourseName.Equals(requestedCourseName)
                                             && !string.IsNullOrEmpty(course.Teacher)
                                             && course.Teacher.Equals(requestedTeacher)
-                                            && course.Grade > minGrade)
+                                            && course.Grade >= minGrade)
                                         {
                                             result.Add(new OutputTargil62
                                             {
@@ -1733,7 +1733,7 @@ namespace Cloud
                                             && course.CourseName.Equals(requestedCourseName)
                                             && !string.IsNullOrEmpty(course.Teacher)
                                             && course.Teacher.Equals(requestedTeacher)
-                                            && course.Grade > minGrade)
+                                            && course.Grade >= minGrade)
 
                                         {
                                             // update
@@ -1801,7 +1801,7 @@ namespace Cloud
                                             && course.CourseName.Equals(requestedCourseName)
                                             && !string.IsNullOrEmpty(course.Teacher)
                                             && course.Teacher.Equals(requestedTeacher)
-                                            && course.Grade > minGrade)
+                                            && course.Grade >= minGrade)
 
                                         {
                                             count++;
