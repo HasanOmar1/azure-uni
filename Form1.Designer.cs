@@ -252,16 +252,16 @@
             this.btn_Ex47 = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabPage_Ex55_B = new System.Windows.Forms.TabPage();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btn_Ex55_B = new System.Windows.Forms.Button();
-            this.dataGridView_Ex55 = new System.Windows.Forms.DataGridView();
             this.textBox_DBName_Ex55_B = new System.Windows.Forms.TextBox();
             this.textBox_TableName_Ex55_B = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
+            this.btn_Ex55_B = new System.Windows.Forms.Button();
+            this.dataGridView_Ex55 = new System.Windows.Forms.DataGridView();
+            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -547,7 +547,7 @@
             this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_DBandContainer.Name = "tabPage_DBandContainer";
             this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_DBandContainer.TabIndex = 1;
             this.tabPage_DBandContainer.Text = "Databases and Containers";
             // 
@@ -748,7 +748,7 @@
             this.tabPage_Exercises.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Exercises.Name = "tabPage_Exercises";
-            this.tabPage_Exercises.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Exercises.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Exercises.TabIndex = 2;
             this.tabPage_Exercises.Text = "Exercises";
             // 
@@ -979,7 +979,7 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
-            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Exercises_2.TabIndex = 3;
             this.tabPage_Exercises_2.Text = "Exercises_2";
             // 
@@ -1805,7 +1805,7 @@
             this.groupBox22.Size = new System.Drawing.Size(699, 301);
             this.groupBox22.TabIndex = 2;
             this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Ex28";
+            this.groupBox22.Text = "Ex28-Business";
             // 
             // label27
             // 
@@ -1892,7 +1892,7 @@
             this.tabPage_Count_Objects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Count_Objects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
-            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Count_Objects.TabIndex = 8;
             this.tabPage_Count_Objects.Text = "Count_Objects";
             // 
@@ -2069,7 +2069,7 @@
             this.tabPage_ReadObjects.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ReadObjects.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_ReadObjects.Name = "tabPage_ReadObjects";
-            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_ReadObjects.TabIndex = 9;
             this.tabPage_ReadObjects.Text = "ReadObjects";
             // 
@@ -2305,7 +2305,7 @@
             this.tabPage_Ex38_39.Controls.Add(this.groupBox27);
             this.tabPage_Ex38_39.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex38_39.Name = "tabPage_Ex38_39";
-            this.tabPage_Ex38_39.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex38_39.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex38_39.TabIndex = 10;
             this.tabPage_Ex38_39.Text = "Ex38_39";
             // 
@@ -2396,7 +2396,7 @@
             this.tabPage_30_12.Controls.Add(this.groupBox28);
             this.tabPage_30_12.Location = new System.Drawing.Point(4, 22);
             this.tabPage_30_12.Name = "tabPage_30_12";
-            this.tabPage_30_12.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_30_12.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_30_12.TabIndex = 11;
             this.tabPage_30_12.Text = "30/12";
             // 
@@ -2514,7 +2514,7 @@
             this.tabPage_Ex62.Controls.Add(this.groupBox29);
             this.tabPage_Ex62.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex62.Name = "tabPage_Ex62";
-            this.tabPage_Ex62.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex62.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex62.TabIndex = 12;
             this.tabPage_Ex62.Text = "Ex 62";
             // 
@@ -2719,7 +2719,7 @@
             this.tabPage_Ex47_55.Controls.Add(this.groupBox32);
             this.tabPage_Ex47_55.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex47_55.Name = "tabPage_Ex47_55";
-            this.tabPage_Ex47_55.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex47_55.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex47_55.TabIndex = 13;
             this.tabPage_Ex47_55.Text = "Ex47_55";
             // 
@@ -2899,20 +2899,13 @@
             this.label49.TabIndex = 2;
             this.label49.Text = "Table Name";
             // 
-            // btn_databaseCounter
-            // 
-            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
-            this.btn_databaseCounter.Name = "btn_databaseCounter";
-            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
-            this.btn_databaseCounter.TabIndex = 0;
-            // 
             // tabPage_Ex55_B
             // 
             this.tabPage_Ex55_B.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Ex55_B.Controls.Add(this.groupBox34);
             this.tabPage_Ex55_B.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Ex55_B.Name = "tabPage_Ex55_B";
-            this.tabPage_Ex55_B.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Ex55_B.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex55_B.TabIndex = 14;
             this.tabPage_Ex55_B.Text = "Ex55_B";
             // 
@@ -2943,27 +2936,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(891, 219);
             this.panel8.TabIndex = 4;
-            // 
-            // btn_Ex55_B
-            // 
-            this.btn_Ex55_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ex55_B.Location = new System.Drawing.Point(125, 115);
-            this.btn_Ex55_B.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Ex55_B.Name = "btn_Ex55_B";
-            this.btn_Ex55_B.Size = new System.Drawing.Size(171, 33);
-            this.btn_Ex55_B.TabIndex = 3;
-            this.btn_Ex55_B.Text = "Get Data";
-            this.btn_Ex55_B.UseVisualStyleBackColor = true;
-            this.btn_Ex55_B.Click += new System.EventHandler(this.btn_Ex55_B_Click);
-            // 
-            // dataGridView_Ex55
-            // 
-            this.dataGridView_Ex55.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView_Ex55.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Ex55.Location = new System.Drawing.Point(419, 13);
-            this.dataGridView_Ex55.Name = "dataGridView_Ex55";
-            this.dataGridView_Ex55.Size = new System.Drawing.Size(437, 186);
-            this.dataGridView_Ex55.TabIndex = 2;
             // 
             // textBox_DBName_Ex55_B
             // 
@@ -3002,6 +2974,34 @@
             this.label52.Size = new System.Drawing.Size(108, 22);
             this.label52.TabIndex = 21;
             this.label52.Text = "Table Name";
+            // 
+            // btn_Ex55_B
+            // 
+            this.btn_Ex55_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ex55_B.Location = new System.Drawing.Point(125, 115);
+            this.btn_Ex55_B.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ex55_B.Name = "btn_Ex55_B";
+            this.btn_Ex55_B.Size = new System.Drawing.Size(171, 33);
+            this.btn_Ex55_B.TabIndex = 3;
+            this.btn_Ex55_B.Text = "Get Data";
+            this.btn_Ex55_B.UseVisualStyleBackColor = true;
+            this.btn_Ex55_B.Click += new System.EventHandler(this.btn_Ex55_B_Click);
+            // 
+            // dataGridView_Ex55
+            // 
+            this.dataGridView_Ex55.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_Ex55.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Ex55.Location = new System.Drawing.Point(419, 13);
+            this.dataGridView_Ex55.Name = "dataGridView_Ex55";
+            this.dataGridView_Ex55.Size = new System.Drawing.Size(437, 186);
+            this.dataGridView_Ex55.TabIndex = 2;
+            // 
+            // btn_databaseCounter
+            // 
+            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
+            this.btn_databaseCounter.Name = "btn_databaseCounter";
+            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
+            this.btn_databaseCounter.TabIndex = 0;
             // 
             // Form1
             // 
