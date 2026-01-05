@@ -1924,7 +1924,7 @@ namespace Cloud
 
         private async Task<bool> IsDataInDBAsync(string dbName, string containerName, string objID, string lastName)
         {
-            richTextBox_Ex46.ForeColor = Color.White;
+            richTextBox_Ex46.ForeColor = Color.Black;
 
             try
             { 
@@ -2006,7 +2006,7 @@ namespace Cloud
             return $"The Student with the id of {textBox_ObjID_Ex47.Text} has {courseCount} Courses";
         }
 
-        // ex 55
+        // ex 55 a
         private async void btn_Ex55_A_Click(object sender, EventArgs e)
         {
             string dbName = textBox_DBName_Ex55_A.Text;
@@ -2050,7 +2050,6 @@ namespace Cloud
                             }
                         }
 
-
                         int courseCount = 0;
                         Course[] courses = student.Courses;
                         foreach(Course c in courses)
@@ -2071,8 +2070,6 @@ namespace Cloud
 
                     }
                 }
-
-
             }
             catch
             {
@@ -2080,6 +2077,106 @@ namespace Cloud
             }
 
             return countOfStudents != 0 ? $"There are {countOfStudents} Students" : "No Such Students";
+        }
+
+        // ex 55 b
+        private async void btn_Ex55_B_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex55_B.Text;
+            string tableName = textBox_TableName_Ex55_B.Text;
+
+            List<OutputTargil55> result = await getStudentsNumWithSpecificCriteriaAsyncV2(dbName, tableName);
+
+            dataGridView_Ex55.DataSource = result;
+
+            dataGridView_Ex55.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_Ex55.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 10);
+                c.DefaultCellStyle.ForeColor = Color.DarkGreen;
+            }
+
+        }
+
+        private async Task<List<OutputTargil55>> getStudentsNumWithSpecificCriteriaAsyncV2(string dbName, string tableName)
+        {
+            List<OutputTargil55> result = new List<OutputTargil55>();
+            bool containsL = false;
+            bool hasAtLeastOneAddressInHaifa = false;
+            bool inTwoCourses = false;
+
+            try
+            {
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return new List<OutputTargil55>();
+
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, tableName);
+                if (containerRefObj == null) return new List<OutputTargil55>();
+
+                FeedIterator<Student> studentIterator = containerRefObj.GetItemQueryIterator<Student>();
+
+                while (studentIterator.HasMoreResults)
+                {
+                    foreach (Student student in await studentIterator.ReadNextAsync())
+                    {
+
+                        containsL = student.FirstName.Contains("L") || student.LastName.Contains("L");
+
+                        Address[] addresses = student.Addresses;
+                        string haifa = "haifa";
+
+                        string city = "";
+                        string street = "";
+                        string houseNum = "";
+                        foreach (Address addr in addresses)
+                        {
+                            if (addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.ToLower().Equals(haifa))
+                            {
+                                hasAtLeastOneAddressInHaifa = true;
+                                city = addr.City;
+                                street = addr.Street;
+                                houseNum = addr.HouseNum;
+                                break;
+                            }
+                        }
+
+                        int courseCount = 0;
+                        Course[] courses = student.Courses;
+                        foreach (Course c in courses)
+                        {
+                            if (c != null)
+                                courseCount++;
+                        }
+
+                        inTwoCourses = courseCount == 2;
+
+                        if (containsL && hasAtLeastOneAddressInHaifa && inTwoCourses)
+                        {
+                            result.Add(new OutputTargil55
+                            {
+                                StudentId = student.id,
+                                FullName = student.FirstName + " " + student.LastName,
+                                City =  city,
+                                Street = street,
+                                HouseNum = houseNum
+
+                            });
+
+                        }
+
+                        // reset for next student
+                        containsL = false;
+                        hasAtLeastOneAddressInHaifa = false;
+                        inTwoCourses = false;
+                    }
+                }
+            }
+            catch
+            {
+                return new List<OutputTargil55>();
+            }
+
+            return result;
         }
     }
 
