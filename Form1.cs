@@ -2213,7 +2213,7 @@ namespace Cloud
 
             return result;
         }
-
+            
 
         // logs
         // refresh btn
@@ -2303,6 +2303,173 @@ namespace Cloud
         private void tabPage_Exercises_Enter(object sender, EventArgs e)
         {
             MessageBox.Show("Tab 3");
+        }
+
+        // ex 57
+        private async void btn_Ex57_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex57.Text;
+            string tableName = textBox_ContainerName_Ex57.Text;
+            string firstName = textBox_FirstName_Ex57.Text;
+            string city = textBox_City_Ex57.Text;
+            string courseName = textBox_CourseName_Ex57.Text;
+
+            List<OutputTargil57> result = await getStudentsWithSpecificCriteriaEx57(dbName, tableName, firstName, city, courseName);
+
+            dataGridView_Ex57.DataSource = result;
+
+            dataGridView_Ex57.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_Ex57.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 10);
+                c.DefaultCellStyle.ForeColor = Color.Blue;
+            }
+        }
+
+        private async Task<List<OutputTargil57>> getStudentsWithSpecificCriteriaEx57(string dbName, string tableName, string firstName, string city, string courseName)
+        {
+            List<OutputTargil57> result = new List<OutputTargil57>();
+            
+
+            try
+            {
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return new List<OutputTargil57>();
+
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, tableName);
+                if (containerRefObj == null) return new List<OutputTargil57>();
+
+                FeedIterator<Student> studentIterator = containerRefObj.GetItemQueryIterator<Student>();
+
+                while (studentIterator.HasMoreResults)
+                {
+
+                    foreach (Student student in await studentIterator.ReadNextAsync())
+                    {
+                        if (!student.FirstName.Equals(firstName)) continue;
+                        else
+                        {
+                            foreach(Address addr in student.Addresses)
+                            {
+                                if (addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.Equals(city))
+                                {
+                                    foreach (Course c in student.Courses)
+                                    {
+                                        if (c != null && !string.IsNullOrEmpty(c.CourseName) && c.CourseName.Equals(courseName))
+                                        {
+                                            result.Add(new OutputTargil57
+                                            {
+                                                StudentId = student.id,
+                                                StudentFullName = student.FirstName + " " + student.LastName,
+                                                TeacherName = !string.IsNullOrEmpty(c.Teacher) ? c.Teacher : "Not Decumented",
+                                                Grade = !string.IsNullOrEmpty(c.Grade.ToString()) ? c.Grade.ToString() : "Not Decumented",
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return new List<OutputTargil57>();
+            }
+
+            return result;
+        }
+
+        // ex 60
+        private async void btn_Ex60_Click(object sender, EventArgs e)
+        {
+            string dbName = textBox_DBName_Ex60.Text;
+            string tableName = textBox_TableName_Ex60.Text;
+            richTextBox_Ex60.Text = await getStudentsAndAverageGradeForCoursesAsync(dbName, tableName);
+        }
+
+        private async Task<string> getStudentsAndAverageGradeForCoursesAsync(string dbName, string tableName)
+        {
+            string result = "";
+            int maxCourses = 0;
+            try
+            {
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return "No DB Found";
+
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, tableName);
+                if (containerRefObj == null) return "No Table Found in " + dbName + " Database";
+
+
+                FeedIterator<Student> studentIterator = containerRefObj.GetItemQueryIterator<Student>();
+
+                while (studentIterator.HasMoreResults)
+                {
+
+                    foreach (Student student in await studentIterator.ReadNextAsync())
+                    {
+                        int courseCounter = 0;
+
+                        foreach (Course c in student.Courses)
+                        {
+                            if (c != null)
+                                courseCounter++;
+                        }
+
+                        if (courseCounter > maxCourses)
+                            maxCourses = courseCounter;
+
+
+                    }
+                }
+
+                result += $"Max number of courses is {maxCourses}\n";
+
+                studentIterator = containerRefObj.GetItemQueryIterator<Student>();
+
+                while (studentIterator.HasMoreResults)
+                {
+
+                    foreach (Student student in await studentIterator.ReadNextAsync())
+                    {
+                        int courseCounter = 0;
+
+                        foreach (Course c in student.Courses)
+                        {
+                            if (c != null)
+                                courseCounter++;
+                        }
+
+
+                        if (courseCounter == maxCourses)
+                        {
+                            int sum = 0;
+
+                            foreach (Course c in student.Courses)
+                            {
+                                if (c != null && !string.IsNullOrEmpty(c.Grade.ToString()) && c.Grade != 0 &&
+                                    !string.IsNullOrEmpty(c.Teacher))
+                                {
+                                    sum+= c.Grade;
+                                }
+                               
+
+                            }
+                                double average = (double)sum / maxCourses;
+                                result += $"Student Full Name: {student.FirstName} {student.LastName}, Average Grade: {average}\n";
+
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return "Error";
+            }
+
+            return result;
+
         }
     }
 
