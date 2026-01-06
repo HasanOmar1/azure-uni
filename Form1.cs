@@ -32,6 +32,11 @@ namespace Cloud
         private string uri = ConfigurationManager.AppSettings["URI"];
         private string primaryKey = ConfigurationManager.AppSettings["PrimaryKey"];
 
+
+        // logs
+        private string logFolderName = ConfigurationManager.AppSettings["Log Folder"];
+        private string logFileName = ConfigurationManager.AppSettings["Log File Name"];
+
         // cosmos
         private CosmosClient myCosmosClient;
 
@@ -73,6 +78,34 @@ namespace Cloud
             textBox_EnvType.Text = envType;
             textBox_URI.Text = uri;
             textBox_PrimaryKey.Text = primaryKey;
+
+            WriteToLog("Starting my Cloud Application...");
+        }
+
+        private void WriteToLog(string logMessage)
+        {
+            try
+            {
+                string logFullPath = Path.Combine(logFolderName, logFileName);
+                //string fullLogMessage = $"{DateTime.Now.ToShortDateString()}: {logMessage}\n";
+                string fullLogMessage = $"{DateTime.Now.ToLongDateString()}, {DateTime.Now.ToShortTimeString()}: {logMessage}\n";
+
+                if (!File.Exists(logFullPath))
+                {
+
+                    if (!Directory.Exists(logFolderName))
+                        Directory.CreateDirectory(logFolderName);
+
+                    File.Create(logFullPath);
+                }
+
+                File.AppendAllText(logFullPath, fullLogMessage);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The operation '" + logMessage + "' was not appended to the log, we got: " + ex.Message);
+            }
         }
 
         private async void btn_CreateDataInCloud_Click(object sender, EventArgs e)
@@ -103,6 +136,8 @@ namespace Cloud
                  "Creation Succeeded ",
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Information);
+
+                WriteToLog("DB '" + dbNameToCreate + "' was created");
             }
             else if (dbCreationStatus == System.Net.HttpStatusCode.OK)
             {
@@ -1385,7 +1420,7 @@ namespace Cloud
 
                 // token = the object
                 string type = token["ObjType"]?.ToString();
-                
+
                 if (type == Targil45.Student.ToString())
                 {
                     student = token.ToObject<Student>();
@@ -1860,7 +1895,7 @@ namespace Cloud
                                     totalNumOfObjsInCurrentTable++;
                                 }
                             }
-                           if(totalNumOfObjsInCurrentTable > maxObjCounter)
+                            if (totalNumOfObjsInCurrentTable > maxObjCounter)
                                 maxObjCounter = totalNumOfObjsInCurrentTable;
                         }
                     }
@@ -1869,7 +1904,7 @@ namespace Cloud
             }
             tablesWithMaxObjs += $"({maxObjCounter} objects) : ";
 
-             dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
+            dbIterator = myCosmosClient.GetDatabaseQueryIterator<DatabaseProperties>();
 
             while (dbIterator.HasMoreResults)
             {
@@ -1899,7 +1934,7 @@ namespace Cloud
                                 }
                             }
                             if (totalNumOfObjsInCurrentTable == maxObjCounter)
-                               tablesWithMaxObjs += $"'{currentDBProp.Id}' - Table '{currentTableProp.Id}' - ";
+                                tablesWithMaxObjs += $"'{currentDBProp.Id}' - Table '{currentTableProp.Id}' - ";
                         }
                     }
 
@@ -1907,7 +1942,7 @@ namespace Cloud
             }
 
             return tablesWithMaxObjs;
-           
+
         }
 
 
@@ -1927,23 +1962,23 @@ namespace Cloud
             richTextBox_Ex46.ForeColor = Color.Black;
 
             try
-            { 
-            Database dbRefObj = myCosmosClient.GetDatabase(dbName);
-            if (dbRefObj == null) return false;
-
-            Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, containerName);
-            if (containerRefObj == null) return false;
-
-            ItemResponse<object> studentObj = await containerRefObj.ReadItemAsync<object>(objID, new PartitionKey(objID));
-            if (studentObj == null) return false;
-            else
             {
-                JToken token = (JToken)studentObj.Resource;
-                string currentLastName = token["LastName"]?.ToString();
-                if (string.IsNullOrEmpty(currentLastName)) return false;
-                if (!currentLastName.Equals(lastName)) return false;
+                Database dbRefObj = myCosmosClient.GetDatabase(dbName);
+                if (dbRefObj == null) return false;
 
-            }
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, containerName);
+                if (containerRefObj == null) return false;
+
+                ItemResponse<object> studentObj = await containerRefObj.ReadItemAsync<object>(objID, new PartitionKey(objID));
+                if (studentObj == null) return false;
+                else
+                {
+                    JToken token = (JToken)studentObj.Resource;
+                    string currentLastName = token["LastName"]?.ToString();
+                    if (string.IsNullOrEmpty(currentLastName)) return false;
+                    if (!currentLastName.Equals(lastName)) return false;
+
+                }
 
             }
             catch
@@ -1953,8 +1988,8 @@ namespace Cloud
             }
 
             richTextBox_Ex46.BackColor = Color.Green;
-            
-                return true;
+
+            return true;
         }
 
         // ex 47
@@ -2038,12 +2073,12 @@ namespace Cloud
                     foreach (Student student in await studentIterator.ReadNextAsync())
                     {
                         containsL = student.FirstName.Contains("L") || student.LastName.Contains("L");
-                        
+
                         Address[] addresses = student.Addresses;
                         string haifa = "haifa";
-                        foreach(Address addr in addresses)
+                        foreach (Address addr in addresses)
                         {
-                            if(addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.ToLower().Equals(haifa))
+                            if (addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.ToLower().Equals(haifa))
                             {
                                 hasAtLeastOneAddressInHaifa = true;
                                 break;
@@ -2052,15 +2087,15 @@ namespace Cloud
 
                         int courseCount = 0;
                         Course[] courses = student.Courses;
-                        foreach(Course c in courses)
+                        foreach (Course c in courses)
                         {
-                           if(c != null)
+                            if (c != null)
                                 courseCount++;
                         }
 
                         inTwoCourses = courseCount == 2;
 
-                        if(containsL && hasAtLeastOneAddressInHaifa && inTwoCourses)
+                        if (containsL && hasAtLeastOneAddressInHaifa && inTwoCourses)
                             countOfStudents++;
 
                         // reset for next student
@@ -2156,7 +2191,7 @@ namespace Cloud
                             {
                                 StudentId = student.id,
                                 FullName = student.FirstName + " " + student.LastName,
-                                City =  city,
+                                City = city,
                                 Street = street,
                                 HouseNum = houseNum
 
@@ -2177,6 +2212,69 @@ namespace Cloud
             }
 
             return result;
+        }
+
+
+        // logs
+        // refresh btn
+        private void btn_Refresh_Load_Data_Click(object sender, EventArgs e)
+        {
+            getUpdatedLogData();
+        }
+
+        private void getUpdatedLogData()
+        {
+            try
+            {
+                string logFullPath = Path.Combine(logFolderName, logFileName);
+
+                if (File.Exists(logFullPath))
+                {
+                    string logData = File.ReadAllText(logFullPath, Encoding.UTF8);
+                    richTextBox_Log_Data.Text = logData;
+                }
+                else
+                {
+                    if (!Directory.Exists(logFolderName))
+                        Directory.CreateDirectory(logFolderName);
+
+                    File.Create(logFullPath);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Loading Log File...\n" + ex.Message,
+                                "Error Loading Log File",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Stop);
+            }
+        }
+
+        // reset btn
+        private void btn_Reset_Log_Data_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string logFullPath = Path.Combine(logFolderName, logFileName);
+
+                if (File.Exists(logFullPath))
+                {
+                    File.Delete(logFullPath);
+                    richTextBox_Log_Data.Clear();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Deleting Log File...\n" + ex.Message,
+                                "Error Deleting Log File",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Stop);
+            }
         }
     }
 
