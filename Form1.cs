@@ -2261,7 +2261,7 @@ namespace Cloud
 
                 if (File.Exists(logFullPath))
                 {
-                    File.Delete(logFullPath);
+                    File.WriteAllText(logFullPath, "");
                     richTextBox_Log_Data.Clear();
                 }
 
@@ -2275,6 +2275,34 @@ namespace Cloud
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Stop);
             }
+        }
+
+        // restricted tab
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPage.Name == TabsNames.tabPage_Restricted_Tab.ToString())
+            {
+                // the restricted tab is being selected
+
+                // we can do some logic according to a global variable of the Form.cs
+                // and then we can decide to prevent the user from entering the above tab (Restricted Tab)
+                // if(....)
+
+                e.Cancel = true;
+                MessageBox.Show("This tab is Restricted",
+                                "Restricted Tab",
+                                MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+
+
+            }
+
+        }
+
+
+        private void tabPage_Exercises_Enter(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tab 3");
         }
     }
 

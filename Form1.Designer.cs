@@ -261,13 +261,13 @@
             this.label52 = new System.Windows.Forms.Label();
             this.btn_Ex55_B = new System.Windows.Forms.Button();
             this.dataGridView_Ex55 = new System.Windows.Forms.DataGridView();
-            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabPage_Log_Activities = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.btn_Reset_Log_Data = new System.Windows.Forms.Button();
             this.btn_Refresh_Load_Data = new System.Windows.Forms.Button();
             this.richTextBox_Log_Data = new System.Windows.Forms.RichTextBox();
-            this.btn_Reset_Log_Data = new System.Windows.Forms.Button();
+            this.tabPage_Restricted_Tab = new System.Windows.Forms.TabPage();
+            this.btn_databaseCounter = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -363,13 +363,14 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex47_55);
             this.tabControl1.Controls.Add(this.tabPage_Ex55_B);
             this.tabControl1.Controls.Add(this.tabPage_Log_Activities);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage_Restricted_Tab);
             this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1711, 702);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage_General
             // 
@@ -550,10 +551,8 @@
             this.tabPage_DBandContainer.Location = new System.Drawing.Point(4, 25);
             this.tabPage_DBandContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_DBandContainer.Name = "tabPage_DBandContainer";
-            this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1703, 673);
             this.tabPage_DBandContainer.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1275, 542);
+            this.tabPage_DBandContainer.Size = new System.Drawing.Size(1703, 673);
             this.tabPage_DBandContainer.TabIndex = 1;
             this.tabPage_DBandContainer.Text = "Databases and Containers";
             // 
@@ -753,9 +752,9 @@
             this.tabPage_Exercises.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Exercises.Name = "tabPage_Exercises";
             this.tabPage_Exercises.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Exercises.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Exercises.TabIndex = 2;
             this.tabPage_Exercises.Text = "Exercises";
+            this.tabPage_Exercises.Enter += new System.EventHandler(this.tabPage_Exercises_Enter);
             // 
             // groupBox9
             // 
@@ -979,10 +978,9 @@
             this.tabPage_Exercises_2.Controls.Add(this.groupBox11);
             this.tabPage_Exercises_2.Controls.Add(this.groupBox10);
             this.tabPage_Exercises_2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Exercises_2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Exercises_2.Name = "tabPage_Exercises_2";
             this.tabPage_Exercises_2.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Exercises_2.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Exercises_2.TabIndex = 3;
             this.tabPage_Exercises_2.Text = "Exercises_2";
             // 
@@ -995,9 +993,9 @@
             this.groupBox12.Controls.Add(this.label14);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox12.Location = new System.Drawing.Point(56, 356);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox12.Size = new System.Drawing.Size(801, 151);
             this.groupBox12.TabIndex = 12;
             this.groupBox12.TabStop = false;
@@ -1050,9 +1048,9 @@
             this.groupBox11.Controls.Add(this.btn_DBsWithConditions);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox11.Location = new System.Drawing.Point(56, 197);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox11.Size = new System.Drawing.Size(801, 151);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
@@ -1087,9 +1085,9 @@
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox10.Location = new System.Drawing.Point(56, 38);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(801, 151);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
@@ -1326,9 +1324,9 @@
             this.groupBox13.Controls.Add(this.label15);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox13.Location = new System.Drawing.Point(33, 44);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox13.Size = new System.Drawing.Size(801, 138);
             this.groupBox13.TabIndex = 13;
             this.groupBox13.TabStop = false;
@@ -1715,7 +1713,7 @@
             this.tabPage_Ex28.Controls.Add(this.groupBox21);
             this.tabPage_Ex28.Controls.Add(this.groupBox22);
             this.tabPage_Ex28.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex28.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Ex28.Name = "tabPage_Ex28";
             this.tabPage_Ex28.Size = new System.Drawing.Size(1703, 673);
             this.tabPage_Ex28.TabIndex = 7;
@@ -1889,7 +1887,6 @@
             this.tabPage_Count_Objects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_Count_Objects.Name = "tabPage_Count_Objects";
             this.tabPage_Count_Objects.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Count_Objects.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Count_Objects.TabIndex = 8;
             this.tabPage_Count_Objects.Text = "Count_Objects";
             // 
@@ -2064,7 +2061,6 @@
             this.tabPage_ReadObjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage_ReadObjects.Name = "tabPage_ReadObjects";
             this.tabPage_ReadObjects.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_ReadObjects.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_ReadObjects.TabIndex = 9;
             this.tabPage_ReadObjects.Text = "ReadObjects";
             // 
@@ -2293,10 +2289,9 @@
             this.tabPage_Ex38_39.Controls.Add(this.groupBox30);
             this.tabPage_Ex38_39.Controls.Add(this.groupBox27);
             this.tabPage_Ex38_39.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex38_39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex38_39.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Ex38_39.Name = "tabPage_Ex38_39";
             this.tabPage_Ex38_39.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Ex38_39.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex38_39.TabIndex = 10;
             this.tabPage_Ex38_39.Text = "Ex38_39";
             // 
@@ -2319,7 +2314,7 @@
             // 
             this.textBox_Ex39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Ex39.Location = new System.Drawing.Point(309, 37);
-            this.textBox_Ex39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Ex39.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Ex39.Name = "textBox_Ex39";
             this.textBox_Ex39.Size = new System.Drawing.Size(824, 26);
             this.textBox_Ex39.TabIndex = 1;
@@ -2356,7 +2351,7 @@
             // 
             this.dataGridView_Ex38.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Ex38.Location = new System.Drawing.Point(116, 177);
-            this.dataGridView_Ex38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Ex38.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Ex38.Name = "dataGridView_Ex38";
             this.dataGridView_Ex38.RowHeadersWidth = 51;
             this.dataGridView_Ex38.Size = new System.Drawing.Size(1019, 290);
@@ -2389,10 +2384,9 @@
             this.tabPage_30_12.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_30_12.Controls.Add(this.groupBox28);
             this.tabPage_30_12.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_30_12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_30_12.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_30_12.Name = "tabPage_30_12";
             this.tabPage_30_12.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_30_12.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_30_12.TabIndex = 11;
             this.tabPage_30_12.Text = "30/12";
             // 
@@ -2476,7 +2470,7 @@
             this.panel1.Controls.Add(this.btn_SearchStudents30);
             this.panel1.Controls.Add(this.dataGridView_SearchResults30);
             this.panel1.Location = new System.Drawing.Point(89, 193);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 357);
             this.panel1.TabIndex = 4;
@@ -2498,7 +2492,7 @@
             this.dataGridView_SearchResults30.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView_SearchResults30.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_SearchResults30.Location = new System.Drawing.Point(29, 23);
-            this.dataGridView_SearchResults30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_SearchResults30.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_SearchResults30.Name = "dataGridView_SearchResults30";
             this.dataGridView_SearchResults30.RowHeadersWidth = 51;
             this.dataGridView_SearchResults30.Size = new System.Drawing.Size(765, 318);
@@ -2509,10 +2503,9 @@
             this.tabPage_Ex62.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Ex62.Controls.Add(this.groupBox29);
             this.tabPage_Ex62.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex62.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Ex62.Name = "tabPage_Ex62";
             this.tabPage_Ex62.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Ex62.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex62.TabIndex = 12;
             this.tabPage_Ex62.Text = "Ex 62";
             // 
@@ -2539,7 +2532,7 @@
             this.panel4.Controls.Add(this.textBox_TotalStudentDeletedTargil62);
             this.panel4.Controls.Add(this.btn_DeleteTheAbovePopulationTargil62);
             this.panel4.Location = new System.Drawing.Point(39, 411);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1188, 71);
             this.panel4.TabIndex = 17;
@@ -2581,7 +2574,7 @@
             this.panel3.Controls.Add(this.textBox_DefineFactorTargil62);
             this.panel3.Controls.Add(this.btn_ApplyFactorOnTheAbovePopulationTargil62);
             this.panel3.Location = new System.Drawing.Point(39, 320);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1188, 71);
             this.panel3.TabIndex = 16;
@@ -2628,7 +2621,7 @@
             this.panel2.Controls.Add(this.label37);
             this.panel2.Controls.Add(this.label38);
             this.panel2.Location = new System.Drawing.Point(39, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1188, 270);
             this.panel2.TabIndex = 4;
@@ -2674,7 +2667,7 @@
             this.dataGridView_ResultsTargil62.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView_ResultsTargil62.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ResultsTargil62.Location = new System.Drawing.Point(559, 16);
-            this.dataGridView_ResultsTargil62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_ResultsTargil62.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_ResultsTargil62.Name = "dataGridView_ResultsTargil62";
             this.dataGridView_ResultsTargil62.RowHeadersWidth = 51;
             this.dataGridView_ResultsTargil62.Size = new System.Drawing.Size(583, 229);
@@ -2716,10 +2709,9 @@
             this.tabPage_Ex47_55.Controls.Add(this.groupBox33);
             this.tabPage_Ex47_55.Controls.Add(this.groupBox32);
             this.tabPage_Ex47_55.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex47_55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex47_55.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Ex47_55.Name = "tabPage_Ex47_55";
             this.tabPage_Ex47_55.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage_Ex47_55.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex47_55.TabIndex = 13;
             this.tabPage_Ex47_55.Text = "Ex47_55";
             // 
@@ -2899,11 +2891,9 @@
             this.tabPage_Ex55_B.BackColor = System.Drawing.Color.DimGray;
             this.tabPage_Ex55_B.Controls.Add(this.groupBox34);
             this.tabPage_Ex55_B.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Ex55_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage_Ex55_B.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_Ex55_B.Name = "tabPage_Ex55_B";
             this.tabPage_Ex55_B.Size = new System.Drawing.Size(1703, 673);
-
-            this.tabPage_Ex55_B.Size = new System.Drawing.Size(1275, 542);
             this.tabPage_Ex55_B.TabIndex = 14;
             this.tabPage_Ex55_B.Text = "Ex55_B";
             // 
@@ -2931,7 +2921,7 @@
             this.panel8.Controls.Add(this.btn_Ex55_B);
             this.panel8.Controls.Add(this.dataGridView_Ex55);
             this.panel8.Location = new System.Drawing.Point(39, 31);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1188, 270);
             this.panel8.TabIndex = 4;
@@ -2975,10 +2965,10 @@
             // btn_Ex55_B
             // 
             this.btn_Ex55_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ex55_B.Location = new System.Drawing.Point(167, 142);
-            this.btn_Ex55_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ex55_B.Location = new System.Drawing.Point(125, 115);
+            this.btn_Ex55_B.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ex55_B.Name = "btn_Ex55_B";
-            this.btn_Ex55_B.Size = new System.Drawing.Size(228, 41);
+            this.btn_Ex55_B.Size = new System.Drawing.Size(171, 33);
             this.btn_Ex55_B.TabIndex = 3;
             this.btn_Ex55_B.Text = "Get Data";
             this.btn_Ex55_B.UseVisualStyleBackColor = true;
@@ -2988,19 +2978,12 @@
             // 
             this.dataGridView_Ex55.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView_Ex55.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Ex55.Location = new System.Drawing.Point(559, 16);
-            this.dataGridView_Ex55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Ex55.Location = new System.Drawing.Point(419, 13);
+            this.dataGridView_Ex55.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Ex55.Name = "dataGridView_Ex55";
             this.dataGridView_Ex55.RowHeadersWidth = 51;
-            this.dataGridView_Ex55.Size = new System.Drawing.Size(583, 229);
+            this.dataGridView_Ex55.Size = new System.Drawing.Size(437, 186);
             this.dataGridView_Ex55.TabIndex = 2;
-            // 
-            // btn_databaseCounter
-            // 
-            this.btn_databaseCounter.Location = new System.Drawing.Point(0, 0);
-            this.btn_databaseCounter.Name = "btn_databaseCounter";
-            this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
-            this.btn_databaseCounter.TabIndex = 0;
             // 
             // tabPage_Log_Activities
             // 
@@ -3011,15 +2994,6 @@
             this.tabPage_Log_Activities.Size = new System.Drawing.Size(1703, 673);
             this.tabPage_Log_Activities.TabIndex = 15;
             this.tabPage_Log_Activities.Text = "Log_Activities";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1703, 673);
-            this.tabPage2.TabIndex = 16;
-            this.tabPage2.Text = "tabPage2";
             // 
             // groupBox35
             // 
@@ -3036,6 +3010,18 @@
             this.groupBox35.TabIndex = 2;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "Log Data";
+            // 
+            // btn_Reset_Log_Data
+            // 
+            this.btn_Reset_Log_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reset_Log_Data.Location = new System.Drawing.Point(632, 327);
+            this.btn_Reset_Log_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Reset_Log_Data.Name = "btn_Reset_Log_Data";
+            this.btn_Reset_Log_Data.Size = new System.Drawing.Size(372, 49);
+            this.btn_Reset_Log_Data.TabIndex = 16;
+            this.btn_Reset_Log_Data.Text = "Reset";
+            this.btn_Reset_Log_Data.UseVisualStyleBackColor = true;
+            this.btn_Reset_Log_Data.Click += new System.EventHandler(this.btn_Reset_Log_Data_Click);
             // 
             // btn_Refresh_Load_Data
             // 
@@ -3058,38 +3044,14 @@
             this.richTextBox_Log_Data.TabIndex = 14;
             this.richTextBox_Log_Data.Text = "";
             // 
-            // btn_Reset_Log_Data
+            // tabPage_Restricted_Tab
             // 
-            this.btn_Reset_Log_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reset_Log_Data.Location = new System.Drawing.Point(632, 327);
-            this.btn_Reset_Log_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Reset_Log_Data.Name = "btn_Reset_Log_Data";
-            this.btn_Reset_Log_Data.Size = new System.Drawing.Size(372, 49);
-            this.btn_Reset_Log_Data.TabIndex = 16;
-            this.btn_Reset_Log_Data.Text = "Reset";
-            this.btn_Reset_Log_Data.UseVisualStyleBackColor = true;
-            this.btn_Reset_Log_Data.Click += new System.EventHandler(this.btn_Reset_Log_Data_Click);
-            // 
-            // btn_Ex55_B
-            // 
-            this.btn_Ex55_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ex55_B.Location = new System.Drawing.Point(125, 115);
-            this.btn_Ex55_B.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Ex55_B.Name = "btn_Ex55_B";
-            this.btn_Ex55_B.Size = new System.Drawing.Size(171, 33);
-            this.btn_Ex55_B.TabIndex = 3;
-            this.btn_Ex55_B.Text = "Get Data";
-            this.btn_Ex55_B.UseVisualStyleBackColor = true;
-            this.btn_Ex55_B.Click += new System.EventHandler(this.btn_Ex55_B_Click);
-            // 
-            // dataGridView_Ex55
-            // 
-            this.dataGridView_Ex55.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView_Ex55.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Ex55.Location = new System.Drawing.Point(419, 13);
-            this.dataGridView_Ex55.Name = "dataGridView_Ex55";
-            this.dataGridView_Ex55.Size = new System.Drawing.Size(437, 186);
-            this.dataGridView_Ex55.TabIndex = 2;
+            this.tabPage_Restricted_Tab.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Restricted_Tab.Location = new System.Drawing.Point(4, 25);
+            this.tabPage_Restricted_Tab.Name = "tabPage_Restricted_Tab";
+            this.tabPage_Restricted_Tab.Size = new System.Drawing.Size(1703, 673);
+            this.tabPage_Restricted_Tab.TabIndex = 16;
+            this.tabPage_Restricted_Tab.Text = "Restricted Tab";
             // 
             // btn_databaseCounter
             // 
@@ -3442,7 +3404,7 @@
         private System.Windows.Forms.Button btn_Ex55_B;
         private System.Windows.Forms.DataGridView dataGridView_Ex55;
         private System.Windows.Forms.TabPage tabPage_Log_Activities;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_Restricted_Tab;
         private System.Windows.Forms.GroupBox groupBox35;
         private System.Windows.Forms.Button btn_Reset_Log_Data;
         private System.Windows.Forms.Button btn_Refresh_Load_Data;

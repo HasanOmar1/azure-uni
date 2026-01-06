@@ -19,4 +19,9 @@ namespace Cloud
         Student,
 
     }
+
+    public enum TabsNames
+    {
+        tabPage_Restricted_Tab,
+    }
 }
