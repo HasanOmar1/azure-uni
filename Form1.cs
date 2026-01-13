@@ -1,4 +1,5 @@
 ﻿using Cloud.DataStructures;
+using Cloud.Forms;
 using Cloud.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
@@ -1645,6 +1646,11 @@ namespace Cloud
         // ex 62
         private async void btn_PresentStudentTargil62_Click(object sender, EventArgs e)
         {
+            await getSearchParamsAndPerformSearch();
+        }
+
+        private async Task getSearchParamsAndPerformSearch()
+        {
             string requestedCourseName = textBox_CourseNameTargil62.Text;
             string requestedTeacher = textBox_TeacherNameTargil62.Text;
             int minGrade = Convert.ToInt32(textBox_MinGradeTargil62.Text);
@@ -1853,6 +1859,31 @@ namespace Cloud
                 }
             }
             return count;
+        }
+
+        private async void dataGridView_ResultsTargil62_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView_ResultsTargil62.CurrentRow.Cells["StudentId"].Value.ToString();
+            string dbName = dataGridView_ResultsTargil62.CurrentRow.Cells["DatabaseName"].Value.ToString();
+            string containerName = dataGridView_ResultsTargil62.CurrentRow.Cells["ContainerName"].Value.ToString();
+
+            try
+            {
+                Microsoft.Azure.Cosmos.Container containerRefObj = myCosmosClient.GetContainer(dbName, containerName);
+                Student student = await containerRefObj.ReadItemAsync<Student>(id, new PartitionKey(id));
+
+                ViewSingleStudent viewSingleStudent = new ViewSingleStudent(dbName, containerName,
+                                                                            containerRefObj, student);
+                viewSingleStudent.ShowDialog();
+
+                // Refresh the Data grid after the form 'viewSingleStudent' was closed
+                await getSearchParamsAndPerformSearch();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"We could not present Student ID {id} in container {containerName} within DB {dbName}.\nWe got the following Error:\n\n{ex.Message}",
+                            "Student cannot be presented", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // ex 39
@@ -2471,6 +2502,8 @@ namespace Cloud
             return result;
 
         }
+
+      
     }
 
 

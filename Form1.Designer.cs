@@ -2721,6 +2721,7 @@
             this.dataGridView_ResultsTargil62.RowHeadersWidth = 51;
             this.dataGridView_ResultsTargil62.Size = new System.Drawing.Size(437, 186);
             this.dataGridView_ResultsTargil62.TabIndex = 2;
+            this.dataGridView_ResultsTargil62.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ResultsTargil62_CellDoubleClick);
             // 
             // label39
             // 
