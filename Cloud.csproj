@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\OutputFor30.cs" />
+    <Compile Include="DataStructures\OutputForAdvancedSearch.cs" />
     <Compile Include="DataStructures\OutputTargil57.cs" />
     <Compile Include="DataStructures\OutputTargil55.cs" />
     <Compile Include="DataStructures\OutputTargil62.cs" />

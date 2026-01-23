@@ -1879,7 +1879,7 @@ namespace Cloud
                 // Refresh the Data grid after the form 'viewSingleStudent' was closed
                 await getSearchParamsAndPerformSearch();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"We could not present Student ID {id} in container {containerName} within DB {dbName}.\nWe got the following Error:\n\n{ex.Message}",
                             "Student cannot be presented", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -2244,7 +2244,7 @@ namespace Cloud
 
             return result;
         }
-            
+
 
         // logs
         // refresh btn
@@ -2360,7 +2360,7 @@ namespace Cloud
         private async Task<List<OutputTargil57>> getStudentsWithSpecificCriteriaEx57(string dbName, string tableName, string firstName, string city, string courseName)
         {
             List<OutputTargil57> result = new List<OutputTargil57>();
-            
+
 
             try
             {
@@ -2380,7 +2380,7 @@ namespace Cloud
                         if (!student.FirstName.Equals(firstName)) continue;
                         else
                         {
-                            foreach(Address addr in student.Addresses)
+                            foreach (Address addr in student.Addresses)
                             {
                                 if (addr != null && !string.IsNullOrEmpty(addr.City) && addr.City.Equals(city))
                                 {
@@ -2482,13 +2482,13 @@ namespace Cloud
                                 if (c != null && !string.IsNullOrEmpty(c.Grade.ToString()) && c.Grade != 0 &&
                                     !string.IsNullOrEmpty(c.Teacher))
                                 {
-                                    sum+= c.Grade;
+                                    sum += c.Grade;
                                 }
-                               
+
 
                             }
-                                double average = (double)sum / maxCourses;
-                                result += $"Student Full Name: {student.FirstName} {student.LastName}, Average Grade: {average}\n";
+                            double average = (double)sum / maxCourses;
+                            result += $"Student Full Name: {student.FirstName} {student.LastName}, Average Grade: {average}\n";
 
                         }
                     }
@@ -2503,9 +2503,95 @@ namespace Cloud
 
         }
 
-      
+        // advanced search
+        private async void btn_GetStudentsForAdvancedSearch_Click(object sender, EventArgs e)
+        {
+            // hardcoded
+            string db = "Students";
+            string table = "t1";
+
+            // Populate the search criteria from screen
+            Student searchCriteria = new Student();
+            searchCriteria.FirstName = textBox_FirstName_AdvancedSearch.Text;
+
+            Address addressToSearch = new Address();
+            addressToSearch.City = textBox_City_AdvancedSearch.Text;
+
+            searchCriteria.Addresses = new Address[1];
+            searchCriteria.Addresses[0] = addressToSearch;
+
+            // Populate the rest of the items from the screen
+            List<OutputForAdvancedSearch> results = await searchByUserCriteria(db, table, searchCriteria);
+            dataGridView_ForAdvancedSearch.DataSource = results;
+
+            dataGridView_ForAdvancedSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn c in dataGridView_ForAdvancedSearch.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 10);
+                c.DefaultCellStyle.ForeColor = Color.Blue;
+            }
+
+        }
+
+        private async Task<List<OutputForAdvancedSearch>> searchByUserCriteria(string db, string table, Student searchCriteria)
+        {
+            List<OutputForAdvancedSearch> result = new List<OutputForAdvancedSearch>();
+            bool found;
+
+            Microsoft.Azure.Cosmos.Container tableRefObj = myCosmosClient.GetContainer(db, table);
+
+            FeedIterator<Student> studentIterator = tableRefObj.GetItemQueryIterator<Student>();
+
+            while (studentIterator.HasMoreResults)
+            {
+                foreach (Student currentStudent in await studentIterator.ReadNextAsync())
+                {
+                    found = true;
+
+                    // investigate the search criteria
+
+                    // check the firstName in the search criteria
+                    if (!string.IsNullOrEmpty(searchCriteria.FirstName))
+                    {
+                        if (!string.IsNullOrEmpty(currentStudent.FirstName) && currentStudent.FirstName.Equals(searchCriteria.FirstName))
+                        {
+                            found = true;
+                        }
+                        else continue;
+                    }
+
+                    // check the address.city in the search criteria
+                    if (searchCriteria.Addresses != null && !string.IsNullOrEmpty(searchCriteria.Addresses[0].City))
+                    {
+                        Address[] addresses = currentStudent.Addresses;
+
+                        if (addresses != null && addresses.Length == 0)
+                            continue;
+
+                        foreach (Address currentAddress in addresses)
+                        {
+                            if (currentStudent.Addresses != null && !string.IsNullOrEmpty(currentAddress.City) && currentAddress.City.Equals(searchCriteria.Addresses[0].City))
+                            {
+                                found = true;
+                                break;
+                            }
+                            found = false;
+                        }
+                    }
+                    if (found)
+                    {
+                        result.Add(new OutputForAdvancedSearch
+                        {
+                            id = currentStudent.id,
+                            LastName = currentStudent.LastName,
+                            NumOfCourses = (currentStudent.Courses == null) ? 0 : currentStudent.Courses.Count()
+                        });
+                    }
+                }
+            }
+            return result;
+        }
+
     }
-
-
 }
 

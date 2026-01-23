@@ -290,6 +290,15 @@
             this.richTextBox_Log_Data = new System.Windows.Forms.RichTextBox();
             this.tabPage_Restricted_Tab = new System.Windows.Forms.TabPage();
             this.btn_databaseCounter = new System.Windows.Forms.Button();
+            this.tabPage_Advanced_Search = new System.Windows.Forms.TabPage();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox_FirstName_AdvancedSearch = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.textBox_City_AdvancedSearch = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.btn_GetStudentsForAdvancedSearch = new System.Windows.Forms.Button();
+            this.dataGridView_ForAdvancedSearch = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage_General.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -356,6 +365,10 @@
             this.groupBox37.SuspendLayout();
             this.tabPage_Log_Activities.SuspendLayout();
             this.groupBox35.SuspendLayout();
+            this.tabPage_Advanced_Search.SuspendLayout();
+            this.groupBox38.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ForAdvancedSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_CreateCosmosClient
@@ -392,6 +405,7 @@
             this.tabControl1.Controls.Add(this.tabPage_Ex60);
             this.tabControl1.Controls.Add(this.tabPage_Log_Activities);
             this.tabControl1.Controls.Add(this.tabPage_Restricted_Tab);
+            this.tabControl1.Controls.Add(this.tabPage_Advanced_Search);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -3358,6 +3372,104 @@
             this.btn_databaseCounter.Size = new System.Drawing.Size(75, 23);
             this.btn_databaseCounter.TabIndex = 0;
             // 
+            // tabPage_Advanced_Search
+            // 
+            this.tabPage_Advanced_Search.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage_Advanced_Search.Controls.Add(this.groupBox38);
+            this.tabPage_Advanced_Search.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Advanced_Search.Name = "tabPage_Advanced_Search";
+            this.tabPage_Advanced_Search.Size = new System.Drawing.Size(1275, 544);
+            this.tabPage_Advanced_Search.TabIndex = 18;
+            this.tabPage_Advanced_Search.Text = "Advanced Search";
+            // 
+            // groupBox38
+            // 
+            this.groupBox38.BackColor = System.Drawing.Color.Tan;
+            this.groupBox38.Controls.Add(this.panel7);
+            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox38.Location = new System.Drawing.Point(49, 40);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox38.Size = new System.Drawing.Size(943, 461);
+            this.groupBox38.TabIndex = 9;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "Advanced Search";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Teal;
+            this.panel7.Controls.Add(this.textBox_FirstName_AdvancedSearch);
+            this.panel7.Controls.Add(this.label65);
+            this.panel7.Controls.Add(this.textBox_City_AdvancedSearch);
+            this.panel7.Controls.Add(this.label67);
+            this.panel7.Controls.Add(this.btn_GetStudentsForAdvancedSearch);
+            this.panel7.Controls.Add(this.dataGridView_ForAdvancedSearch);
+            this.panel7.Location = new System.Drawing.Point(29, 40);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(891, 383);
+            this.panel7.TabIndex = 4;
+            // 
+            // textBox_FirstName_AdvancedSearch
+            // 
+            this.textBox_FirstName_AdvancedSearch.Location = new System.Drawing.Point(143, 14);
+            this.textBox_FirstName_AdvancedSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_FirstName_AdvancedSearch.Name = "textBox_FirstName_AdvancedSearch";
+            this.textBox_FirstName_AdvancedSearch.Size = new System.Drawing.Size(225, 27);
+            this.textBox_FirstName_AdvancedSearch.TabIndex = 30;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(25, 19);
+            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(97, 22);
+            this.label65.TabIndex = 29;
+            this.label65.Text = "First Name";
+            // 
+            // textBox_City_AdvancedSearch
+            // 
+            this.textBox_City_AdvancedSearch.Location = new System.Drawing.Point(143, 56);
+            this.textBox_City_AdvancedSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_City_AdvancedSearch.Name = "textBox_City_AdvancedSearch";
+            this.textBox_City_AdvancedSearch.Size = new System.Drawing.Size(225, 27);
+            this.textBox_City_AdvancedSearch.TabIndex = 26;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(81, 61);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(41, 22);
+            this.label67.TabIndex = 25;
+            this.label67.Text = "City";
+            // 
+            // btn_GetStudentsForAdvancedSearch
+            // 
+            this.btn_GetStudentsForAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetStudentsForAdvancedSearch.Location = new System.Drawing.Point(143, 105);
+            this.btn_GetStudentsForAdvancedSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_GetStudentsForAdvancedSearch.Name = "btn_GetStudentsForAdvancedSearch";
+            this.btn_GetStudentsForAdvancedSearch.Size = new System.Drawing.Size(225, 36);
+            this.btn_GetStudentsForAdvancedSearch.TabIndex = 3;
+            this.btn_GetStudentsForAdvancedSearch.Text = "Present Students";
+            this.btn_GetStudentsForAdvancedSearch.UseVisualStyleBackColor = true;
+            this.btn_GetStudentsForAdvancedSearch.Click += new System.EventHandler(this.btn_GetStudentsForAdvancedSearch_Click);
+            // 
+            // dataGridView_ForAdvancedSearch
+            // 
+            this.dataGridView_ForAdvancedSearch.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView_ForAdvancedSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ForAdvancedSearch.Location = new System.Drawing.Point(407, 14);
+            this.dataGridView_ForAdvancedSearch.Name = "dataGridView_ForAdvancedSearch";
+            this.dataGridView_ForAdvancedSearch.RowHeadersWidth = 51;
+            this.dataGridView_ForAdvancedSearch.Size = new System.Drawing.Size(464, 344);
+            this.dataGridView_ForAdvancedSearch.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3468,6 +3580,11 @@
             this.groupBox37.PerformLayout();
             this.tabPage_Log_Activities.ResumeLayout(false);
             this.groupBox35.ResumeLayout(false);
+            this.tabPage_Advanced_Search.ResumeLayout(false);
+            this.groupBox38.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ForAdvancedSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3736,6 +3853,15 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Button btn_Ex60;
         private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TabPage tabPage_Advanced_Search;
+        private System.Windows.Forms.GroupBox groupBox38;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox textBox_FirstName_AdvancedSearch;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TextBox textBox_City_AdvancedSearch;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Button btn_GetStudentsForAdvancedSearch;
+        private System.Windows.Forms.DataGridView dataGridView_ForAdvancedSearch;
     }
 }
 
